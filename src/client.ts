@@ -218,6 +218,7 @@ export class RustaBase {
             let data: any = {};
             try {
                 data = await response.json();
+                if (data === null || data === undefined) data = {};
             } catch (err: any) {
                 if (init.signal?.aborted || err?.name === "AbortError") throw err;
             }
