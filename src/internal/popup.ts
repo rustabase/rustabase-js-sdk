@@ -1,1 +1,19 @@
-LyoqIE9wZW5zIGEgY2VudGVyZWQgcG9wdXAgd2luZG93IChicm93c2VyIG9ubHkpLiBSZXR1cm5zIG51bGwgd2hlbiBibG9ja2VkIG9yIHVuYXZhaWxhYmxlLiAqLwpleHBvcnQgZnVuY3Rpb24gb3BlblBvcHVwKHVybD86IHN0cmluZyk6IFdpbmRvdyB8IG51bGwgewogICAgaWYgKHR5cGVvZiB3aW5kb3cgPT09ICJ1bmRlZmluZWQiIHx8ICF3aW5kb3cub3BlbikgewogICAgICAgIHRocm93IG5ldyBFcnJvcigKICAgICAgICAgICAgIlBvcHVwcyBhcmVuJ3QgYXZhaWxhYmxlIGhlcmUuIFBhc3MgYG9wZW5VcmxgIHRvIHNpZ25JbldpdGhPQXV0aCgpIHRvIG9wZW4gdGhlIHNpZ24taW4gcGFnZSB5b3Vyc2VsZi4iLAogICAgICAgICk7CiAgICB9CiAgICBjb25zdCBzY3JlZW5XID0gd2luZG93LmlubmVyV2lkdGggfHwgMTAyNDsKICAgIGNvbnN0IHNjcmVlbkggPSB3aW5kb3cuaW5uZXJIZWlnaHQgfHwgNzY4OwogICAgY29uc3Qgd2lkdGggPSBNYXRoLm1pbigxMDI0LCBzY3JlZW5XKTsKICAgIGNvbnN0IGhlaWdodCA9IE1hdGgubWluKDc2OCwgc2NyZWVuSCk7CiAgICBjb25zdCBsZWZ0ID0gc2NyZWVuVyAvIDIgLSB3aWR0aCAvIDI7CiAgICBjb25zdCB0b3AgPSBzY3JlZW5IIC8gMiAtIGhlaWdodCAvIDI7CiAgICByZXR1cm4gd2luZG93Lm9wZW4oCiAgICAgICAgdXJsIHx8ICJhYm91dDpibGFuayIsCiAgICAgICAgdXJsID8gInJiX29hdXRoIiA6ICJfYmxhbmsiLAogICAgICAgIGB3aWR0aD0ke3dpZHRofSxoZWlnaHQ9JHtoZWlnaHR9LHRvcD0ke3RvcH0sbGVmdD0ke2xlZnR9LHJlc2l6YWJsZSxtZW51YmFyPW5vYCwKICAgICk7Cn0K
+/** Opens a centered popup window (browser only). Returns null when blocked or unavailable. */
+export function openPopup(url?: string): Window | null {
+    if (typeof window === "undefined" || !window.open) {
+        throw new Error(
+            "Popups aren't available here. Pass `openUrl` to signInWithOAuth() to open the sign-in page yourself.",
+        );
+    }
+    const screenW = window.innerWidth || 1024;
+    const screenH = window.innerHeight || 768;
+    const width = Math.min(1024, screenW);
+    const height = Math.min(768, screenH);
+    const left = screenW / 2 - width / 2;
+    const top = screenH / 2 - height / 2;
+    return window.open(
+        url || "about:blank",
+        url ? "rb_oauth" : "_blank",
+        `width=${width},height=${height},top=${top},left=${left},resizable,menubar=no`,
+    );
+}

@@ -1,1 +1,48 @@
-ZXhwb3J0IGludGVyZmFjZSBDb29raWVPcHRpb25zIHsKICAgIG5hbWU/OiBzdHJpbmc7CiAgICBwYXRoPzogc3RyaW5nOwogICAgZG9tYWluPzogc3RyaW5nOwogICAgZXhwaXJlcz86IERhdGU7CiAgICBtYXhBZ2U/OiBudW1iZXI7CiAgICBodHRwT25seT86IGJvb2xlYW47CiAgICBzZWN1cmU/OiBib29sZWFuOwogICAgc2FtZVNpdGU/OiAiU3RyaWN0IiB8ICJMYXgiIHwgIk5vbmUiIHwgYm9vbGVhbjsKfQoKY29uc3QgVkFMSURfTkFNRSA9IC9eW1x1MDAwOVx1MDAyMC1cdTAwN2VcdTAwODAtXHUwMGZmXSskLzsKCi8qKiBSZWFkcyBvbmUgY29va2llIHZhbHVlIGZyb20gYSBgQ29va2llYCBoZWFkZXIgc3RyaW5nLiAqLwpleHBvcnQgZnVuY3Rpb24gcmVhZENvb2tpZShoZWFkZXI6IHN0cmluZywgbmFtZTogc3RyaW5nKTogc3RyaW5nIHwgdW5kZWZpbmVkIHsKICAgIGZvciAoY29uc3QgcGFydCBvZiAoaGVhZGVyIHx8ICIiKS5zcGxpdCgiOyIpKSB7CiAgICAgICAgY29uc3QgZXEgPSBwYXJ0LmluZGV4T2YoIj0iKTsKICAgICAgICBpZiAoZXEgPCAwKSBjb250aW51ZTsKICAgICAgICBpZiAocGFydC5zbGljZSgwLCBlcSkudHJpbSgpICE9PSBuYW1lKSBjb250aW51ZTsKICAgICAgICBsZXQgdmFsdWUgPSBwYXJ0LnNsaWNlKGVxICsgMSkudHJpbSgpOwogICAgICAgIGlmICh2YWx1ZS5zdGFydHNXaXRoKCciJykgJiYgdmFsdWUuZW5kc1dpdGgoJyInKSkgdmFsdWUgPSB2YWx1ZS5zbGljZSgxLCAtMSk7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgcmV0dXJuIGRlY29kZVVSSUNvbXBvbmVudCh2YWx1ZSk7CiAgICAgICAgfSBjYXRjaCB7CiAgICAgICAgICAgIHJldHVybiB2YWx1ZTsKICAgICAgICB9CiAgICB9CiAgICByZXR1cm4gdW5kZWZpbmVkOwp9CgovKiogQnVpbGRzIGEgYFNldC1Db29raWVgIGhlYWRlciB2YWx1ZS4gKi8KZXhwb3J0IGZ1bmN0aW9uIHdyaXRlQ29va2llKG5hbWU6IHN0cmluZywgdmFsdWU6IHN0cmluZywgb3B0czogQ29va2llT3B0aW9ucyA9IHt9KTogc3RyaW5nIHsKICAgIGlmICghVkFMSURfTkFNRS50ZXN0KG5hbWUpKSB0aHJvdyBuZXcgVHlwZUVycm9yKCJJbnZhbGlkIGNvb2tpZSBuYW1lLiIpOwogICAgY29uc3QgZW5jb2RlZCA9IGVuY29kZVVSSUNvbXBvbmVudCh2YWx1ZSk7CiAgICBpZiAoZW5jb2RlZCAmJiAhVkFMSURfTkFNRS50ZXN0KGVuY29kZWQpKSB0aHJvdyBuZXcgVHlwZUVycm9yKCJJbnZhbGlkIGNvb2tpZSB2YWx1ZS4iKTsKCiAgICBjb25zdCBwYXJ0cyA9IFtgJHtuYW1lfT0ke2VuY29kZWR9YF07CiAgICBpZiAob3B0cy5tYXhBZ2UgIT0gbnVsbCkgcGFydHMucHVzaChgTWF4LUFnZT0ke01hdGguZmxvb3Iob3B0cy5tYXhBZ2UpfWApOwogICAgaWYgKG9wdHMuZG9tYWluKSBwYXJ0cy5wdXNoKGBEb21haW49JHtvcHRzLmRvbWFpbn1gKTsKICAgIGlmIChvcHRzLnBhdGgpIHBhcnRzLnB1c2goYFBhdGg9JHtvcHRzLnBhdGh9YCk7CiAgICBpZiAob3B0cy5leHBpcmVzKSBwYXJ0cy5wdXNoKGBFeHBpcmVzPSR7b3B0cy5leHBpcmVzLnRvVVRDU3RyaW5nKCl9YCk7CiAgICBpZiAob3B0cy5odHRwT25seSkgcGFydHMucHVzaCgiSHR0cE9ubHkiKTsKICAgIGlmIChvcHRzLnNlY3VyZSkgcGFydHMucHVzaCgiU2VjdXJlIik7CiAgICBpZiAob3B0cy5zYW1lU2l0ZSkgewogICAgICAgIHBhcnRzLnB1c2goYFNhbWVTaXRlPSR7b3B0cy5zYW1lU2l0ZSA9PT0gdHJ1ZSA/ICJTdHJpY3QiIDogb3B0cy5zYW1lU2l0ZX1gKTsKICAgIH0KICAgIHJldHVybiBwYXJ0cy5qb2luKCI7ICIpOwp9Cg==
+export interface CookieOptions {
+    name?: string;
+    path?: string;
+    domain?: string;
+    expires?: Date;
+    maxAge?: number;
+    httpOnly?: boolean;
+    secure?: boolean;
+    sameSite?: "Strict" | "Lax" | "None" | boolean;
+}
+
+const VALID_NAME = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+
+/** Reads one cookie value from a `Cookie` header string. */
+export function readCookie(header: string, name: string): string | undefined {
+    for (const part of (header || "").split(";")) {
+        const eq = part.indexOf("=");
+        if (eq < 0) continue;
+        if (part.slice(0, eq).trim() !== name) continue;
+        let value = part.slice(eq + 1).trim();
+        if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
+        try {
+            return decodeURIComponent(value);
+        } catch {
+            return value;
+        }
+    }
+    return undefined;
+}
+
+/** Builds a `Set-Cookie` header value. */
+export function writeCookie(name: string, value: string, opts: CookieOptions = {}): string {
+    if (!VALID_NAME.test(name)) throw new TypeError("Invalid cookie name.");
+    const encoded = encodeURIComponent(value);
+    if (encoded && !VALID_NAME.test(encoded)) throw new TypeError("Invalid cookie value.");
+
+    const parts = [`${name}=${encoded}`];
+    if (opts.maxAge != null) parts.push(`Max-Age=${Math.floor(opts.maxAge)}`);
+    if (opts.domain) parts.push(`Domain=${opts.domain}`);
+    if (opts.path) parts.push(`Path=${opts.path}`);
+    if (opts.expires) parts.push(`Expires=${opts.expires.toUTCString()}`);
+    if (opts.httpOnly) parts.push("HttpOnly");
+    if (opts.secure) parts.push("Secure");
+    if (opts.sameSite) {
+        parts.push(`SameSite=${opts.sameSite === true ? "Strict" : opts.sameSite}`);
+    }
+    return parts.join("; ");
+}

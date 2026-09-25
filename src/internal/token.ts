@@ -1,1 +1,34 @@
-ZnVuY3Rpb24gZGVjb2RlQmFzZTY0VXJsKGlucHV0OiBzdHJpbmcpOiBzdHJpbmcgewogICAgY29uc3QgYjY0ID0gaW5wdXQucmVwbGFjZSgvLS9nLCAiKyIpLnJlcGxhY2UoL18vZywgIi8iKTsKICAgIGNvbnN0IHBhZGRlZCA9IGI2NCArICI9PT0iLnNsaWNlKChiNjQubGVuZ3RoICsgMykgJSA0KTsKICAgIGlmICh0eXBlb2YgYXRvYiA9PT0gImZ1bmN0aW9uIikgewogICAgICAgIGNvbnN0IGJpbiA9IGF0b2IocGFkZGVkKTsKICAgICAgICBjb25zdCBieXRlcyA9IFVpbnQ4QXJyYXkuZnJvbShiaW4sIChjKSA9PiBjLmNoYXJDb2RlQXQoMCkpOwogICAgICAgIHJldHVybiBuZXcgVGV4dERlY29kZXIoKS5kZWNvZGUoYnl0ZXMpOwogICAgfQogICAgLy8gTm9kZSB3aXRob3V0IGF0b2IgKHZlcnkgb2xkIHZlcnNpb25zKQogICAgcmV0dXJuIChnbG9iYWxUaGlzIGFzIGFueSkuQnVmZmVyLmZyb20ocGFkZGVkLCAiYmFzZTY0IikudG9TdHJpbmcoInV0ZjgiKTsKfQoKLyoqIFJlYWRzIHRoZSBjbGFpbXMgb2YgYSBKV1Qgd2l0aG91dCB2ZXJpZnlpbmcgaXQuIFJldHVybnMgYHt9YCBmb3IgYW55dGhpbmcgaW52YWxpZC4gKi8KZXhwb3J0IGZ1bmN0aW9uIHJlYWRDbGFpbXModG9rZW46IHN0cmluZyk6IFJlY29yZDxzdHJpbmcsIGFueT4gewogICAgaWYgKCF0b2tlbikgcmV0dXJuIHt9OwogICAgY29uc3QgcGFydCA9IHRva2VuLnNwbGl0KCIuIilbMV07CiAgICBpZiAoIXBhcnQpIHJldHVybiB7fTsKICAgIHRyeSB7CiAgICAgICAgY29uc3QgY2xhaW1zID0gSlNPTi5wYXJzZShkZWNvZGVCYXNlNjRVcmwocGFydCkpOwogICAgICAgIHJldHVybiBjbGFpbXMgJiYgdHlwZW9mIGNsYWltcyA9PT0gIm9iamVjdCIgPyBjbGFpbXMgOiB7fTsKICAgIH0gY2F0Y2ggewogICAgICAgIHJldHVybiB7fTsKICAgIH0KfQoKLyoqCiAqIFRydWUgd2hlbiB0aGUgdG9rZW4gaXMgbWlzc2luZywgbWFsZm9ybWVkLCBvciBleHBpcmVzIHdpdGhpbiBgbGVld2F5U2Vjb25kc2AuCiAqLwpleHBvcnQgZnVuY3Rpb24gdG9rZW5FeHBpcmVkKHRva2VuOiBzdHJpbmcsIGxlZXdheVNlY29uZHMgPSAwKTogYm9vbGVhbiB7CiAgICBjb25zdCBjbGFpbXMgPSByZWFkQ2xhaW1zKHRva2VuKTsKICAgIGlmICghT2JqZWN0LmtleXMoY2xhaW1zKS5sZW5ndGgpIHJldHVybiB0cnVlOwogICAgaWYgKCFjbGFpbXMuZXhwKSByZXR1cm4gZmFsc2U7CiAgICByZXR1cm4gY2xhaW1zLmV4cCAtIGxlZXdheVNlY29uZHMgPD0gRGF0ZS5ub3coKSAvIDEwMDA7Cn0K
+function decodeBase64Url(input: string): string {
+    const b64 = input.replace(/-/g, "+").replace(/_/g, "/");
+    const padded = b64 + "===".slice((b64.length + 3) % 4);
+    if (typeof atob === "function") {
+        const bin = atob(padded);
+        const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+        return new TextDecoder().decode(bytes);
+    }
+    // Node without atob (very old versions)
+    return (globalThis as any).Buffer.from(padded, "base64").toString("utf8");
+}
+
+/** Reads the claims of a JWT without verifying it. Returns `{}` for anything invalid. */
+export function readClaims(token: string): Record<string, any> {
+    if (!token) return {};
+    const part = token.split(".")[1];
+    if (!part) return {};
+    try {
+        const claims = JSON.parse(decodeBase64Url(part));
+        return claims && typeof claims === "object" ? claims : {};
+    } catch {
+        return {};
+    }
+}
+
+/**
+ * True when the token is missing, malformed, or expires within `leewaySeconds`.
+ */
+export function tokenExpired(token: string, leewaySeconds = 0): boolean {
+    const claims = readClaims(token);
+    if (!Object.keys(claims).length) return true;
+    if (!claims.exp) return false;
+    return claims.exp - leewaySeconds <= Date.now() / 1000;
+}

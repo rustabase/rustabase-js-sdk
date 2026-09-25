@@ -1,1 +1,59 @@
-aW1wb3J0IHR5cGUgeyBKc29uIH0gZnJvbSAiLi4vdHlwZXMiOwoKLyoqIEpvaW5zIGEgYmFzZSB1cmwgYW5kIGEgcGF0aCB3aXRoIGV4YWN0bHkgb25lIHNsYXNoIGJldHdlZW4gdGhlbS4gKi8KZXhwb3J0IGZ1bmN0aW9uIGpvaW5VcmwoYmFzZTogc3RyaW5nLCBwYXRoOiBzdHJpbmcpOiBzdHJpbmcgewogICAgaWYgKCFwYXRoKSByZXR1cm4gYmFzZTsKICAgIHJldHVybiBiYXNlLnJlcGxhY2UoL1wvKyQvLCAiIikgKyAiLyIgKyBwYXRoLnJlcGxhY2UoL15cLysvLCAiIik7Cn0KCi8qKiBBcHBlbmRzIGEgcXVlcnkgc3RyaW5nIHRvIGEgdXJsLiAqLwpleHBvcnQgZnVuY3Rpb24gd2l0aFF1ZXJ5KHVybDogc3RyaW5nLCBxdWVyeT86IEpzb24pOiBzdHJpbmcgewogICAgY29uc3QgcXMgPSB0b1F1ZXJ5U3RyaW5nKHF1ZXJ5KTsKICAgIGlmICghcXMpIHJldHVybiB1cmw7CiAgICByZXR1cm4gdXJsICsgKHVybC5pbmNsdWRlcygiPyIpID8gIiYiIDogIj8iKSArIHFzOwp9CgovKiogRW5jb2RlcyBhIHZhbHVlIG1hcCBhcyBhIHF1ZXJ5IHN0cmluZy4gQXJyYXlzIHJlcGVhdCB0aGUga2V5OyBvYmplY3RzIGJlY29tZSBKU09OLiAqLwpleHBvcnQgZnVuY3Rpb24gdG9RdWVyeVN0cmluZyhxdWVyeT86IEpzb24pOiBzdHJpbmcgewogICAgaWYgKCFxdWVyeSkgcmV0dXJuICIiOwogICAgY29uc3Qgb3V0OiBzdHJpbmdbXSA9IFtdOwogICAgZm9yIChjb25zdCBba2V5LCByYXddIG9mIE9iamVjdC5lbnRyaWVzKHF1ZXJ5KSkgewogICAgICAgIGlmIChyYXcgPT09IHVuZGVmaW5lZCB8fCByYXcgPT09IG51bGwpIGNvbnRpbnVlOwogICAgICAgIGNvbnN0IHZhbHVlcyA9IEFycmF5LmlzQXJyYXkocmF3KSA/IHJhdyA6IFtyYXddOwogICAgICAgIGZvciAoY29uc3QgdmFsdWUgb2YgdmFsdWVzKSB7CiAgICAgICAgICAgIG91dC5wdXNoKGVuY29kZVVSSUNvbXBvbmVudChrZXkpICsgIj0iICsgZW5jb2RlVVJJQ29tcG9uZW50KHN0cmluZ2lmeVBhcmFtKHZhbHVlKSkpOwogICAgICAgIH0KICAgIH0KICAgIHJldHVybiBvdXQuam9pbigiJiIpOwp9CgpmdW5jdGlvbiBzdHJpbmdpZnlQYXJhbSh2YWx1ZTogdW5rbm93bik6IHN0cmluZyB7CiAgICBpZiAodmFsdWUgaW5zdGFuY2VvZiBEYXRlKSByZXR1cm4gdmFsdWUudG9JU09TdHJpbmcoKS5yZXBsYWNlKCJUIiwgIiAiKTsKICAgIGlmICh0eXBlb2YgdmFsdWUgPT09ICJvYmplY3QiICYmIHZhbHVlICE9PSBudWxsKSByZXR1cm4gSlNPTi5zdHJpbmdpZnkodmFsdWUpOwogICAgcmV0dXJuIFN0cmluZyh2YWx1ZSk7Cn0KCi8qKiBFbmNvZGVzIGEgcGF0aCBzZWdtZW50LiAqLwpleHBvcnQgY29uc3Qgc2VnID0gKHZhbHVlOiBzdHJpbmcpID0+IGVuY29kZVVSSUNvbXBvbmVudCh2YWx1ZSk7CgovKioKICogU2FmZWx5IGJpbmRzIGB7Om5hbWV9YCBwbGFjZWhvbGRlcnMgaW4gYSBmaWx0ZXIgZXhwcmVzc2lvbi4KICoKICogICAgIHJiLmZpbHRlcigidGl0bGUgfiB7OnF9ICYmIGNyZWF0ZWQgPiB7OnNpbmNlfSIsIHsgcTogImhpIiwgc2luY2U6IG5ldyBEYXRlKCkgfSkKICovCmV4cG9ydCBmdW5jdGlvbiBiaW5kRmlsdGVyKGV4cHJlc3Npb246IHN0cmluZywgcGFyYW1zPzogSnNvbik6IHN0cmluZyB7CiAgICBpZiAoIXBhcmFtcykgcmV0dXJuIGV4cHJlc3Npb247CiAgICByZXR1cm4gZXhwcmVzc2lvbi5yZXBsYWNlKC9cezooW1x3XSspXH0vZywgKG1hdGNoLCBuYW1lOiBzdHJpbmcpID0+CiAgICAgICAgbmFtZSBpbiBwYXJhbXMgPyBmaWx0ZXJMaXRlcmFsKHBhcmFtc1tuYW1lXSkgOiBtYXRjaCwKICAgICk7Cn0KCmZ1bmN0aW9uIGZpbHRlckxpdGVyYWwodmFsdWU6IHVua25vd24pOiBzdHJpbmcgewogICAgaWYgKHZhbHVlID09PSBudWxsIHx8IHZhbHVlID09PSB1bmRlZmluZWQpIHJldHVybiAibnVsbCI7CiAgICBpZiAodHlwZW9mIHZhbHVlID09PSAibnVtYmVyIiB8fCB0eXBlb2YgdmFsdWUgPT09ICJib29sZWFuIikgcmV0dXJuIFN0cmluZyh2YWx1ZSk7CiAgICBpZiAodHlwZW9mIHZhbHVlID09PSAic3RyaW5nIikgcmV0dXJuIEpTT04uc3RyaW5naWZ5KHZhbHVlKTsKICAgIGlmICh2YWx1ZSBpbnN0YW5jZW9mIERhdGUpIHJldHVybiBKU09OLnN0cmluZ2lmeSh2YWx1ZS50b0lTT1N0cmluZygpLnJlcGxhY2UoIlQiLCAiICIpKTsKICAgIGNvbnN0IGpzb24gPSBKU09OLnN0cmluZ2lmeSh2YWx1ZSk7CiAgICAvLyBhcnJheXMvb2JqZWN0cyBhcmUgY29tcGFyZWQgYXMgSlNPTiB0ZXh0CiAgICByZXR1cm4gL15bW3tdLy50ZXN0KGpzb24pID8gSlNPTi5zdHJpbmdpZnkoanNvbikgOiBqc29uOwp9Cg==
+import type { Json } from "../types";
+
+/** Joins a base url and a path with exactly one slash between them. */
+export function joinUrl(base: string, path: string): string {
+    if (!path) return base;
+    return base.replace(/\/+$/, "") + "/" + path.replace(/^\/+/, "");
+}
+
+/** Appends a query string to a url. */
+export function withQuery(url: string, query?: Json): string {
+    const qs = toQueryString(query);
+    if (!qs) return url;
+    return url + (url.includes("?") ? "&" : "?") + qs;
+}
+
+/** Encodes a value map as a query string. Arrays repeat the key; objects become JSON. */
+export function toQueryString(query?: Json): string {
+    if (!query) return "";
+    const out: string[] = [];
+    for (const [key, raw] of Object.entries(query)) {
+        if (raw === undefined || raw === null) continue;
+        const values = Array.isArray(raw) ? raw : [raw];
+        for (const value of values) {
+            out.push(encodeURIComponent(key) + "=" + encodeURIComponent(stringifyParam(value)));
+        }
+    }
+    return out.join("&");
+}
+
+function stringifyParam(value: unknown): string {
+    if (value instanceof Date) return value.toISOString().replace("T", " ");
+    if (typeof value === "object" && value !== null) return JSON.stringify(value);
+    return String(value);
+}
+
+/** Encodes a path segment. */
+export const seg = (value: string) => encodeURIComponent(value);
+
+/**
+ * Safely binds `{:name}` placeholders in a filter expression.
+ *
+ *     rb.filter("title ~ {:q} && created > {:since}", { q: "hi", since: new Date() })
+ */
+export function bindFilter(expression: string, params?: Json): string {
+    if (!params) return expression;
+    return expression.replace(/\{:([\w]+)\}/g, (match, name: string) =>
+        name in params ? filterLiteral(params[name]) : match,
+    );
+}
+
+function filterLiteral(value: unknown): string {
+    if (value === null || value === undefined) return "null";
+    if (typeof value === "number" || typeof value === "boolean") return String(value);
+    if (typeof value === "string") return JSON.stringify(value);
+    if (value instanceof Date) return JSON.stringify(value.toISOString().replace("T", " "));
+    const json = JSON.stringify(value);
+    // arrays/objects are compared as JSON text
+    return /^[[{]/.test(json) ? JSON.stringify(json) : json;
+}

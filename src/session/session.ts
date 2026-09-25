@@ -1,1 +1,116 @@
-aW1wb3J0IHsgcmVhZENvb2tpZSwgd3JpdGVDb29raWUsIHR5cGUgQ29va2llT3B0aW9ucyB9IGZyb20gIi4uL2ludGVybmFsL2Nvb2tpZSI7CmltcG9ydCB7IHJlYWRDbGFpbXMsIHRva2VuRXhwaXJlZCB9IGZyb20gIi4uL2ludGVybmFsL3Rva2VuIjsKaW1wb3J0IHsgU0VTU0lPTl9LRVksIFNVUEVSVVNFUlMsIFNVUEVSVVNFUlNfSUQgfSBmcm9tICIuLi9wcm90b2NvbCI7CmltcG9ydCB0eXBlIHsgUm93IH0gZnJvbSAiLi4vdHlwZXMiOwoKZXhwb3J0IHR5cGUgU2Vzc2lvbkxpc3RlbmVyID0gKHRva2VuOiBzdHJpbmcsIHJlY29yZDogUm93IHwgbnVsbCkgPT4gdm9pZDsKCi8qKgogKiBIb2xkcyB0aGUgc2lnbmVkLWluIHRva2VuIGFuZCByZWNvcmQuIEV4dGVuZCBpdCB0byBwZXJzaXN0IHRoZSBzZXNzaW9uCiAqIGFueXdoZXJlIChzZWUgYE1lbW9yeVNlc3Npb25gLCBgQnJvd3NlclNlc3Npb25gLCBgQXN5bmNTZXNzaW9uYCkuCiAqLwpleHBvcnQgY2xhc3MgU2Vzc2lvbiB7CiAgICBwcm90ZWN0ZWQgX3Rva2VuID0gIiI7CiAgICBwcm90ZWN0ZWQgX3JlY29yZDogUm93IHwgbnVsbCA9IG51bGw7CiAgICBwcml2YXRlIGxpc3RlbmVycyA9IG5ldyBTZXQ8U2Vzc2lvbkxpc3RlbmVyPigpOwoKICAgIGdldCB0b2tlbigpOiBzdHJpbmcgewogICAgICAgIHJldHVybiB0aGlzLl90b2tlbjsKICAgIH0KCiAgICBnZXQgcmVjb3JkKCk6IFJvdyB8IG51bGwgewogICAgICAgIHJldHVybiB0aGlzLl9yZWNvcmQ7CiAgICB9CgogICAgLyoqIFRydWUgd2hlbiBhIHRva2VuIGlzIHByZXNlbnQgYW5kIG5vdCBleHBpcmVkLiAqLwogICAgZ2V0IGlzVmFsaWQoKTogYm9vbGVhbiB7CiAgICAgICAgcmV0dXJuICF0b2tlbkV4cGlyZWQodGhpcy5fdG9rZW4pOwogICAgfQoKICAgIC8qKiBUcnVlIHdoZW4gdGhlIHNlc3Npb24gYmVsb25ncyB0byBhIHN1cGVydXNlci4gKi8KICAgIGdldCBpc1N1cGVydXNlcigpOiBib29sZWFuIHsKICAgICAgICBjb25zdCBjbGFpbXMgPSByZWFkQ2xhaW1zKHRoaXMuX3Rva2VuKTsKICAgICAgICBpZiAoY2xhaW1zLnR5cGUgIT09ICJhdXRoIikgcmV0dXJuIGZhbHNlOwogICAgICAgIGlmICh0aGlzLl9yZWNvcmQ/LmNvbGxlY3Rpb25OYW1lKSByZXR1cm4gdGhpcy5fcmVjb3JkLmNvbGxlY3Rpb25OYW1lID09PSBTVVBFUlVTRVJTOwogICAgICAgIHJldHVybiBjbGFpbXMuY29sbGVjdGlvbklkID09PSBTVVBFUlVTRVJTX0lEOwogICAgfQoKICAgIC8qKiBUcnVlIHdoZW4gdGhlIHNlc3Npb24gYmVsb25ncyB0byBhIHJlZ3VsYXIgKG5vbi1zdXBlcnVzZXIpIGF1dGggcmVjb3JkLiAqLwogICAgZ2V0IGlzVXNlcigpOiBib29sZWFuIHsKICAgICAgICByZXR1cm4gcmVhZENsYWltcyh0aGlzLl90b2tlbikudHlwZSA9PT0gImF1dGgiICYmICF0aGlzLmlzU3VwZXJ1c2VyOwogICAgfQoKICAgIC8qKiBTdG9yZXMgYSBuZXcgdG9rZW4gYW5kIHJlY29yZCBhbmQgbm90aWZpZXMgbGlzdGVuZXJzLiAqLwogICAgc2V0KHRva2VuOiBzdHJpbmcsIHJlY29yZD86IFJvdyB8IG51bGwpOiB2b2lkIHsKICAgICAgICB0aGlzLl90b2tlbiA9IHRva2VuIHx8ICIiOwogICAgICAgIHRoaXMuX3JlY29yZCA9IHJlY29yZCA/PyBudWxsOwogICAgICAgIHRoaXMuZW1pdCgpOwogICAgfQoKICAgIC8qKiBTaWducyBvdXQgbG9jYWxseSBhbmQgbm90aWZpZXMgbGlzdGVuZXJzLiAqLwogICAgY2xlYXIoKTogdm9pZCB7CiAgICAgICAgdGhpcy5fdG9rZW4gPSAiIjsKICAgICAgICB0aGlzLl9yZWNvcmQgPSBudWxsOwogICAgICAgIHRoaXMuZW1pdCgpOwogICAgfQoKICAgIC8qKgogICAgICogTGlzdGVucyBmb3Igc2Vzc2lvbiBjaGFuZ2VzLiBSZXR1cm5zIGEgZnVuY3Rpb24gdGhhdCBzdG9wcyBsaXN0ZW5pbmcuCiAgICAgKiBQYXNzIGBpbW1lZGlhdGVgIHRvIGFsc28gcmVjZWl2ZSB0aGUgY3VycmVudCBzdGF0ZSByaWdodCBhd2F5LgogICAgICovCiAgICBvbkNoYW5nZShsaXN0ZW5lcjogU2Vzc2lvbkxpc3RlbmVyLCBpbW1lZGlhdGUgPSBmYWxzZSk6ICgpID0+IHZvaWQgewogICAgICAgIHRoaXMubGlzdGVuZXJzLmFkZChsaXN0ZW5lcik7CiAgICAgICAgaWYgKGltbWVkaWF0ZSkgbGlzdGVuZXIodGhpcy5fdG9rZW4sIHRoaXMuX3JlY29yZCk7CiAgICAgICAgcmV0dXJuICgpID0+IHsKICAgICAgICAgICAgdGhpcy5saXN0ZW5lcnMuZGVsZXRlKGxpc3RlbmVyKTsKICAgICAgICB9OwogICAgfQoKICAgIHByb3RlY3RlZCBlbWl0KCk6IHZvaWQgewogICAgICAgIGZvciAoY29uc3QgbCBvZiBbLi4udGhpcy5saXN0ZW5lcnNdKSBsKHRoaXMuX3Rva2VuLCB0aGlzLl9yZWNvcmQpOwogICAgfQoKICAgIC8qKiBSZXN0b3JlcyB0aGUgc2Vzc2lvbiBmcm9tIGEgYENvb2tpZWAgaGVhZGVyIChlLmcuIG9uIGEgc2VydmVyKS4gKi8KICAgIGxvYWRDb29raWUoY29va2llSGVhZGVyOiBzdHJpbmcsIG5hbWUgPSBTRVNTSU9OX0tFWSk6IHZvaWQgewogICAgICAgIGNvbnN0IHJhdyA9IHJlYWRDb29raWUoY29va2llSGVhZGVyIHx8ICIiLCBuYW1lKTsKICAgICAgICBsZXQgcGFyc2VkOiBhbnkgPSB7fTsKICAgICAgICB0cnkgewogICAgICAgICAgICBwYXJzZWQgPSByYXcgPyBKU09OLnBhcnNlKHJhdykgOiB7fTsKICAgICAgICB9IGNhdGNoIHt9CiAgICAgICAgdGhpcy5zZXQocGFyc2VkPy50b2tlbiB8fCAiIiwgcGFyc2VkPy5yZWNvcmQgfHwgbnVsbCk7CiAgICB9CgogICAgLyoqCiAgICAgKiBTZXJpYWxpc2VzIHRoZSBzZXNzaW9uIGludG8gYSBgU2V0LUNvb2tpZWAgaGVhZGVyIHZhbHVlLgogICAgICogVGhlIGNvb2tpZSBleHBpcmVzIHRvZ2V0aGVyIHdpdGggdGhlIHRva2VuLiBJZiB0aGUgcmVzdWx0IGlzIGxhcmdlcgogICAgICogdGhhbiA0IEtCLCBvbmx5IHRoZSByZWNvcmQncyBjb3JlIGZpZWxkcyBhcmUga2VwdC4KICAgICAqLwogICAgdG9Db29raWUob3B0aW9uczogQ29va2llT3B0aW9ucyA9IHt9KTogc3RyaW5nIHsKICAgICAgICBjb25zdCB7IG5hbWUgPSBTRVNTSU9OX0tFWSwgLi4ucmVzdCB9ID0gb3B0aW9uczsKICAgICAgICBjb25zdCBvcHRzOiBDb29raWVPcHRpb25zID0gewogICAgICAgICAgICBzZWN1cmU6IHRydWUsCiAgICAgICAgICAgIHNhbWVTaXRlOiB0cnVlLAogICAgICAgICAgICBodHRwT25seTogdHJ1ZSwKICAgICAgICAgICAgcGF0aDogIi8iLAogICAgICAgICAgICAuLi5yZXN0LAogICAgICAgIH07CiAgICAgICAgaWYgKCFvcHRzLmV4cGlyZXMpIHsKICAgICAgICAgICAgY29uc3QgZXhwID0gcmVhZENsYWltcyh0aGlzLl90b2tlbikuZXhwOwogICAgICAgICAgICBvcHRzLmV4cGlyZXMgPSBuZXcgRGF0ZShleHAgPyBleHAgKiAxMDAwIDogMCk7CiAgICAgICAgfQoKICAgICAgICBjb25zdCBmdWxsID0gd3JpdGVDb29raWUoCiAgICAgICAgICAgIG5hbWUsCiAgICAgICAgICAgIEpTT04uc3RyaW5naWZ5KHsgdG9rZW46IHRoaXMuX3Rva2VuLCByZWNvcmQ6IHRoaXMuX3JlY29yZCB9KSwKICAgICAgICAgICAgb3B0cywKICAgICAgICApOwogICAgICAgIGlmIChmdWxsLmxlbmd0aCA8PSA0MDk2IHx8ICF0aGlzLl9yZWNvcmQpIHJldHVybiBmdWxsOwoKICAgICAgICBjb25zdCByID0gdGhpcy5fcmVjb3JkOwogICAgICAgIGNvbnN0IHNsaW0gPSB7IGlkOiByLmlkLCBlbWFpbDogci5lbWFpbCwgY29sbGVjdGlvbklkOiByLmNvbGxlY3Rpb25JZCwgY29sbGVjdGlvbk5hbWU6IHIuY29sbGVjdGlvbk5hbWUsIHZlcmlmaWVkOiByLnZlcmlmaWVkIH07CiAgICAgICAgcmV0dXJuIHdyaXRlQ29va2llKG5hbWUsIEpTT04uc3RyaW5naWZ5KHsgdG9rZW46IHRoaXMuX3Rva2VuLCByZWNvcmQ6IHNsaW0gfSksIG9wdHMpOwogICAgfQp9CgovKiogU2Vzc2lvbiBrZXB0IG9ubHkgaW4gbWVtb3J5IChsb3N0IG9uIHJlbG9hZCkuIERlZmF1bHQgb24gc2VydmVycy4gKi8KZXhwb3J0IGNsYXNzIE1lbW9yeVNlc3Npb24gZXh0ZW5kcyBTZXNzaW9uIHt9Cg==
+import { readCookie, writeCookie, type CookieOptions } from "../internal/cookie";
+import { readClaims, tokenExpired } from "../internal/token";
+import { SESSION_KEY, SUPERUSERS, SUPERUSERS_ID } from "../protocol";
+import type { Row } from "../types";
+
+export type SessionListener = (token: string, record: Row | null) => void;
+
+/**
+ * Holds the signed-in token and record. Extend it to persist the session
+ * anywhere (see `MemorySession`, `BrowserSession`, `AsyncSession`).
+ */
+export class Session {
+    protected _token = "";
+    protected _record: Row | null = null;
+    private listeners = new Set<SessionListener>();
+
+    get token(): string {
+        return this._token;
+    }
+
+    get record(): Row | null {
+        return this._record;
+    }
+
+    /** True when a token is present and not expired. */
+    get isValid(): boolean {
+        return !tokenExpired(this._token);
+    }
+
+    /** True when the session belongs to a superuser. */
+    get isSuperuser(): boolean {
+        const claims = readClaims(this._token);
+        if (claims.type !== "auth") return false;
+        if (this._record?.collectionName) return this._record.collectionName === SUPERUSERS;
+        return claims.collectionId === SUPERUSERS_ID;
+    }
+
+    /** True when the session belongs to a regular (non-superuser) auth record. */
+    get isUser(): boolean {
+        return readClaims(this._token).type === "auth" && !this.isSuperuser;
+    }
+
+    /** Stores a new token and record and notifies listeners. */
+    set(token: string, record?: Row | null): void {
+        this._token = token || "";
+        this._record = record ?? null;
+        this.emit();
+    }
+
+    /** Signs out locally and notifies listeners. */
+    clear(): void {
+        this._token = "";
+        this._record = null;
+        this.emit();
+    }
+
+    /**
+     * Listens for session changes. Returns a function that stops listening.
+     * Pass `immediate` to also receive the current state right away.
+     */
+    onChange(listener: SessionListener, immediate = false): () => void {
+        this.listeners.add(listener);
+        if (immediate) listener(this._token, this._record);
+        return () => {
+            this.listeners.delete(listener);
+        };
+    }
+
+    protected emit(): void {
+        for (const l of [...this.listeners]) l(this._token, this._record);
+    }
+
+    /** Restores the session from a `Cookie` header (e.g. on a server). */
+    loadCookie(cookieHeader: string, name = SESSION_KEY): void {
+        const raw = readCookie(cookieHeader || "", name);
+        let parsed: any = {};
+        try {
+            parsed = raw ? JSON.parse(raw) : {};
+        } catch {}
+        this.set(parsed?.token || "", parsed?.record || null);
+    }
+
+    /**
+     * Serialises the session into a `Set-Cookie` header value.
+     * The cookie expires together with the token. If the result is larger
+     * than 4 KB, only the record's core fields are kept.
+     */
+    toCookie(options: CookieOptions = {}): string {
+        const { name = SESSION_KEY, ...rest } = options;
+        const opts: CookieOptions = {
+            secure: true,
+            sameSite: true,
+            httpOnly: true,
+            path: "/",
+            ...rest,
+        };
+        if (!opts.expires) {
+            const exp = readClaims(this._token).exp;
+            opts.expires = new Date(exp ? exp * 1000 : 0);
+        }
+
+        const full = writeCookie(
+            name,
+            JSON.stringify({ token: this._token, record: this._record }),
+            opts,
+        );
+        if (full.length <= 4096 || !this._record) return full;
+
+        const r = this._record;
+        const slim = { id: r.id, email: r.email, collectionId: r.collectionId, collectionName: r.collectionName, verified: r.verified };
+        return writeCookie(name, JSON.stringify({ token: this._token, record: slim }), opts);
+    }
+}
+
+/** Session kept only in memory (lost on reload). Default on servers. */
+export class MemorySession extends Session {}

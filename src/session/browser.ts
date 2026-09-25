@@ -1,1 +1,66 @@
-aW1wb3J0IHsgU0VTU0lPTl9LRVkgfSBmcm9tICIuLi9wcm90b2NvbCI7CmltcG9ydCB0eXBlIHsgUm93IH0gZnJvbSAiLi4vdHlwZXMiOwppbXBvcnQgeyBTZXNzaW9uIH0gZnJvbSAiLi9zZXNzaW9uIjsKCi8qKgogKiBTZXNzaW9uIHNhdmVkIGluIGBsb2NhbFN0b3JhZ2VgLCBrZXB0IGluIHN5bmMgYWNyb3NzIGJyb3dzZXIgdGFicy4KICogRmFsbHMgYmFjayB0byBtZW1vcnkgd2hlbiBzdG9yYWdlIGlzbid0IGF2YWlsYWJsZS4KICovCmV4cG9ydCBjbGFzcyBCcm93c2VyU2Vzc2lvbiBleHRlbmRzIFNlc3Npb24gewogICAgcHJpdmF0ZSByZWFkb25seSBrZXk6IHN0cmluZzsKICAgIHByaXZhdGUgcmVhZG9ubHkgc3RvcmFnZTogU3RvcmFnZSB8IG51bGw7CgogICAgY29uc3RydWN0b3Ioa2V5ID0gU0VTU0lPTl9LRVkpIHsKICAgICAgICBzdXBlcigpOwogICAgICAgIHRoaXMua2V5ID0ga2V5OwogICAgICAgIHRoaXMuc3RvcmFnZSA9IEJyb3dzZXJTZXNzaW9uLmRldGVjdFN0b3JhZ2UoKTsKICAgICAgICB0aGlzLnJlc3RvcmUoKTsKCiAgICAgICAgaWYgKHR5cGVvZiB3aW5kb3cgIT09ICJ1bmRlZmluZWQiICYmIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKSB7CiAgICAgICAgICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJzdG9yYWdlIiwgKGUpID0+IHsKICAgICAgICAgICAgICAgIGlmIChlLmtleSA9PT0gdGhpcy5rZXkpIHRoaXMucmVzdG9yZSh0cnVlKTsKICAgICAgICAgICAgfSk7CiAgICAgICAgfQogICAgfQoKICAgIHNldCh0b2tlbjogc3RyaW5nLCByZWNvcmQ/OiBSb3cgfCBudWxsKTogdm9pZCB7CiAgICAgICAgdGhpcy53cml0ZSh7IHRva2VuLCByZWNvcmQ6IHJlY29yZCA/PyBudWxsIH0pOwogICAgICAgIHN1cGVyLnNldCh0b2tlbiwgcmVjb3JkKTsKICAgIH0KCiAgICBjbGVhcigpOiB2b2lkIHsKICAgICAgICB0cnkgewogICAgICAgICAgICB0aGlzLnN0b3JhZ2U/LnJlbW92ZUl0ZW0odGhpcy5rZXkpOwogICAgICAgIH0gY2F0Y2gge30KICAgICAgICBzdXBlci5jbGVhcigpOwogICAgfQoKICAgIHByaXZhdGUgcmVzdG9yZShub3RpZnkgPSBmYWxzZSk6IHZvaWQgewogICAgICAgIGxldCBzYXZlZDogYW55ID0gbnVsbDsKICAgICAgICB0cnkgewogICAgICAgICAgICBjb25zdCByYXcgPSB0aGlzLnN0b3JhZ2U/LmdldEl0ZW0odGhpcy5rZXkpOwogICAgICAgICAgICBzYXZlZCA9IHJhdyA/IEpTT04ucGFyc2UocmF3KSA6IG51bGw7CiAgICAgICAgfSBjYXRjaCB7fQogICAgICAgIHRoaXMuX3Rva2VuID0gc2F2ZWQ/LnRva2VuIHx8ICIiOwogICAgICAgIHRoaXMuX3JlY29yZCA9IHNhdmVkPy5yZWNvcmQgfHwgbnVsbDsKICAgICAgICBpZiAobm90aWZ5KSB0aGlzLmVtaXQoKTsKICAgIH0KCiAgICBwcml2YXRlIHdyaXRlKHZhbHVlOiB1bmtub3duKTogdm9pZCB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdGhpcy5zdG9yYWdlPy5zZXRJdGVtKHRoaXMua2V5LCBKU09OLnN0cmluZ2lmeSh2YWx1ZSkpOwogICAgICAgIH0gY2F0Y2gge30KICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyBkZXRlY3RTdG9yYWdlKCk6IFN0b3JhZ2UgfCBudWxsIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBpZiAodHlwZW9mIHdpbmRvdyA9PT0gInVuZGVmaW5lZCIgfHwgIXdpbmRvdy5sb2NhbFN0b3JhZ2UpIHJldHVybiBudWxsOwogICAgICAgICAgICBjb25zdCBwcm9iZSA9ICJfX3JiX3Byb2JlX18iOwogICAgICAgICAgICB3aW5kb3cubG9jYWxTdG9yYWdlLnNldEl0ZW0ocHJvYmUsICIxIik7CiAgICAgICAgICAgIHdpbmRvdy5sb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbShwcm9iZSk7CiAgICAgICAgICAgIHJldHVybiB3aW5kb3cubG9jYWxTdG9yYWdlOwogICAgICAgIH0gY2F0Y2ggewogICAgICAgICAgICByZXR1cm4gbnVsbDsKICAgICAgICB9CiAgICB9Cn0K
+import { SESSION_KEY } from "../protocol";
+import type { Row } from "../types";
+import { Session } from "./session";
+
+/**
+ * Session saved in `localStorage`, kept in sync across browser tabs.
+ * Falls back to memory when storage isn't available.
+ */
+export class BrowserSession extends Session {
+    private readonly key: string;
+    private readonly storage: Storage | null;
+
+    constructor(key = SESSION_KEY) {
+        super();
+        this.key = key;
+        this.storage = BrowserSession.detectStorage();
+        this.restore();
+
+        if (typeof window !== "undefined" && window.addEventListener) {
+            window.addEventListener("storage", (e) => {
+                if (e.key === this.key) this.restore(true);
+            });
+        }
+    }
+
+    set(token: string, record?: Row | null): void {
+        this.write({ token, record: record ?? null });
+        super.set(token, record);
+    }
+
+    clear(): void {
+        try {
+            this.storage?.removeItem(this.key);
+        } catch {}
+        super.clear();
+    }
+
+    private restore(notify = false): void {
+        let saved: any = null;
+        try {
+            const raw = this.storage?.getItem(this.key);
+            saved = raw ? JSON.parse(raw) : null;
+        } catch {}
+        this._token = saved?.token || "";
+        this._record = saved?.record || null;
+        if (notify) this.emit();
+    }
+
+    private write(value: unknown): void {
+        try {
+            this.storage?.setItem(this.key, JSON.stringify(value));
+        } catch {}
+    }
+
+    private static detectStorage(): Storage | null {
+        try {
+            if (typeof window === "undefined" || !window.localStorage) return null;
+            const probe = "__rb_probe__";
+            window.localStorage.setItem(probe, "1");
+            window.localStorage.removeItem(probe);
+            return window.localStorage;
+        } catch {
+            return null;
+        }
+    }
+}

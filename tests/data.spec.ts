@@ -1,1 +1,119 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGV4cGVjdCwgaXQgfSBmcm9tICJ2aXRlc3QiOwppbXBvcnQgeyBjcmVhdGVDbGllbnQsIE1lbW9yeVNlc3Npb24gfSBmcm9tICIuLi9zcmMiOwppbXBvcnQgeyBtb2NrRmV0Y2ggfSBmcm9tICIuL2hlbHBlcnMiOwoKY29uc3QgbWFrZSA9IChyZXBseT86IFBhcmFtZXRlcnM8dHlwZW9mIG1vY2tGZXRjaD5bMF0pID0+IHsKICAgIGNvbnN0IG0gPSBtb2NrRmV0Y2gocmVwbHkpOwogICAgY29uc3QgcmIgPSBjcmVhdGVDbGllbnQoImh0dHA6Ly94IiwgeyBzZXNzaW9uOiBuZXcgTWVtb3J5U2Vzc2lvbigpLCBmZXRjaDogbS5mZXRjaCB9KTsKICAgIHJldHVybiB7IHJiLCAuLi5tIH07Cn07CgpkZXNjcmliZSgidGFibGVzIiwgKCkgPT4gewogICAgaXQoImxpc3RzIHdpdGggb3B0aW9ucyIsIGFzeW5jICgpID0+IHsKICAgICAgICBjb25zdCB7IHJiLCBjYWxscyB9ID0gbWFrZSgoKSA9PiAoeyBib2R5OiB7IGl0ZW1zOiBbXSwgcGFnZTogMiwgcGVyUGFnZTogNSwgdG90YWxJdGVtczogMCwgdG90YWxQYWdlczogMCB9IH0pKTsKICAgICAgICBhd2FpdCByYi5mcm9tKCJwb3N0cyIpLmxpc3QoeyBwYWdlOiAyLCBwZXJQYWdlOiA1LCBzb3J0OiAiLWNyZWF0ZWQiLCBmaWx0ZXI6ICJhPTEiLCBleHBhbmQ6ICJhdXRob3IiIH0pOwogICAgICAgIGV4cGVjdChjYWxsc1swXS51cmwpLnRvQmUoCiAgICAgICAgICAgICJodHRwOi8veC9hcGkvY29sbGVjdGlvbnMvcG9zdHMvcmVjb3Jkcz9wYWdlPTImcGVyUGFnZT01JmZpbHRlcj1hJTNEMSZzb3J0PS1jcmVhdGVkJmV4cGFuZD1hdXRob3IiLAogICAgICAgICk7CiAgICB9KTsKCiAgICBpdCgid2Fsa3MgZXZlcnkgcGFnZSBpbiBhbGwoKSIsIGFzeW5jICgpID0+IHsKICAgICAgICBsZXQgbiA9IDA7CiAgICAgICAgY29uc3QgeyByYiB9ID0gbWFrZSgoKSA9PiB7CiAgICAgICAgICAgIG4rKzsKICAgICAgICAgICAgcmV0dXJuIHsgYm9keTogeyBpdGVtczogbiA9PT0gMSA/IFt7IGlkOiAiMSIgfSwgeyBpZDogIjIiIH1dIDogW3sgaWQ6ICIzIiB9XSwgcGVyUGFnZTogMiB9IH07CiAgICAgICAgfSk7CiAgICAgICAgY29uc3Qgcm93cyA9IGF3YWl0IHJiLmZyb20oInBvc3RzIikuYWxsKHsgY2h1bms6IDIgfSk7CiAgICAgICAgZXhwZWN0KHJvd3MubWFwKChyKSA9PiByLmlkKSkudG9FcXVhbChbIjEiLCAiMiIsICIzIl0pOwogICAgfSk7CgogICAgaXQoImZpcnN0KCkgdGhyb3dzIDQwNCB3aGVuIGVtcHR5IiwgYXN5bmMgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIgfSA9IG1ha2UoKCkgPT4gKHsgYm9keTogeyBpdGVtczogW10sIHBlclBhZ2U6IDEgfSB9KSk7CiAgICAgICAgYXdhaXQgZXhwZWN0KHJiLmZyb20oInBvc3RzIikuZmlyc3QoImE9MSIpKS5yZWplY3RzLnRvTWF0Y2hPYmplY3QoeyBzdGF0dXM6IDQwNCB9KTsKICAgIH0pOwoKICAgIGl0KCJjcmVhdGUgLyB1cGRhdGUgLyByZW1vdmUiLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiwgY2FsbHMgfSA9IG1ha2UoKF91LCBpbml0KSA9PiAoeyBib2R5OiBpbml0Lm1ldGhvZCA9PT0gIkRFTEVURSIgPyB7fSA6IHsgaWQ6ICIxIiB9IH0pKTsKICAgICAgICBhd2FpdCByYi5mcm9tKCJwb3N0cyIpLmNyZWF0ZSh7IHRpdGxlOiAiYSIgfSk7CiAgICAgICAgYXdhaXQgcmIuZnJvbSgicG9zdHMiKS51cGRhdGUoIjEiLCB7IHRpdGxlOiAiYiIgfSk7CiAgICAgICAgYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5yZW1vdmUoIjEiKTsKICAgICAgICBleHBlY3QoY2FsbHMubWFwKChjKSA9PiBjLmluaXQubWV0aG9kKSkudG9FcXVhbChbIlBPU1QiLCAiUEFUQ0giLCAiREVMRVRFIl0pOwogICAgICAgIGV4cGVjdChjYWxsc1sxXS51cmwpLnRvQmUoImh0dHA6Ly94L2FwaS9jb2xsZWN0aW9ucy9wb3N0cy9yZWNvcmRzLzEiKTsKICAgIH0pOwoKICAgIGl0KCJ1cGxvYWRzIGZpbGVzIGFzIG11bHRpcGFydCB3aXRoIGEganNvbiBwYXJ0IiwgYXN5bmMgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIsIGNhbGxzIH0gPSBtYWtlKCgpID0+ICh7IGJvZHk6IHsgaWQ6ICIxIiB9IH0pKTsKICAgICAgICBhd2FpdCByYi5mcm9tKCJwb3N0cyIpLmNyZWF0ZSh7IHRpdGxlOiAiYSIsIHZpZXdzOiAyLCBjb3ZlcjogbmV3IEJsb2IoWyJ4Il0pIH0pOwogICAgICAgIGNvbnN0IGJvZHkgPSBjYWxsc1swXS5pbml0LmJvZHkgYXMgRm9ybURhdGE7CiAgICAgICAgZXhwZWN0KGJvZHkpLnRvQmVJbnN0YW5jZU9mKEZvcm1EYXRhKTsKICAgICAgICBleHBlY3QoSlNPTi5wYXJzZShib2R5LmdldCgiQGpzb25QYXlsb2FkIikgYXMgc3RyaW5nKSkudG9FcXVhbCh7IHRpdGxlOiAiYSIsIHZpZXdzOiAyIH0pOwogICAgICAgIGV4cGVjdChib2R5LmdldCgiY292ZXIiKSkudG9CZUluc3RhbmNlT2YoQmxvYik7CiAgICB9KTsKCiAgICBpdCgia2VlcHMgdGhlIHNlc3Npb24gcmVjb3JkIGluIHN5bmMgb24gdXBkYXRlIGFuZCByZW1vdmUiLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiB9ID0gbWFrZSgoX3UsIGluaXQpID0+ICh7IGJvZHk6IGluaXQubWV0aG9kID09PSAiUEFUQ0giID8geyBpZDogInUxIiwgY29sbGVjdGlvbklkOiAiYzEiLCBjb2xsZWN0aW9uTmFtZTogInVzZXJzIiwgbmFtZTogIk5ldyIgfSA6IHt9IH0pKTsKICAgICAgICByYi5zZXNzaW9uLnNldCgidCIsIHsgaWQ6ICJ1MSIsIGNvbGxlY3Rpb25JZDogImMxIiwgY29sbGVjdGlvbk5hbWU6ICJ1c2VycyIsIG5hbWU6ICJPbGQiIH0pOwogICAgICAgIGF3YWl0IHJiLmZyb20oInVzZXJzIikudXBkYXRlKCJ1MSIsIHsgbmFtZTogIk5ldyIgfSk7CiAgICAgICAgZXhwZWN0KHJiLnNlc3Npb24ucmVjb3JkPy5uYW1lKS50b0JlKCJOZXciKTsKICAgICAgICBhd2FpdCByYi5mcm9tKCJ1c2VycyIpLnJlbW92ZSgidTEiKTsKICAgICAgICBleHBlY3QocmIuc2Vzc2lvbi50b2tlbikudG9CZSgiIik7CiAgICB9KTsKfSk7CgpkZXNjcmliZSgiYXV0aCIsICgpID0+IHsKICAgIGl0KCJzaWducyBpbiB3aXRoIHBhc3N3b3JkIGFuZCBzYXZlcyB0aGUgc2Vzc2lvbiIsIGFzeW5jICgpID0+IHsKICAgICAgICBjb25zdCB7IHJiLCBjYWxscyB9ID0gbWFrZSgoKSA9PiAoeyBib2R5OiB7IHRva2VuOiAidG9rIiwgcmVjb3JkOiB7IGlkOiAiMSIgfSB9IH0pKTsKICAgICAgICBhd2FpdCByYi5hdXRoKCJ1c2VycyIpLnNpZ25JbldpdGhQYXNzd29yZCgiYUBiLmMiLCAicHciKTsKICAgICAgICBleHBlY3QoY2FsbHNbMF0udXJsKS50b0JlKCJodHRwOi8veC9hcGkvY29sbGVjdGlvbnMvdXNlcnMvYXV0aC13aXRoLXBhc3N3b3JkIik7CiAgICAgICAgZXhwZWN0KEpTT04ucGFyc2UoY2FsbHNbMF0uaW5pdC5ib2R5KSkudG9FcXVhbCh7IGlkZW50aXR5OiAiYUBiLmMiLCBwYXNzd29yZDogInB3IiB9KTsKICAgICAgICBleHBlY3QocmIuc2Vzc2lvbi50b2tlbikudG9CZSgidG9rIik7CiAgICB9KTsKCiAgICBpdCgib3RwIGZsb3ciLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiwgY2FsbHMgfSA9IG1ha2UoKHUpID0+ICh7IGJvZHk6IHUuZW5kc1dpdGgoInJlcXVlc3Qtb3RwIikgPyB7IG90cElkOiAibzEiIH0gOiB7IHRva2VuOiAidCIsIHJlY29yZDogeyBpZDogIjEiIH0gfSB9KSk7CiAgICAgICAgY29uc3QgeyBvdHBJZCB9ID0gYXdhaXQgcmIuYXV0aCgpLnJlcXVlc3RPdHAoImFAYi5jIik7CiAgICAgICAgYXdhaXQgcmIuYXV0aCgpLnNpZ25JbldpdGhPdHAob3RwSWQsICIxMjM0NTYiKTsKICAgICAgICBleHBlY3QoSlNPTi5wYXJzZShjYWxsc1sxXS5pbml0LmJvZHkpKS50b0VxdWFsKHsgb3RwSWQ6ICJvMSIsIHBhc3N3b3JkOiAiMTIzNDU2IiB9KTsKICAgICAgICBleHBlY3QocmIuc2Vzc2lvbi50b2tlbikudG9CZSgidCIpOwogICAgfSk7Cn0pOwoKZGVzY3JpYmUoImZpbGVzIGFuZCBiYXRjaCIsICgpID0+IHsKICAgIGl0KCJidWlsZHMgZmlsZSB1cmxzIiwgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIgfSA9IG1ha2UoKTsKICAgICAgICBleHBlY3QocmIuZmlsZXMudXJsKHsgaWQ6ICJyMSIsIGNvbGxlY3Rpb25JZDogImMxIiB9LCAiYSBiLnBuZyIsIHsgdGh1bWI6ICIxMDB4MTAwIiwgZG93bmxvYWQ6IHRydWUgfSkpLnRvQmUoCiAgICAgICAgICAgICJodHRwOi8veC9hcGkvZmlsZXMvYzEvcjEvYSUyMGIucG5nP3RodW1iPTEwMHgxMDAmZG93bmxvYWQ9dHJ1ZSIsCiAgICAgICAgKTsKICAgICAgICBleHBlY3QocmIuZmlsZXMudXJsKG51bGwsICJ4IikpLnRvQmUoIiIpOwogICAgfSk7CgogICAgaXQoInNlbmRzIGEgYmF0Y2giLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiwgY2FsbHMgfSA9IG1ha2UoKCkgPT4gKHsgYm9keTogW10gfSkpOwogICAgICAgIGNvbnN0IGIgPSByYi5iYXRjaCgpOwogICAgICAgIGIuZnJvbSgicG9zdHMiKS5jcmVhdGUoeyB0aXRsZTogImEiLCBmaWxlOiBuZXcgQmxvYihbIngiXSkgfSk7CiAgICAgICAgYi5mcm9tKCJwb3N0cyIpLnJlbW92ZSgiOSIpOwogICAgICAgIGF3YWl0IGIuc2VuZCgpOwogICAgICAgIGNvbnN0IGZvcm0gPSBjYWxsc1swXS5pbml0LmJvZHkgYXMgRm9ybURhdGE7CiAgICAgICAgY29uc3QgcGF5bG9hZCA9IEpTT04ucGFyc2UoZm9ybS5nZXQoIkBqc29uUGF5bG9hZCIpIGFzIHN0cmluZyk7CiAgICAgICAgZXhwZWN0KHBheWxvYWQucmVxdWVzdHMpLnRvSGF2ZUxlbmd0aCgyKTsKICAgICAgICBleHBlY3QocGF5bG9hZC5yZXF1ZXN0c1swXSkudG9NYXRjaE9iamVjdCh7IG1ldGhvZDogIlBPU1QiLCB1cmw6ICIvYXBpL2NvbGxlY3Rpb25zL3Bvc3RzL3JlY29yZHMiLCBib2R5OiB7IHRpdGxlOiAiYSIgfSB9KTsKICAgICAgICBleHBlY3QocGF5bG9hZC5yZXF1ZXN0c1sxXSkudG9NYXRjaE9iamVjdCh7IG1ldGhvZDogIkRFTEVURSIsIHVybDogIi9hcGkvY29sbGVjdGlvbnMvcG9zdHMvcmVjb3Jkcy85IiB9KTsKICAgICAgICBleHBlY3QoZm9ybS5nZXQoInJlcXVlc3RzLjAuZmlsZSIpKS50b0JlSW5zdGFuY2VPZihCbG9iKTsKICAgIH0pOwp9KTsKCmRlc2NyaWJlKCJhZG1pbiIsICgpID0+IHsKICAgIGl0KCJyZWFjaGVzIHRoZSBhZG1pbiBlbmRwb2ludHMiLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiwgY2FsbHMgfSA9IG1ha2UoKCkgPT4gKHsgYm9keToge30gfSkpOwogICAgICAgIGF3YWl0IHJiLmFkbWluLmNvbGxlY3Rpb25zLnRydW5jYXRlKCJwb3N0cyIpOwogICAgICAgIGF3YWl0IHJiLmFkbWluLmFwaUtleXMucm90YXRlKCJrMSIpOwogICAgICAgIGF3YWl0IHJiLmFkbWluLnJscy5zZXRFbmFibGVkKCJwb3N0cyIsIHsgZW5hYmxlZDogdHJ1ZSB9KTsKICAgICAgICBhd2FpdCByYi5hZG1pbi5zcWwoInNlbGVjdCAxIik7CiAgICAgICAgZXhwZWN0KGNhbGxzLm1hcCgoYykgPT4gYy5pbml0Lm1ldGhvZCArICIgIiArIGMudXJsLnJlcGxhY2UoImh0dHA6Ly94IiwgIiIpKSkudG9FcXVhbChbCiAgICAgICAgICAgICJERUxFVEUgL2FwaS9jb2xsZWN0aW9ucy9wb3N0cy90cnVuY2F0ZSIsCiAgICAgICAgICAgICJQT1NUIC9hcGkvYXBpLWtleXMvazEvcm90YXRlIiwKICAgICAgICAgICAgIlBPU1QgL2FwaS9ybHMvdGFibGVzL3Bvc3RzL3JscyIsCiAgICAgICAgICAgICJQT1NUIC9hcGkvc3FsIiwKICAgICAgICBdKTsKICAgIH0pOwp9KTsK
+import { describe, expect, it } from "vitest";
+import { createClient, MemorySession } from "../src";
+import { mockFetch } from "./helpers";
+
+const make = (reply?: Parameters<typeof mockFetch>[0]) => {
+    const m = mockFetch(reply);
+    const rb = createClient("http://x", { session: new MemorySession(), fetch: m.fetch });
+    return { rb, ...m };
+};
+
+describe("tables", () => {
+    it("lists with options", async () => {
+        const { rb, calls } = make(() => ({ body: { items: [], page: 2, perPage: 5, totalItems: 0, totalPages: 0 } }));
+        await rb.from("posts").list({ page: 2, perPage: 5, sort: "-created", filter: "a=1", expand: "author" });
+        expect(calls[0].url).toBe(
+            "http://x/api/collections/posts/records?page=2&perPage=5&filter=a%3D1&sort=-created&expand=author",
+        );
+    });
+
+    it("walks every page in all()", async () => {
+        let n = 0;
+        const { rb } = make(() => {
+            n++;
+            return { body: { items: n === 1 ? [{ id: "1" }, { id: "2" }] : [{ id: "3" }], perPage: 2 } };
+        });
+        const rows = await rb.from("posts").all({ chunk: 2 });
+        expect(rows.map((r) => r.id)).toEqual(["1", "2", "3"]);
+    });
+
+    it("first() throws 404 when empty", async () => {
+        const { rb } = make(() => ({ body: { items: [], perPage: 1 } }));
+        await expect(rb.from("posts").first("a=1")).rejects.toMatchObject({ status: 404 });
+    });
+
+    it("create / update / remove", async () => {
+        const { rb, calls } = make((_u, init) => ({ body: init.method === "DELETE" ? {} : { id: "1" } }));
+        await rb.from("posts").create({ title: "a" });
+        await rb.from("posts").update("1", { title: "b" });
+        await rb.from("posts").remove("1");
+        expect(calls.map((c) => c.init.method)).toEqual(["POST", "PATCH", "DELETE"]);
+        expect(calls[1].url).toBe("http://x/api/collections/posts/records/1");
+    });
+
+    it("uploads files as multipart with a json part", async () => {
+        const { rb, calls } = make(() => ({ body: { id: "1" } }));
+        await rb.from("posts").create({ title: "a", views: 2, cover: new Blob(["x"]) });
+        const body = calls[0].init.body as FormData;
+        expect(body).toBeInstanceOf(FormData);
+        expect(JSON.parse(body.get("@jsonPayload") as string)).toEqual({ title: "a", views: 2 });
+        expect(body.get("cover")).toBeInstanceOf(Blob);
+    });
+
+    it("keeps the session record in sync on update and remove", async () => {
+        const { rb } = make((_u, init) => ({ body: init.method === "PATCH" ? { id: "u1", collectionId: "c1", collectionName: "users", name: "New" } : {} }));
+        rb.session.set("t", { id: "u1", collectionId: "c1", collectionName: "users", name: "Old" });
+        await rb.from("users").update("u1", { name: "New" });
+        expect(rb.session.record?.name).toBe("New");
+        await rb.from("users").remove("u1");
+        expect(rb.session.token).toBe("");
+    });
+});
+
+describe("auth", () => {
+    it("signs in with password and saves the session", async () => {
+        const { rb, calls } = make(() => ({ body: { token: "tok", record: { id: "1" } } }));
+        await rb.auth("users").signInWithPassword("a@b.c", "pw");
+        expect(calls[0].url).toBe("http://x/api/collections/users/auth-with-password");
+        expect(JSON.parse(calls[0].init.body)).toEqual({ identity: "a@b.c", password: "pw" });
+        expect(rb.session.token).toBe("tok");
+    });
+
+    it("otp flow", async () => {
+        const { rb, calls } = make((u) => ({ body: u.endsWith("request-otp") ? { otpId: "o1" } : { token: "t", record: { id: "1" } } }));
+        const { otpId } = await rb.auth().requestOtp("a@b.c");
+        await rb.auth().signInWithOtp(otpId, "123456");
+        expect(JSON.parse(calls[1].init.body)).toEqual({ otpId: "o1", password: "123456" });
+        expect(rb.session.token).toBe("t");
+    });
+});
+
+describe("files and batch", () => {
+    it("builds file urls", () => {
+        const { rb } = make();
+        expect(rb.files.url({ id: "r1", collectionId: "c1" }, "a b.png", { thumb: "100x100", download: true })).toBe(
+            "http://x/api/files/c1/r1/a%20b.png?thumb=100x100&download=true",
+        );
+        expect(rb.files.url(null, "x")).toBe("");
+    });
+
+    it("sends a batch", async () => {
+        const { rb, calls } = make(() => ({ body: [] }));
+        const b = rb.batch();
+        b.from("posts").create({ title: "a", file: new Blob(["x"]) });
+        b.from("posts").remove("9");
+        await b.send();
+        const form = calls[0].init.body as FormData;
+        const payload = JSON.parse(form.get("@jsonPayload") as string);
+        expect(payload.requests).toHaveLength(2);
+        expect(payload.requests[0]).toMatchObject({ method: "POST", url: "/api/collections/posts/records", body: { title: "a" } });
+        expect(payload.requests[1]).toMatchObject({ method: "DELETE", url: "/api/collections/posts/records/9" });
+        expect(form.get("requests.0.file")).toBeInstanceOf(Blob);
+    });
+});
+
+describe("admin", () => {
+    it("reaches the admin endpoints", async () => {
+        const { rb, calls } = make(() => ({ body: {} }));
+        await rb.admin.collections.truncate("posts");
+        await rb.admin.apiKeys.rotate("k1");
+        await rb.admin.rls.setEnabled("posts", { enabled: true });
+        await rb.admin.sql("select 1");
+        expect(calls.map((c) => c.init.method + " " + c.url.replace("http://x", ""))).toEqual([
+            "DELETE /api/collections/posts/truncate",
+            "POST /api/api-keys/k1/rotate",
+            "POST /api/rls/tables/posts/rls",
+            "POST /api/sql",
+        ]);
+    });
+});

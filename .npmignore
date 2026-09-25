@@ -1,1 +1,11 @@
-c3JjCnRlc3RzCnJvbGx1cC5jb25maWcubWpzCnZpdGUuY29uZmlnLnRzCnRzY29uZmlnLmpzb24KdHNjb25maWctdGVzdC5qc29uCgojIGdlbmVyYXRlZCBtYXJrZG93biBwcmV2aWV3cwpSRUFETUUuaHRtbApDSEFOR0VMT0cuaHRtbApMSUNFTlNFLmh0bWwK
+src
+tests
+rollup.config.mjs
+vite.config.ts
+tsconfig.json
+tsconfig-test.json
+
+# generated markdown previews
+README.html
+CHANGELOG.html
+LICENSE.html

@@ -1,1 +1,103 @@
-aW1wb3J0IHR5cGUgeyBSdXN0YUJhc2UgfSBmcm9tICIuLi9jbGllbnQiOwppbXBvcnQgeyBSdXN0YUJhc2VFcnJvciB9IGZyb20gIi4uL2Vycm9ycyI7CmltcG9ydCB7IHNlZyB9IGZyb20gIi4uL2ludGVybmFsL2VuY29kZSI7CmltcG9ydCB0eXBlIHsgQWxsT3B0aW9ucywgQm9keSwgTGlzdE9wdGlvbnMsIFBhZ2UsIFJlYWRPcHRpb25zLCBSZXF1ZXN0T3B0aW9ucyB9IGZyb20gIi4uL3R5cGVzIjsKCi8qKiBNb3ZlcyByZWFkIG9wdGlvbnMgKGZpbHRlciwgc29ydCwgZXhwYW5kLi4uKSBpbnRvIHRoZSBxdWVyeSBzdHJpbmcuICovCmV4cG9ydCBmdW5jdGlvbiByZWFkUXVlcnkob3B0aW9uczogUmVhZE9wdGlvbnMgJiBQYXJ0aWFsPExpc3RPcHRpb25zPiA9IHt9KTogUmVxdWVzdE9wdGlvbnMgewogICAgY29uc3QgeyBleHBhbmQsIGZpZWxkcywgcGFnZSwgcGVyUGFnZSwgZmlsdGVyLCBzb3J0LCBza2lwVG90YWwsIHF1ZXJ5LCAuLi5yZXN0IH0gPSBvcHRpb25zOwogICAgcmV0dXJuIHsKICAgICAgICAuLi5yZXN0LAogICAgICAgIHF1ZXJ5OiB7IHBhZ2UsIHBlclBhZ2UsIGZpbHRlciwgc29ydCwgc2tpcFRvdGFsLCBleHBhbmQsIGZpZWxkcywgLi4uKHF1ZXJ5IHx8IHt9KSB9LAogICAgfTsKfQoKLyoqIFBhZ2VkIGxpc3QgLyByZWFkIC8gd3JpdGUgaGVscGVycyBmb3Igb25lIFJFU1QgcmVzb3VyY2UuICovCmV4cG9ydCBjbGFzcyBDcnVkPFQ+IHsKICAgIHByb3RlY3RlZCByZWFkb25seSByYjogUnVzdGFCYXNlOwogICAgcHJvdGVjdGVkIHJlYWRvbmx5IHBhdGg6IHN0cmluZzsKCiAgICBjb25zdHJ1Y3RvcihyYjogUnVzdGFCYXNlLCBwYXRoOiBzdHJpbmcpIHsKICAgICAgICB0aGlzLnJiID0gcmI7CiAgICAgICAgdGhpcy5wYXRoID0gcGF0aDsKICAgIH0KCiAgICAvKiogT25lIHBhZ2Ugb2Ygcm93cy4gKi8KICAgIGxpc3Qob3B0aW9uczogTGlzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8UGFnZTxUPj4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QodGhpcy5wYXRoLCB7CiAgICAgICAgICAgIC4uLnJlYWRRdWVyeSh7IHBhZ2U6IDEsIHBlclBhZ2U6IDMwLCAuLi5vcHRpb25zIH0pLAogICAgICAgICAgICBtZXRob2Q6ICJHRVQiLAogICAgICAgIH0pOwogICAgfQoKICAgIC8qKiBFdmVyeSByb3csIHdhbGtpbmcgdGhyb3VnaCBhbGwgcGFnZXMuICovCiAgICBhc3luYyBhbGwob3B0aW9uczogQWxsT3B0aW9ucyA9IHt9KTogUHJvbWlzZTxUW10+IHsKICAgICAgICBjb25zdCB7IGNodW5rID0gMTAwMCwgLi4ucmVzdCB9ID0gb3B0aW9uczsKICAgICAgICBjb25zdCBvdXQ6IFRbXSA9IFtdOwogICAgICAgIGZvciAobGV0IHBhZ2UgPSAxOyA7IHBhZ2UrKykgewogICAgICAgICAgICBjb25zdCByZXMgPSBhd2FpdCB0aGlzLmxpc3QoewogICAgICAgICAgICAgICAgLi4ucmVzdCwKICAgICAgICAgICAgICAgIHBhZ2UsCiAgICAgICAgICAgICAgICBwZXJQYWdlOiBjaHVuaywKICAgICAgICAgICAgICAgIHNraXBUb3RhbDogdHJ1ZSwKICAgICAgICAgICAgICAgIHJlcXVlc3RLZXk6IHJlc3QucmVxdWVzdEtleSA/PyBudWxsLAogICAgICAgICAgICB9KTsKICAgICAgICAgICAgb3V0LnB1c2goLi4ucmVzLml0ZW1zKTsKICAgICAgICAgICAgaWYgKHJlcy5pdGVtcy5sZW5ndGggPCByZXMucGVyUGFnZSkgcmV0dXJuIG91dDsKICAgICAgICB9CiAgICB9CgogICAgLyoqIFRoZSBmaXJzdCByb3cgbWF0Y2hpbmcgYSBmaWx0ZXIuIFRocm93cyBhIDQwNCBlcnJvciB3aGVuIG5vdGhpbmcgbWF0Y2hlcy4gKi8KICAgIGFzeW5jIGZpcnN0KGZpbHRlcjogc3RyaW5nLCBvcHRpb25zOiBPbWl0PExpc3RPcHRpb25zLCAiZmlsdGVyIj4gPSB7fSk6IFByb21pc2U8VD4gewogICAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IHRoaXMubGlzdCh7CiAgICAgICAgICAgIHJlcXVlc3RLZXk6ICJmaXJzdCAiICsgdGhpcy5wYXRoICsgIiAiICsgZmlsdGVyLAogICAgICAgICAgICAuLi5vcHRpb25zLAogICAgICAgICAgICBmaWx0ZXIsCiAgICAgICAgICAgIHBhZ2U6IDEsCiAgICAgICAgICAgIHBlclBhZ2U6IDEsCiAgICAgICAgICAgIHNraXBUb3RhbDogdHJ1ZSwKICAgICAgICB9KTsKICAgICAgICBpZiAoIXJlcy5pdGVtcy5sZW5ndGgpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IFJ1c3RhQmFzZUVycm9yKHsKICAgICAgICAgICAgICAgIHN0YXR1czogNDA0LAogICAgICAgICAgICAgICAgdXJsOiB0aGlzLnJiLnVybCh0aGlzLnBhdGgpLAogICAgICAgICAgICAgICAgZGF0YTogeyBjb2RlOiA0MDQsIG1lc3NhZ2U6ICJObyByb3cgbWF0Y2hlcyB0aGUgZmlsdGVyLiIsIGRhdGE6IHt9IH0sCiAgICAgICAgICAgIH0pOwogICAgICAgIH0KICAgICAgICByZXR1cm4gcmVzLml0ZW1zWzBdOwogICAgfQoKICAgIC8qKiBPbmUgcm93IGJ5IGlkLiAqLwogICAgZ2V0KGlkOiBzdHJpbmcsIG9wdGlvbnM6IFJlYWRPcHRpb25zID0ge30pOiBQcm9taXNlPFQ+IHsKICAgICAgICBpZiAoIWlkKSB7CiAgICAgICAgICAgIHJldHVybiBQcm9taXNlLnJlamVjdCgKICAgICAgICAgICAgICAgIG5ldyBSdXN0YUJhc2VFcnJvcih7CiAgICAgICAgICAgICAgICAgICAgc3RhdHVzOiA0MDQsCiAgICAgICAgICAgICAgICAgICAgdXJsOiB0aGlzLnJiLnVybCh0aGlzLnBhdGggKyAiLyIpLAogICAgICAgICAgICAgICAgICAgIGRhdGE6IHsgY29kZTogNDA0LCBtZXNzYWdlOiAiQW4gaWQgaXMgcmVxdWlyZWQuIiwgZGF0YToge30gfSwKICAgICAgICAgICAgICAgIH0pLAogICAgICAgICAgICApOwogICAgICAgIH0KICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvIiArIHNlZyhpZCksIHsgLi4ucmVhZFF1ZXJ5KG9wdGlvbnMpLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQoKICAgIC8qKiBDcmVhdGVzIGEgcm93LiBPYmplY3RzIGNvbnRhaW5pbmcgZmlsZXMgYXJlIHVwbG9hZGVkIGFzIG11bHRpcGFydC4gKi8KICAgIGNyZWF0ZShkYXRhOiBCb2R5ID0ge30sIG9wdGlvbnM6IFJlYWRPcHRpb25zID0ge30pOiBQcm9taXNlPFQ+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCwgeyAuLi5yZWFkUXVlcnkob3B0aW9ucyksIG1ldGhvZDogIlBPU1QiLCBib2R5OiBkYXRhIH0pOwogICAgfQoKICAgIC8qKiBVcGRhdGVzIGEgcm93LiAqLwogICAgdXBkYXRlKGlkOiBzdHJpbmcsIGRhdGE6IEJvZHkgPSB7fSwgb3B0aW9uczogUmVhZE9wdGlvbnMgPSB7fSk6IFByb21pc2U8VD4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QodGhpcy5wYXRoICsgIi8iICsgc2VnKGlkKSwgewogICAgICAgICAgICAuLi5yZWFkUXVlcnkob3B0aW9ucyksCiAgICAgICAgICAgIG1ldGhvZDogIlBBVENIIiwKICAgICAgICAgICAgYm9keTogZGF0YSwKICAgICAgICB9KTsKICAgIH0KCiAgICAvKiogRGVsZXRlcyBhIHJvdy4gKi8KICAgIGFzeW5jIHJlbW92ZShpZDogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx0cnVlPiB7CiAgICAgICAgYXdhaXQgdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvIiArIHNlZyhpZCksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiREVMRVRFIiB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KfQo=
+import type { RustaBase } from "../client";
+import { RustaBaseError } from "../errors";
+import { seg } from "../internal/encode";
+import type { AllOptions, Body, ListOptions, Page, ReadOptions, RequestOptions } from "../types";
+
+/** Moves read options (filter, sort, expand...) into the query string. */
+export function readQuery(options: ReadOptions & Partial<ListOptions> = {}): RequestOptions {
+    const { expand, fields, page, perPage, filter, sort, skipTotal, query, ...rest } = options;
+    return {
+        ...rest,
+        query: { page, perPage, filter, sort, skipTotal, expand, fields, ...(query || {}) },
+    };
+}
+
+/** Paged list / read / write helpers for one REST resource. */
+export class Crud<T> {
+    protected readonly rb: RustaBase;
+    protected readonly path: string;
+
+    constructor(rb: RustaBase, path: string) {
+        this.rb = rb;
+        this.path = path;
+    }
+
+    /** One page of rows. */
+    list(options: ListOptions = {}): Promise<Page<T>> {
+        return this.rb.request(this.path, {
+            ...readQuery({ page: 1, perPage: 30, ...options }),
+            method: "GET",
+        });
+    }
+
+    /** Every row, walking through all pages. */
+    async all(options: AllOptions = {}): Promise<T[]> {
+        const { chunk = 1000, ...rest } = options;
+        const out: T[] = [];
+        for (let page = 1; ; page++) {
+            const res = await this.list({
+                ...rest,
+                page,
+                perPage: chunk,
+                skipTotal: true,
+                requestKey: rest.requestKey ?? null,
+            });
+            out.push(...res.items);
+            if (res.items.length < res.perPage) return out;
+        }
+    }
+
+    /** The first row matching a filter. Throws a 404 error when nothing matches. */
+    async first(filter: string, options: Omit<ListOptions, "filter"> = {}): Promise<T> {
+        const res = await this.list({
+            requestKey: "first " + this.path + " " + filter,
+            ...options,
+            filter,
+            page: 1,
+            perPage: 1,
+            skipTotal: true,
+        });
+        if (!res.items.length) {
+            throw new RustaBaseError({
+                status: 404,
+                url: this.rb.url(this.path),
+                data: { code: 404, message: "No row matches the filter.", data: {} },
+            });
+        }
+        return res.items[0];
+    }
+
+    /** One row by id. */
+    get(id: string, options: ReadOptions = {}): Promise<T> {
+        if (!id) {
+            return Promise.reject(
+                new RustaBaseError({
+                    status: 404,
+                    url: this.rb.url(this.path + "/"),
+                    data: { code: 404, message: "An id is required.", data: {} },
+                }),
+            );
+        }
+        return this.rb.request(this.path + "/" + seg(id), { ...readQuery(options), method: "GET" });
+    }
+
+    /** Creates a row. Objects containing files are uploaded as multipart. */
+    create(data: Body = {}, options: ReadOptions = {}): Promise<T> {
+        return this.rb.request(this.path, { ...readQuery(options), method: "POST", body: data });
+    }
+
+    /** Updates a row. */
+    update(id: string, data: Body = {}, options: ReadOptions = {}): Promise<T> {
+        return this.rb.request(this.path + "/" + seg(id), {
+            ...readQuery(options),
+            method: "PATCH",
+            body: data,
+        });
+    }
+
+    /** Deletes a row. */
+    async remove(id: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
+        return true;
+    }
+}

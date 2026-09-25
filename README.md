@@ -1,1 +1,129 @@
-IyBSdXN0YUJhc2UgSmF2YVNjcmlwdCBTREsKCk9mZmljaWFsIEphdmFTY3JpcHQgLyBUeXBlU2NyaXB0IGNsaWVudCBmb3IgW1J1c3RhQmFzZV0oaHR0cHM6Ly9ydXN0YWJhc2UuY29tKS4gV29ya3MgaW4gYnJvd3NlcnMsIE5vZGUuanMgMTgrLCBEZW5vLCBCdW4gYW5kIFJlYWN0IE5hdGl2ZS4KCmBgYHNoCm5wbSBpbnN0YWxsIHJ1c3RhYmFzZS1qcy1zZGsKYGBgCgojIyBRdWljayBzdGFydAoKYGBganMKaW1wb3J0IHsgY3JlYXRlQ2xpZW50IH0gZnJvbSAicnVzdGFiYXNlLWpzLXNkayI7Cgpjb25zdCByYiA9IGNyZWF0ZUNsaWVudCgiaHR0cHM6Ly9teS1hcHAucnVzdGFiYXNlLm5ldCIpOwoKLy8gc2lnbiBpbgphd2FpdCByYi5hdXRoKCJ1c2VycyIpLnNpZ25JbldpdGhQYXNzd29yZCgibWVAZXhhbXBsZS5jb20iLCAic2VjcmV0Iik7CgovLyByZWFkCmNvbnN0IHBhZ2UgPSBhd2FpdCByYi5mcm9tKCJwb3N0cyIpLmxpc3QoeyBmaWx0ZXI6IHJiLmZpbHRlcigic3RhdHVzID0gezpzfSIsIHsgczogImxpdmUiIH0pLCBzb3J0OiAiLWNyZWF0ZWQiIH0pOwpjb25zdCBhbGwgPSBhd2FpdCByYi5mcm9tKCJwb3N0cyIpLmFsbCgpOwpjb25zdCBwb3N0ID0gYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5nZXQoIlJFQ09SRF9JRCIsIHsgZXhwYW5kOiAiYXV0aG9yIiB9KTsKY29uc3QgbGF0ZXN0ID0gYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5maXJzdCgiZmVhdHVyZWQgPSB0cnVlIik7CgovLyB3cml0ZQpjb25zdCBjcmVhdGVkID0gYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5jcmVhdGUoeyB0aXRsZTogIkhlbGxvIiwgY292ZXI6IGZpbGVJbnB1dC5maWxlc1swXSB9KTsKYXdhaXQgcmIuZnJvbSgicG9zdHMiKS51cGRhdGUoY3JlYXRlZC5pZCwgeyB0aXRsZTogIkhlbGxvIGFnYWluIiB9KTsKYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5yZW1vdmUoY3JlYXRlZC5pZCk7CgovLyBsaXZlIHVwZGF0ZXMKY29uc3Qgc3RvcCA9IGF3YWl0IHJiLmZyb20oInBvc3RzIikuc3Vic2NyaWJlKCIqIiwgKHsgYWN0aW9uLCByZWNvcmQgfSkgPT4gY29uc29sZS5sb2coYWN0aW9uLCByZWNvcmQpKTsKYXdhaXQgc3RvcCgpOwpgYGAKCiMjIFNlc3Npb25zCgp8IENsYXNzIHwgV2hlcmUgaXQga2VlcHMgdGhlIHNlc3Npb24gfAp8IC0tLSB8IC0tLSB8CnwgYEJyb3dzZXJTZXNzaW9uYCB8IGBsb2NhbFN0b3JhZ2VgLCBzeW5jZWQgYWNyb3NzIHRhYnMgKGRlZmF1bHQgaW4gYnJvd3NlcnMpIHwKfCBgTWVtb3J5U2Vzc2lvbmAgfCBtZW1vcnkgb25seSAoZGVmYXVsdCBvbiBzZXJ2ZXJzKSB8CnwgYEFzeW5jU2Vzc2lvbmAgfCBhbnkgYXN5bmMgc3RvcmFnZSwgZS5nLiBSZWFjdCBOYXRpdmUgQXN5bmNTdG9yYWdlIHwKCmBgYGpzCnJiLnNlc3Npb24udG9rZW47ICAgICAgICAvLyBjdXJyZW50IHRva2VuCnJiLnNlc3Npb24ucmVjb3JkOyAgICAgICAvLyBzaWduZWQtaW4gcmVjb3JkCnJiLnNlc3Npb24uaXNWYWxpZDsgICAgICAvLyB0b2tlbiBwcmVzZW50IGFuZCBub3QgZXhwaXJlZApyYi5zZXNzaW9uLmlzU3VwZXJ1c2VyOwpyYi5zZXNzaW9uLm9uQ2hhbmdlKCh0b2tlbiwgcmVjb3JkKSA9PiB7fSk7CnJiLnNpZ25PdXQoKTsKYGBgCgpTZXJ2ZXIgcmVuZGVyaW5nOgoKYGBganMKY29uc3QgcmIgPSBjcmVhdGVDbGllbnQoVVJMLCB7IHNlc3Npb246IG5ldyBNZW1vcnlTZXNzaW9uKCkgfSk7CnJiLnNlc3Npb24ubG9hZENvb2tpZShyZXF1ZXN0LmhlYWRlcnMuZ2V0KCJjb29raWUiKSA/PyAiIik7Ci8vIC4uLgpyZXNwb25zZS5oZWFkZXJzLmFwcGVuZCgic2V0LWNvb2tpZSIsIHJiLnNlc3Npb24udG9Db29raWUoKSk7CmBgYAoKIyMgU2lnbi1pbgoKYGBganMKY29uc3QgdXNlcnMgPSByYi5hdXRoKCJ1c2VycyIpOwoKYXdhaXQgdXNlcnMuc2lnbkluV2l0aFBhc3N3b3JkKGVtYWlsLCBwYXNzd29yZCwgeyBrZWVwQWxpdmU6IDE4MDAgfSk7IC8vIHJlZnJlc2ggMzAgbWluIGJlZm9yZSBleHBpcnkKYXdhaXQgdXNlcnMuc2lnbkluV2l0aE9BdXRoKHsgcHJvdmlkZXI6ICJnb29nbGUiIH0pOyAgICAgICAgICAgICAgICAgLy8gb3BlbnMgYSBwb3B1cApjb25zdCB7IG90cElkIH0gPSBhd2FpdCB1c2Vycy5yZXF1ZXN0T3RwKGVtYWlsKTsKYXdhaXQgdXNlcnMuc2lnbkluV2l0aE90cChvdHBJZCwgIjEyMzQ1NiIpOwphd2FpdCB1c2Vycy5yZWZyZXNoKCk7CmF3YWl0IHVzZXJzLm1ldGhvZHMoKTsKCmF3YWl0IHVzZXJzLnJlcXVlc3RQYXNzd29yZFJlc2V0KGVtYWlsKTsKYXdhaXQgdXNlcnMuY29uZmlybVBhc3N3b3JkUmVzZXQodG9rZW4sIHBhc3N3b3JkLCBwYXNzd29yZENvbmZpcm0pOwphd2FpdCB1c2Vycy5yZXF1ZXN0VmVyaWZpY2F0aW9uKGVtYWlsKTsKYXdhaXQgdXNlcnMuY29uZmlybVZlcmlmaWNhdGlvbih0b2tlbik7CmF3YWl0IHVzZXJzLnJlcXVlc3RFbWFpbENoYW5nZShuZXdFbWFpbCk7CmF3YWl0IHVzZXJzLmNvbmZpcm1FbWFpbENoYW5nZSh0b2tlbiwgcGFzc3dvcmQpOwpgYGAKCiMjIEZpbGVzCgpgYGBqcwpyYi5maWxlcy51cmwocmVjb3JkLCByZWNvcmQuYXZhdGFyLCB7IHRodW1iOiAiMTAweDEwMCIgfSk7CmNvbnN0IHRva2VuID0gYXdhaXQgcmIuZmlsZXMudG9rZW4oKTsgLy8gZm9yIHByb3RlY3RlZCBmaWxlcwpyYi5maWxlcy51cmwocmVjb3JkLCByZWNvcmQuY29udHJhY3QsIHsgdG9rZW4gfSk7CmBgYAoKIyMgQmF0Y2ggd3JpdGVzCgpgYGBqcwpjb25zdCBiYXRjaCA9IHJiLmJhdGNoKCk7CmJhdGNoLmZyb20oInBvc3RzIikuY3JlYXRlKHsgdGl0bGU6ICJBIiB9KTsKYmF0Y2guZnJvbSgicG9zdHMiKS51cGRhdGUoImlkMSIsIHsgdGl0bGU6ICJCIiB9KTsKYmF0Y2guZnJvbSgicG9zdHMiKS51cHNlcnQoeyBpZDogImlkMiIsIHRpdGxlOiAiQyIgfSk7CmJhdGNoLmZyb20oImNvbW1lbnRzIikucmVtb3ZlKCJpZDMiKTsKY29uc3QgcmVzdWx0cyA9IGF3YWl0IGJhdGNoLnNlbmQoKTsKYGBgCgojIyBBZG1pbiAoc3VwZXJ1c2VycykKCmByYi5hZG1pbi5jb2xsZWN0aW9uc2AsIGBzZXR0aW5nc2AsIGBsb2dzYCwgYGJhY2t1cHNgLCBgY3JvbnNgLCBgYXBpS2V5c2AsIGB3ZWJob29rc2AsIGBmdW5jdGlvbnNgLCBgcmxzYCBhbmQgYHJiLmFkbWluLnNxbChxdWVyeSlgLgoKIyMgRXJyb3JzIGFuZCBjYW5jZWxsaW5nCgpFdmVyeSBmYWlsdXJlIHRocm93cyBhIGBSdXN0YUJhc2VFcnJvcmA6CgpgYGBqcwp0cnkgewogICAgYXdhaXQgcmIuZnJvbSgicG9zdHMiKS5jcmVhdGUoe30pOwp9IGNhdGNoIChlcnIpIHsKICAgIGVyci5zdGF0dXM7ICAgICAgIC8vIDAgd2hlbiB0aGUgc2VydmVyIGNvdWxkbid0IGJlIHJlYWNoZWQKICAgIGVyci5maWVsZEVycm9yczsgIC8vIHsgdGl0bGU6IHsgY29kZSwgbWVzc2FnZSB9IH0KICAgIGVyci5jYW5jZWxsZWQ7ICAgIC8vIHRydWUgd2hlbiBhdXRvLWNhbmNlbGxlZAp9CmBgYAoKSWRlbnRpY2FsIHJlcXVlc3RzIGNhbmNlbCB0aGUgb2xkZXIgb25lLiBQYXNzIGByZXF1ZXN0S2V5OiBudWxsYCB0byBvcHQgb3V0LCBhIGN1c3RvbSBgcmVxdWVzdEtleWAgdG8gZ3JvdXAgcmVxdWVzdHMsIG9yIHNldCBgcmIuYXV0b0NhbmNlbCA9IGZhbHNlYC4gVXNlIGByYi5jYW5jZWwoa2V5KWAgLyBgcmIuY2FuY2VsQWxsKClgIHRvIGNhbmNlbCBtYW51YWxseS4KCiMjIEhvb2tzCgpgYGBqcwpyYi5vblJlcXVlc3QgPSAodXJsLCBpbml0KSA9PiAoeyB1cmwsIGluaXQ6IHsgLi4uaW5pdCwgaGVhZGVyczogeyAuLi5pbml0LmhlYWRlcnMsICJYLVRyYWNlIjogIjEiIH0gfSB9KTsKcmIub25SZXNwb25zZSA9IChyZXNwb25zZSwgZGF0YSkgPT4gZGF0YTsKYGBgCgojIyBMaWNlbnNlCgpNSVQK
+# RustaBase JavaScript SDK
+
+Official JavaScript / TypeScript client for [RustaBase](https://rustabase.com). Works in browsers, Node.js 18+, Deno, Bun and React Native.
+
+```sh
+npm install rustabase-js-sdk
+```
+
+## Quick start
+
+```js
+import { createClient } from "rustabase-js-sdk";
+
+const rb = createClient("https://my-app.rustabase.net");
+
+// sign in
+await rb.auth("users").signInWithPassword("me@example.com", "secret");
+
+// read
+const page = await rb.from("posts").list({ filter: rb.filter("status = {:s}", { s: "live" }), sort: "-created" });
+const all = await rb.from("posts").all();
+const post = await rb.from("posts").get("RECORD_ID", { expand: "author" });
+const latest = await rb.from("posts").first("featured = true");
+
+// write
+const created = await rb.from("posts").create({ title: "Hello", cover: fileInput.files[0] });
+await rb.from("posts").update(created.id, { title: "Hello again" });
+await rb.from("posts").remove(created.id);
+
+// live updates
+const stop = await rb.from("posts").subscribe("*", ({ action, record }) => console.log(action, record));
+await stop();
+```
+
+## Sessions
+
+| Class | Where it keeps the session |
+| --- | --- |
+| `BrowserSession` | `localStorage`, synced across tabs (default in browsers) |
+| `MemorySession` | memory only (default on servers) |
+| `AsyncSession` | any async storage, e.g. React Native AsyncStorage |
+
+```js
+rb.session.token;        // current token
+rb.session.record;       // signed-in record
+rb.session.isValid;      // token present and not expired
+rb.session.isSuperuser;
+rb.session.onChange((token, record) => {});
+rb.signOut();
+```
+
+Server rendering:
+
+```js
+const rb = createClient(URL, { session: new MemorySession() });
+rb.session.loadCookie(request.headers.get("cookie") ?? "");
+// ...
+response.headers.append("set-cookie", rb.session.toCookie());
+```
+
+## Sign-in
+
+```js
+const users = rb.auth("users");
+
+await users.signInWithPassword(email, password, { keepAlive: 1800 }); // refresh 30 min before expiry
+await users.signInWithOAuth({ provider: "google" });                 // opens a popup
+const { otpId } = await users.requestOtp(email);
+await users.signInWithOtp(otpId, "123456");
+await users.refresh();
+await users.methods();
+
+await users.requestPasswordReset(email);
+await users.confirmPasswordReset(token, password, passwordConfirm);
+await users.requestVerification(email);
+await users.confirmVerification(token);
+await users.requestEmailChange(newEmail);
+await users.confirmEmailChange(token, password);
+```
+
+## Files
+
+```js
+rb.files.url(record, record.avatar, { thumb: "100x100" });
+const token = await rb.files.token(); // for protected files
+rb.files.url(record, record.contract, { token });
+```
+
+## Batch writes
+
+```js
+const batch = rb.batch();
+batch.from("posts").create({ title: "A" });
+batch.from("posts").update("id1", { title: "B" });
+batch.from("posts").upsert({ id: "id2", title: "C" });
+batch.from("comments").remove("id3");
+const results = await batch.send();
+```
+
+## Admin (superusers)
+
+`rb.admin.collections`, `settings`, `logs`, `backups`, `crons`, `apiKeys`, `webhooks`, `functions`, `rls` and `rb.admin.sql(query)`.
+
+## Errors and cancelling
+
+Every failure throws a `RustaBaseError`:
+
+```js
+try {
+    await rb.from("posts").create({});
+} catch (err) {
+    err.status;       // 0 when the server couldn't be reached
+    err.fieldErrors;  // { title: { code, message } }
+    err.cancelled;    // true when auto-cancelled
+}
+```
+
+Identical requests cancel the older one. Pass `requestKey: null` to opt out, a custom `requestKey` to group requests, or set `rb.autoCancel = false`. Use `rb.cancel(key)` / `rb.cancelAll()` to cancel manually.
+
+## Hooks
+
+```js
+rb.onRequest = (url, init) => ({ url, init: { ...init, headers: { ...init.headers, "X-Trace": "1" } } });
+rb.onResponse = (response, data) => data;
+```
+
+## License
+
+MIT

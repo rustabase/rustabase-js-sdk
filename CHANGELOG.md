@@ -1,1 +1,11 @@
-IyBDaGFuZ2Vsb2cKCiMjIDEuMC4wCgpGaXJzdCByZWxlYXNlIG9mIHRoZSBSdXN0YUJhc2UgSmF2YVNjcmlwdCBTREssIHdyaXR0ZW4gZnJvbSBzY3JhdGNoLgoKLSBgY3JlYXRlQ2xpZW50KHVybClgIGVudHJ5IHBvaW50IHdpdGggYHJiLmZyb20oKWAsIGByYi5hdXRoKClgLCBgcmIuZmlsZXNgLCBgcmIucmVhbHRpbWVgLCBgcmIuYmF0Y2goKWAgYW5kIGByYi5hZG1pbmAuCi0gU2Vzc2lvbnM6IGBCcm93c2VyU2Vzc2lvbmAgKGRlZmF1bHQgaW4gYnJvd3NlcnMpLCBgTWVtb3J5U2Vzc2lvbmAsIGBBc3luY1Nlc3Npb25gLCB3aXRoIGNvb2tpZSBoZWxwZXJzIGZvciBzZXJ2ZXIgcmVuZGVyaW5nLgotIFNpZ24taW4gd2l0aCBwYXNzd29yZCwgb25lLXRpbWUgY29kZSBhbmQgT0F1dGgyLCBwbHVzIG9wdGlvbmFsIGBrZWVwQWxpdmVgIHRva2VuIHJlZnJlc2guCi0gTGl2ZSB1cGRhdGVzIG92ZXIgdGhlIGBSQl9DT05ORUNUYCByZWFsdGltZSBwcm90b2NvbC4KLSBBbGwgZXJyb3JzIGFyZSBgUnVzdGFCYXNlRXJyb3JgIHdpdGggYHN0YXR1c2AsIGBkYXRhYCwgYGZpZWxkRXJyb3JzYCBhbmQgYGNhbmNlbGxlZGAuCg==
+# Changelog
+
+## 1.0.0
+
+First release of the RustaBase JavaScript SDK, written from scratch.
+
+- `createClient(url)` entry point with `rb.from()`, `rb.auth()`, `rb.files`, `rb.realtime`, `rb.batch()` and `rb.admin`.
+- Sessions: `BrowserSession` (default in browsers), `MemorySession`, `AsyncSession`, with cookie helpers for server rendering.
+- Sign-in with password, one-time code and OAuth2, plus optional `keepAlive` token refresh.
+- Live updates over the `RB_CONNECT` realtime protocol.
+- All errors are `RustaBaseError` with `status`, `data`, `fieldErrors` and `cancelled`.

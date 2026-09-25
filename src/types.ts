@@ -1,1 +1,103 @@
-LyoqIEFueSByZWNvcmQgcmV0dXJuZWQgYnkgdGhlIHNlcnZlci4gKi8KZXhwb3J0IGludGVyZmFjZSBSb3cgewogICAgaWQ6IHN0cmluZzsKICAgIGNvbGxlY3Rpb25JZDogc3RyaW5nOwogICAgY29sbGVjdGlvbk5hbWU6IHN0cmluZzsKICAgIFtmaWVsZDogc3RyaW5nXTogYW55Owp9CgpleHBvcnQgdHlwZSBKc29uID0gUmVjb3JkPHN0cmluZywgYW55PjsKZXhwb3J0IHR5cGUgQm9keSA9IEpzb24gfCBGb3JtRGF0YTsKCi8qKiBPcHRpb25zIGFjY2VwdGVkIGJ5IGV2ZXJ5IHJlcXVlc3QuICovCmV4cG9ydCBpbnRlcmZhY2UgUmVxdWVzdE9wdGlvbnMgewogICAgLyoqIEV4dHJhIHF1ZXJ5IHN0cmluZyB2YWx1ZXMuICovCiAgICBxdWVyeT86IEpzb247CiAgICAvKiogRXh0cmEgaGVhZGVycy4gKi8KICAgIGhlYWRlcnM/OiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+OwogICAgLyoqIFJlcXVlc3QgYm9keSAob2JqZWN0cyBhcmUgc2VudCBhcyBKU09OLCBvciBtdWx0aXBhcnQgd2hlbiB0aGV5IGNvbnRhaW4gZmlsZXMpLiAqLwogICAgYm9keT86IGFueTsKICAgIG1ldGhvZD86IHN0cmluZzsKICAgIC8qKgogICAgICogUmVxdWVzdHMgd2l0aCB0aGUgc2FtZSBrZXkgY2FuY2VsIGVhY2ggb3RoZXIgKG9ubHkgdGhlIG5ld2VzdCBvbmUgd2lucykuCiAgICAgKiBEZWZhdWx0cyB0byBgTUVUSE9EICsgcGF0aGAuIFBhc3MgYG51bGxgIHRvIG5ldmVyIGF1dG8tY2FuY2VsLgogICAgICovCiAgICByZXF1ZXN0S2V5Pzogc3RyaW5nIHwgbnVsbDsKICAgIC8qKiBDdXN0b20gZmV0Y2ggaW1wbGVtZW50YXRpb24gZm9yIHRoaXMgY2FsbC4gKi8KICAgIGZldGNoPzogdHlwZW9mIGZldGNoOwogICAgc2lnbmFsPzogQWJvcnRTaWduYWw7CiAgICBbZmV0Y2hPcHRpb246IHN0cmluZ106IGFueTsKfQoKLyoqIFNoYXJlZCBxdWVyeSBvcHRpb25zIGZvciByZWNvcmQgcmVhZHMuICovCmV4cG9ydCBpbnRlcmZhY2UgUmVhZE9wdGlvbnMgZXh0ZW5kcyBSZXF1ZXN0T3B0aW9ucyB7CiAgICBleHBhbmQ/OiBzdHJpbmc7CiAgICBmaWVsZHM/OiBzdHJpbmc7Cn0KCmV4cG9ydCBpbnRlcmZhY2UgTGlzdE9wdGlvbnMgZXh0ZW5kcyBSZWFkT3B0aW9ucyB7CiAgICBwYWdlPzogbnVtYmVyOwogICAgcGVyUGFnZT86IG51bWJlcjsKICAgIGZpbHRlcj86IHN0cmluZzsKICAgIHNvcnQ/OiBzdHJpbmc7CiAgICAvKiogU2tpcCBjb3VudGluZyB0aGUgdG90YWwgKGZhc3RlcikuICovCiAgICBza2lwVG90YWw/OiBib29sZWFuOwp9CgpleHBvcnQgaW50ZXJmYWNlIEFsbE9wdGlvbnMgZXh0ZW5kcyBPbWl0PExpc3RPcHRpb25zLCAicGFnZSIgfCAicGVyUGFnZSI+IHsKICAgIC8qKiBSb3dzIGZldGNoZWQgcGVyIHJlcXVlc3Qgd2hpbGUgd2Fsa2luZyBldmVyeSBwYWdlLiBEZWZhdWx0IDEwMDAuICovCiAgICBjaHVuaz86IG51bWJlcjsKfQoKZXhwb3J0IGludGVyZmFjZSBQYWdlPFQgPSBSb3c+IHsKICAgIHBhZ2U6IG51bWJlcjsKICAgIHBlclBhZ2U6IG51bWJlcjsKICAgIHRvdGFsSXRlbXM6IG51bWJlcjsKICAgIHRvdGFsUGFnZXM6IG51bWJlcjsKICAgIGl0ZW1zOiBUW107Cn0KCmV4cG9ydCBpbnRlcmZhY2UgQXV0aFJlc3VsdDxUID0gUm93PiB7CiAgICB0b2tlbjogc3RyaW5nOwogICAgcmVjb3JkOiBUOwogICAgbWV0YT86IEpzb247Cn0KCmV4cG9ydCBpbnRlcmZhY2UgQXV0aE1ldGhvZHMgewogICAgbWZhOiB7IGVuYWJsZWQ6IGJvb2xlYW47IGR1cmF0aW9uOiBudW1iZXIgfTsKICAgIG90cDogeyBlbmFibGVkOiBib29sZWFuOyBkdXJhdGlvbjogbnVtYmVyIH07CiAgICBwYXNzd29yZDogeyBlbmFibGVkOiBib29sZWFuOyBpZGVudGl0eUZpZWxkczogc3RyaW5nW10gfTsKICAgIG9hdXRoMjogeyBlbmFibGVkOiBib29sZWFuOyBwcm92aWRlcnM6IE9BdXRoUHJvdmlkZXJbXSB9Owp9CgpleHBvcnQgaW50ZXJmYWNlIE9BdXRoUHJvdmlkZXIgewogICAgbmFtZTogc3RyaW5nOwogICAgZGlzcGxheU5hbWU6IHN0cmluZzsKICAgIHN0YXRlOiBzdHJpbmc7CiAgICBhdXRoVVJMOiBzdHJpbmc7CiAgICBjb2RlVmVyaWZpZXI6IHN0cmluZzsKICAgIGNvZGVDaGFsbGVuZ2U6IHN0cmluZzsKICAgIGNvZGVDaGFsbGVuZ2VNZXRob2Q6IHN0cmluZzsKfQoKZXhwb3J0IGludGVyZmFjZSBGaWxlVXJsT3B0aW9ucyB7CiAgICAvKiogVGh1bWIgc2l6ZSwgZS5nLiAiMTAweDEwMCIuICovCiAgICB0aHVtYj86IHN0cmluZzsKICAgIC8qKiBGb3JjZSB0aGUgYnJvd3NlciB0byBkb3dubG9hZCBpbnN0ZWFkIG9mIGRpc3BsYXkuICovCiAgICBkb3dubG9hZD86IGJvb2xlYW47CiAgICAvKiogQWNjZXNzIHRva2VuIGZvciBwcm90ZWN0ZWQgZmlsZXMgKHNlZSBgcmIuZmlsZXMudG9rZW4oKWApLiAqLwogICAgdG9rZW4/OiBzdHJpbmc7CiAgICBba2V5OiBzdHJpbmddOiBhbnk7Cn0KCmV4cG9ydCBpbnRlcmZhY2UgQmF0Y2hSZXN1bHQgewogICAgc3RhdHVzOiBudW1iZXI7CiAgICBib2R5OiBhbnk7Cn0KCmV4cG9ydCBpbnRlcmZhY2UgUmVhbHRpbWVFdmVudDxUID0gUm93PiB7CiAgICBhY3Rpb246ICJjcmVhdGUiIHwgInVwZGF0ZSIgfCAiZGVsZXRlIiB8IHN0cmluZzsKICAgIHJlY29yZDogVDsKfQoKZXhwb3J0IHR5cGUgVW5zdWJzY3JpYmUgPSAoKSA9PiBQcm9taXNlPHZvaWQ+Owo=
+/** Any record returned by the server. */
+export interface Row {
+    id: string;
+    collectionId: string;
+    collectionName: string;
+    [field: string]: any;
+}
+
+export type Json = Record<string, any>;
+export type Body = Json | FormData;
+
+/** Options accepted by every request. */
+export interface RequestOptions {
+    /** Extra query string values. */
+    query?: Json;
+    /** Extra headers. */
+    headers?: Record<string, string>;
+    /** Request body (objects are sent as JSON, or multipart when they contain files). */
+    body?: any;
+    method?: string;
+    /**
+     * Requests with the same key cancel each other (only the newest one wins).
+     * Defaults to `METHOD + path`. Pass `null` to never auto-cancel.
+     */
+    requestKey?: string | null;
+    /** Custom fetch implementation for this call. */
+    fetch?: typeof fetch;
+    signal?: AbortSignal;
+    [fetchOption: string]: any;
+}
+
+/** Shared query options for record reads. */
+export interface ReadOptions extends RequestOptions {
+    expand?: string;
+    fields?: string;
+}
+
+export interface ListOptions extends ReadOptions {
+    page?: number;
+    perPage?: number;
+    filter?: string;
+    sort?: string;
+    /** Skip counting the total (faster). */
+    skipTotal?: boolean;
+}
+
+export interface AllOptions extends Omit<ListOptions, "page" | "perPage"> {
+    /** Rows fetched per request while walking every page. Default 1000. */
+    chunk?: number;
+}
+
+export interface Page<T = Row> {
+    page: number;
+    perPage: number;
+    totalItems: number;
+    totalPages: number;
+    items: T[];
+}
+
+export interface AuthResult<T = Row> {
+    token: string;
+    record: T;
+    meta?: Json;
+}
+
+export interface AuthMethods {
+    mfa: { enabled: boolean; duration: number };
+    otp: { enabled: boolean; duration: number };
+    password: { enabled: boolean; identityFields: string[] };
+    oauth2: { enabled: boolean; providers: OAuthProvider[] };
+}
+
+export interface OAuthProvider {
+    name: string;
+    displayName: string;
+    state: string;
+    authURL: string;
+    codeVerifier: string;
+    codeChallenge: string;
+    codeChallengeMethod: string;
+}
+
+export interface FileUrlOptions {
+    /** Thumb size, e.g. "100x100". */
+    thumb?: string;
+    /** Force the browser to download instead of display. */
+    download?: boolean;
+    /** Access token for protected files (see `rb.files.token()`). */
+    token?: string;
+    [key: string]: any;
+}
+
+export interface BatchResult {
+    status: number;
+    body: any;
+}
+
+export interface RealtimeEvent<T = Row> {
+    action: "create" | "update" | "delete" | string;
+    record: T;
+}
+
+export type Unsubscribe = () => Promise<void>;

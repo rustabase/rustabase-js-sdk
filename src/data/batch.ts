@@ -1,1 +1,67 @@
-aW1wb3J0IHR5cGUgeyBSdXN0YUJhc2UgfSBmcm9tICIuLi9jbGllbnQiOwppbXBvcnQgeyBzcGxpdEJvZHkgfSBmcm9tICIuLi9pbnRlcm5hbC9ib2R5IjsKaW1wb3J0IHsgc2VnLCB3aXRoUXVlcnkgfSBmcm9tICIuLi9pbnRlcm5hbC9lbmNvZGUiOwppbXBvcnQgdHlwZSB7IEJhdGNoUmVzdWx0LCBCb2R5LCBSZWFkT3B0aW9ucywgUmVxdWVzdE9wdGlvbnMgfSBmcm9tICIuLi90eXBlcyI7CmltcG9ydCB7IHJlYWRRdWVyeSB9IGZyb20gIi4vY3J1ZCI7CgppbnRlcmZhY2UgU3RlcCB7CiAgICBtZXRob2Q6IHN0cmluZzsKICAgIHVybDogc3RyaW5nOwogICAgaGVhZGVycz86IFJlY29yZDxzdHJpbmcsIHN0cmluZz47CiAgICBqc29uOiBSZWNvcmQ8c3RyaW5nLCBhbnk+OwogICAgZmlsZXM6IFJlY29yZDxzdHJpbmcsIGFueVtdPjsKfQoKLyoqCiAqIFNldmVyYWwgcmVjb3JkIHdyaXRlcyBzZW50IGluIG9uZSByZXF1ZXN0IGFuZCBhcHBsaWVkIGluIG9uZSB0cmFuc2FjdGlvbi4KICoKICogICAgIGNvbnN0IGJhdGNoID0gcmIuYmF0Y2goKTsKICogICAgIGJhdGNoLmZyb20oInBvc3RzIikuY3JlYXRlKHsgdGl0bGU6ICJBIiB9KTsKICogICAgIGJhdGNoLmZyb20oInBvc3RzIikucmVtb3ZlKCJhYmMiKTsKICogICAgIGNvbnN0IHJlc3VsdHMgPSBhd2FpdCBiYXRjaC5zZW5kKCk7CiAqLwpleHBvcnQgY2xhc3MgQmF0Y2ggewogICAgcHJpdmF0ZSByZWFkb25seSByYjogUnVzdGFCYXNlOwogICAgcHJpdmF0ZSByZWFkb25seSBzdGVwczogU3RlcFtdID0gW107CgogICAgY29uc3RydWN0b3IocmI6IFJ1c3RhQmFzZSkgewogICAgICAgIHRoaXMucmIgPSByYjsKICAgIH0KCiAgICAvKiogUXVldWUgd3JpdGVzIGZvciBvbmUgY29sbGVjdGlvbi4gKi8KICAgIGZyb20oY29sbGVjdGlvbjogc3RyaW5nKSB7CiAgICAgICAgY29uc3QgcGF0aCA9ICIvYXBpL2NvbGxlY3Rpb25zLyIgKyBzZWcoY29sbGVjdGlvbikgKyAiL3JlY29yZHMiOwogICAgICAgIGNvbnN0IGFkZCA9IChtZXRob2Q6IHN0cmluZywgdXJsOiBzdHJpbmcsIGJvZHk/OiBCb2R5LCBvcHRpb25zOiBSZWFkT3B0aW9ucyA9IHt9KSA9PiB7CiAgICAgICAgICAgIGNvbnN0IHsgcXVlcnksIGhlYWRlcnMgfSA9IHJlYWRRdWVyeShvcHRpb25zKTsKICAgICAgICAgICAgY29uc3QgeyBqc29uLCBmaWxlcyB9ID0gc3BsaXRCb2R5KGJvZHkpOwogICAgICAgICAgICB0aGlzLnN0ZXBzLnB1c2goeyBtZXRob2QsIHVybDogd2l0aFF1ZXJ5KHVybCwgcXVlcnkpLCBoZWFkZXJzLCBqc29uLCBmaWxlcyB9KTsKICAgICAgICB9OwogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIGNyZWF0ZTogKGRhdGE6IEJvZHksIG9wdGlvbnM/OiBSZWFkT3B0aW9ucykgPT4gYWRkKCJQT1NUIiwgcGF0aCwgZGF0YSwgb3B0aW9ucyksCiAgICAgICAgICAgIHVwZGF0ZTogKGlkOiBzdHJpbmcsIGRhdGE6IEJvZHksIG9wdGlvbnM/OiBSZWFkT3B0aW9ucykgPT4KICAgICAgICAgICAgICAgIGFkZCgiUEFUQ0giLCBwYXRoICsgIi8iICsgc2VnKGlkKSwgZGF0YSwgb3B0aW9ucyksCiAgICAgICAgICAgIC8qKiBVcGRhdGVzIHdoZW4gYGRhdGEuaWRgIGV4aXN0cywgb3RoZXJ3aXNlIGNyZWF0ZXMuICovCiAgICAgICAgICAgIHVwc2VydDogKGRhdGE6IEJvZHksIG9wdGlvbnM/OiBSZWFkT3B0aW9ucykgPT4gYWRkKCJQVVQiLCBwYXRoLCBkYXRhLCBvcHRpb25zKSwKICAgICAgICAgICAgcmVtb3ZlOiAoaWQ6IHN0cmluZywgb3B0aW9ucz86IFJlYWRPcHRpb25zKSA9PgogICAgICAgICAgICAgICAgYWRkKCJERUxFVEUiLCBwYXRoICsgIi8iICsgc2VnKGlkKSwgdW5kZWZpbmVkLCBvcHRpb25zKSwKICAgICAgICB9OwogICAgfQoKICAgIC8qKiBOdW1iZXIgb2YgcXVldWVkIHdyaXRlcy4gKi8KICAgIGdldCBzaXplKCk6IG51bWJlciB7CiAgICAgICAgcmV0dXJuIHRoaXMuc3RlcHMubGVuZ3RoOwogICAgfQoKICAgIC8qKiBTZW5kcyBldmVyeSBxdWV1ZWQgd3JpdGUuICovCiAgICBzZW5kKG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEJhdGNoUmVzdWx0W10+IHsKICAgICAgICBjb25zdCBmb3JtID0gbmV3IEZvcm1EYXRhKCk7CiAgICAgICAgY29uc3QgcmVxdWVzdHMgPSB0aGlzLnN0ZXBzLm1hcCgocywgaSkgPT4gewogICAgICAgICAgICBmb3IgKGNvbnN0IFtmaWVsZCwgbGlzdF0gb2YgT2JqZWN0LmVudHJpZXMocy5maWxlcykpIHsKICAgICAgICAgICAgICAgIGZvciAoY29uc3QgZmlsZSBvZiBsaXN0KSBmb3JtLmFwcGVuZChgcmVxdWVzdHMuJHtpfS4ke2ZpZWxkfWAsIGZpbGUpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHJldHVybiB7IG1ldGhvZDogcy5tZXRob2QsIHVybDogcy51cmwsIGhlYWRlcnM6IHMuaGVhZGVycywgYm9keTogcy5qc29uIH07CiAgICAgICAgfSk7CiAgICAgICAgZm9ybS5hcHBlbmQoIkBqc29uUGF5bG9hZCIsIEpTT04uc3RyaW5naWZ5KHsgcmVxdWVzdHMgfSkpOwogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvYmF0Y2giLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIlBPU1QiLCBib2R5OiBmb3JtIH0pOwogICAgfQp9Cg==
+import type { RustaBase } from "../client";
+import { splitBody } from "../internal/body";
+import { seg, withQuery } from "../internal/encode";
+import type { BatchResult, Body, ReadOptions, RequestOptions } from "../types";
+import { readQuery } from "./crud";
+
+interface Step {
+    method: string;
+    url: string;
+    headers?: Record<string, string>;
+    json: Record<string, any>;
+    files: Record<string, any[]>;
+}
+
+/**
+ * Several record writes sent in one request and applied in one transaction.
+ *
+ *     const batch = rb.batch();
+ *     batch.from("posts").create({ title: "A" });
+ *     batch.from("posts").remove("abc");
+ *     const results = await batch.send();
+ */
+export class Batch {
+    private readonly rb: RustaBase;
+    private readonly steps: Step[] = [];
+
+    constructor(rb: RustaBase) {
+        this.rb = rb;
+    }
+
+    /** Queue writes for one collection. */
+    from(collection: string) {
+        const path = "/api/collections/" + seg(collection) + "/records";
+        const add = (method: string, url: string, body?: Body, options: ReadOptions = {}) => {
+            const { query, headers } = readQuery(options);
+            const { json, files } = splitBody(body);
+            this.steps.push({ method, url: withQuery(url, query), headers, json, files });
+        };
+        return {
+            create: (data: Body, options?: ReadOptions) => add("POST", path, data, options),
+            update: (id: string, data: Body, options?: ReadOptions) =>
+                add("PATCH", path + "/" + seg(id), data, options),
+            /** Updates when `data.id` exists, otherwise creates. */
+            upsert: (data: Body, options?: ReadOptions) => add("PUT", path, data, options),
+            remove: (id: string, options?: ReadOptions) =>
+                add("DELETE", path + "/" + seg(id), undefined, options),
+        };
+    }
+
+    /** Number of queued writes. */
+    get size(): number {
+        return this.steps.length;
+    }
+
+    /** Sends every queued write. */
+    send(options: RequestOptions = {}): Promise<BatchResult[]> {
+        const form = new FormData();
+        const requests = this.steps.map((s, i) => {
+            for (const [field, list] of Object.entries(s.files)) {
+                for (const file of list) form.append(`requests.${i}.${field}`, file);
+            }
+            return { method: s.method, url: s.url, headers: s.headers, body: s.json };
+        });
+        form.append("@jsonPayload", JSON.stringify({ requests }));
+        return this.rb.request("/api/batch", { ...options, method: "POST", body: form });
+    }
+}

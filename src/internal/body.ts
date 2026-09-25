@@ -1,1 +1,113 @@
-LyoqIFRydWUgZm9yIGJyb3dzZXIgQmxvYi9GaWxlIHZhbHVlcyBhbmQgUmVhY3QgTmF0aXZlIGB7IHVyaSB9YCBmaWxlIG9iamVjdHMuICovCmV4cG9ydCBmdW5jdGlvbiBpc0ZpbGVMaWtlKHZhbHVlOiBhbnkpOiBib29sZWFuIHsKICAgIGlmICh2YWx1ZSA9PSBudWxsKSByZXR1cm4gZmFsc2U7CiAgICBpZiAodHlwZW9mIEJsb2IgIT09ICJ1bmRlZmluZWQiICYmIHZhbHVlIGluc3RhbmNlb2YgQmxvYikgcmV0dXJuIHRydWU7CiAgICBjb25zdCBpc1JlYWN0TmF0aXZlID0KICAgICAgICAodHlwZW9mIG5hdmlnYXRvciAhPT0gInVuZGVmaW5lZCIgJiYgKG5hdmlnYXRvciBhcyBhbnkpLnByb2R1Y3QgPT09ICJSZWFjdE5hdGl2ZSIpIHx8CiAgICAgICAgKHR5cGVvZiBnbG9iYWxUaGlzICE9PSAidW5kZWZpbmVkIiAmJiAhIShnbG9iYWxUaGlzIGFzIGFueSkuSGVybWVzSW50ZXJuYWwpOwogICAgcmV0dXJuIGlzUmVhY3ROYXRpdmUgJiYgdHlwZW9mIHZhbHVlID09PSAib2JqZWN0IiAmJiB0eXBlb2YgdmFsdWUudXJpID09PSAic3RyaW5nIjsKfQoKZXhwb3J0IGZ1bmN0aW9uIGlzRm9ybURhdGEodmFsdWU6IGFueSk6IHZhbHVlIGlzIEZvcm1EYXRhIHsKICAgIGlmICghdmFsdWUgfHwgdHlwZW9mIHZhbHVlICE9PSAib2JqZWN0IikgcmV0dXJuIGZhbHNlOwogICAgcmV0dXJuICgKICAgICAgICAodHlwZW9mIEZvcm1EYXRhICE9PSAidW5kZWZpbmVkIiAmJiB2YWx1ZSBpbnN0YW5jZW9mIEZvcm1EYXRhKSB8fAogICAgICAgIHZhbHVlLmNvbnN0cnVjdG9yPy5uYW1lID09PSAiRm9ybURhdGEiCiAgICApOwp9CgpmdW5jdGlvbiBoYXNGaWxlcyhib2R5OiBSZWNvcmQ8c3RyaW5nLCBhbnk+KTogYm9vbGVhbiB7CiAgICByZXR1cm4gT2JqZWN0LnZhbHVlcyhib2R5KS5zb21lKCh2KSA9PgogICAgICAgIEFycmF5LmlzQXJyYXkodikgPyB2LnNvbWUoaXNGaWxlTGlrZSkgOiBpc0ZpbGVMaWtlKHYpLAogICAgKTsKfQoKLyoqCiAqIFR1cm5zIGEgcGxhaW4gb2JqZWN0IHRoYXQgY29udGFpbnMgZmlsZXMgaW50byBtdWx0aXBhcnQgZm9ybSBkYXRhLgogKiBOb24tZmlsZSB2YWx1ZXMgdHJhdmVsIHRvZ2V0aGVyIGFzIG9uZSBKU09OIHBhcnQgbmFtZWQgYEBqc29uUGF5bG9hZGAKICogc28gdGhlaXIgdHlwZXMgKG51bWJlcnMsIGJvb2xlYW5zLCBhcnJheXMpIGFyZSBwcmVzZXJ2ZWQuCiAqLwpleHBvcnQgZnVuY3Rpb24gcHJlcGFyZUJvZHkoYm9keTogYW55KTogYW55IHsKICAgIGlmICgKICAgICAgICB0eXBlb2YgRm9ybURhdGEgPT09ICJ1bmRlZmluZWQiIHx8CiAgICAgICAgYm9keSA9PSBudWxsIHx8CiAgICAgICAgdHlwZW9mIGJvZHkgIT09ICJvYmplY3QiIHx8CiAgICAgICAgaXNGb3JtRGF0YShib2R5KSB8fAogICAgICAgICFoYXNGaWxlcyhib2R5KQogICAgKSB7CiAgICAgICAgcmV0dXJuIGJvZHk7CiAgICB9CgogICAgY29uc3QgZm9ybSA9IG5ldyBGb3JtRGF0YSgpOwogICAgY29uc3QganNvbjogUmVjb3JkPHN0cmluZywgYW55PiA9IHt9OwoKICAgIGZvciAoY29uc3QgW2tleSwgdmFsdWVdIG9mIE9iamVjdC5lbnRyaWVzKGJvZHkpKSB7CiAgICAgICAgaWYgKHZhbHVlID09PSB1bmRlZmluZWQpIGNvbnRpbnVlOwogICAgICAgIGNvbnN0IGxpc3QgPSBBcnJheS5pc0FycmF5KHZhbHVlKSA/IHZhbHVlIDogW3ZhbHVlXTsKICAgICAgICBjb25zdCBmaWxlcyA9IGxpc3QuZmlsdGVyKGlzRmlsZUxpa2UpOwogICAgICAgIGNvbnN0IHBsYWluID0gbGlzdC5maWx0ZXIoKHYpID0+ICFpc0ZpbGVMaWtlKHYpKTsKCiAgICAgICAgaWYgKCFmaWxlcy5sZW5ndGgpIHsKICAgICAgICAgICAganNvbltrZXldID0gdmFsdWU7CiAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgIH0KICAgICAgICBpZiAoQXJyYXkuaXNBcnJheSh2YWx1ZSkgJiYgcGxhaW4ubGVuZ3RoKSB7CiAgICAgICAgICAgIC8vIGtlZXAgZXhpc3RpbmcgZW50cmllcyBhbmQgYXBwZW5kIHRoZSBuZXcgZmlsZXMKICAgICAgICAgICAganNvbltrZXldID0gcGxhaW47CiAgICAgICAgICAgIGNvbnN0IGFwcGVuZEtleSA9IGtleS5zdGFydHNXaXRoKCIrIikgfHwga2V5LmVuZHNXaXRoKCIrIikgPyBrZXkgOiBrZXkgKyAiKyI7CiAgICAgICAgICAgIGZpbGVzLmZvckVhY2goKGYpID0+IGZvcm0uYXBwZW5kKGFwcGVuZEtleSwgZiBhcyBhbnkpKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBmaWxlcy5mb3JFYWNoKChmKSA9PiBmb3JtLmFwcGVuZChrZXksIGYgYXMgYW55KSk7CiAgICAgICAgfQogICAgfQoKICAgIGZvcm0uYXBwZW5kKCJAanNvblBheWxvYWQiLCBKU09OLnN0cmluZ2lmeShqc29uKSk7CiAgICByZXR1cm4gZm9ybTsKfQoKLyoqIFNwbGl0cyBhIGJvZHkgaW50byBKU09OIHZhbHVlcyBhbmQgZmlsZXMgKHVzZWQgYnkgYmF0Y2ggcmVxdWVzdHMpLiAqLwpleHBvcnQgZnVuY3Rpb24gc3BsaXRCb2R5KGJvZHk6IGFueSk6IHsganNvbjogUmVjb3JkPHN0cmluZywgYW55PjsgZmlsZXM6IFJlY29yZDxzdHJpbmcsIGFueVtdPiB9IHsKICAgIGNvbnN0IGpzb246IFJlY29yZDxzdHJpbmcsIGFueT4gPSB7fTsKICAgIGNvbnN0IGZpbGVzOiBSZWNvcmQ8c3RyaW5nLCBhbnlbXT4gPSB7fTsKICAgIGlmIChib2R5ID09IG51bGwpIHJldHVybiB7IGpzb24sIGZpbGVzIH07CgogICAgY29uc3QgZW50cmllczogQXJyYXk8W3N0cmluZywgYW55XT4gPSBbXTsKICAgIGlmIChpc0Zvcm1EYXRhKGJvZHkpKSB7CiAgICAgICAgY29uc3QgZ3JvdXBlZDogUmVjb3JkPHN0cmluZywgYW55W10+ID0ge307CiAgICAgICAgYm9keS5mb3JFYWNoKCh2LCBrKSA9PiAoZ3JvdXBlZFtrXSA9IGdyb3VwZWRba10gfHwgW10pLnB1c2godikpOwogICAgICAgIGZvciAoY29uc3QgW2ssIHZhbHNdIG9mIE9iamVjdC5lbnRyaWVzKGdyb3VwZWQpKSB7CiAgICAgICAgICAgIGlmIChrID09PSAiQGpzb25QYXlsb2FkIikgewogICAgICAgICAgICAgICAgdmFscy5mb3JFYWNoKCh2KSA9PiBPYmplY3QuYXNzaWduKGpzb24sIHNhZmVQYXJzZSh2KSkpOwogICAgICAgICAgICAgICAgY29udGludWU7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZW50cmllcy5wdXNoKFtrLCB2YWxzLmxlbmd0aCA9PT0gMSA/IHZhbHNbMF0gOiB2YWxzXSk7CiAgICAgICAgfQogICAgfSBlbHNlIHsKICAgICAgICBlbnRyaWVzLnB1c2goLi4uT2JqZWN0LmVudHJpZXMoYm9keSkpOwogICAgfQoKICAgIGZvciAoY29uc3QgW2tleSwgdmFsdWVdIG9mIGVudHJpZXMpIHsKICAgICAgICBjb25zdCBsaXN0ID0gQXJyYXkuaXNBcnJheSh2YWx1ZSkgPyB2YWx1ZSA6IFt2YWx1ZV07CiAgICAgICAgY29uc3QgZiA9IGxpc3QuZmlsdGVyKGlzRmlsZUxpa2UpOwogICAgICAgIGNvbnN0IHBsYWluID0gbGlzdC5maWx0ZXIoKHYpID0+ICFpc0ZpbGVMaWtlKHYpKTsKICAgICAgICBpZiAoIWYubGVuZ3RoKSB7CiAgICAgICAgICAgIGpzb25ba2V5XSA9IHZhbHVlOwogICAgICAgIH0gZWxzZSBpZiAoQXJyYXkuaXNBcnJheSh2YWx1ZSkgJiYgcGxhaW4ubGVuZ3RoKSB7CiAgICAgICAgICAgIGpzb25ba2V5XSA9IHBsYWluOwogICAgICAgICAgICBjb25zdCBhcHBlbmRLZXkgPSBrZXkuc3RhcnRzV2l0aCgiKyIpIHx8IGtleS5lbmRzV2l0aCgiKyIpID8ga2V5IDoga2V5ICsgIisiOwogICAgICAgICAgICBmaWxlc1thcHBlbmRLZXldID0gKGZpbGVzW2FwcGVuZEtleV0gfHwgW10pLmNvbmNhdChmKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBpZiAoQXJyYXkuaXNBcnJheSh2YWx1ZSkgJiYgIXBsYWluLmxlbmd0aCAmJiAhZi5sZW5ndGgpIGpzb25ba2V5XSA9IFtdOwogICAgICAgICAgICBmaWxlc1trZXldID0gKGZpbGVzW2tleV0gfHwgW10pLmNvbmNhdChmKTsKICAgICAgICB9CiAgICB9CiAgICByZXR1cm4geyBqc29uLCBmaWxlcyB9Owp9CgpmdW5jdGlvbiBzYWZlUGFyc2UodjogYW55KTogUmVjb3JkPHN0cmluZywgYW55PiB7CiAgICB0cnkgewogICAgICAgIHJldHVybiB0eXBlb2YgdiA9PT0gInN0cmluZyIgPyBKU09OLnBhcnNlKHYpIDoge307CiAgICB9IGNhdGNoIHsKICAgICAgICByZXR1cm4ge307CiAgICB9Cn0K
+/** True for browser Blob/File values and React Native `{ uri }` file objects. */
+export function isFileLike(value: any): boolean {
+    if (value == null) return false;
+    if (typeof Blob !== "undefined" && value instanceof Blob) return true;
+    const isReactNative =
+        (typeof navigator !== "undefined" && (navigator as any).product === "ReactNative") ||
+        (typeof globalThis !== "undefined" && !!(globalThis as any).HermesInternal);
+    return isReactNative && typeof value === "object" && typeof value.uri === "string";
+}
+
+export function isFormData(value: any): value is FormData {
+    if (!value || typeof value !== "object") return false;
+    return (
+        (typeof FormData !== "undefined" && value instanceof FormData) ||
+        value.constructor?.name === "FormData"
+    );
+}
+
+function hasFiles(body: Record<string, any>): boolean {
+    return Object.values(body).some((v) =>
+        Array.isArray(v) ? v.some(isFileLike) : isFileLike(v),
+    );
+}
+
+/**
+ * Turns a plain object that contains files into multipart form data.
+ * Non-file values travel together as one JSON part named `@jsonPayload`
+ * so their types (numbers, booleans, arrays) are preserved.
+ */
+export function prepareBody(body: any): any {
+    if (
+        typeof FormData === "undefined" ||
+        body == null ||
+        typeof body !== "object" ||
+        isFormData(body) ||
+        !hasFiles(body)
+    ) {
+        return body;
+    }
+
+    const form = new FormData();
+    const json: Record<string, any> = {};
+
+    for (const [key, value] of Object.entries(body)) {
+        if (value === undefined) continue;
+        const list = Array.isArray(value) ? value : [value];
+        const files = list.filter(isFileLike);
+        const plain = list.filter((v) => !isFileLike(v));
+
+        if (!files.length) {
+            json[key] = value;
+            continue;
+        }
+        if (Array.isArray(value) && plain.length) {
+            // keep existing entries and append the new files
+            json[key] = plain;
+            const appendKey = key.startsWith("+") || key.endsWith("+") ? key : key + "+";
+            files.forEach((f) => form.append(appendKey, f as any));
+        } else {
+            files.forEach((f) => form.append(key, f as any));
+        }
+    }
+
+    form.append("@jsonPayload", JSON.stringify(json));
+    return form;
+}
+
+/** Splits a body into JSON values and files (used by batch requests). */
+export function splitBody(body: any): { json: Record<string, any>; files: Record<string, any[]> } {
+    const json: Record<string, any> = {};
+    const files: Record<string, any[]> = {};
+    if (body == null) return { json, files };
+
+    const entries: Array<[string, any]> = [];
+    if (isFormData(body)) {
+        const grouped: Record<string, any[]> = {};
+        body.forEach((v, k) => (grouped[k] = grouped[k] || []).push(v));
+        for (const [k, vals] of Object.entries(grouped)) {
+            if (k === "@jsonPayload") {
+                vals.forEach((v) => Object.assign(json, safeParse(v)));
+                continue;
+            }
+            entries.push([k, vals.length === 1 ? vals[0] : vals]);
+        }
+    } else {
+        entries.push(...Object.entries(body));
+    }
+
+    for (const [key, value] of entries) {
+        const list = Array.isArray(value) ? value : [value];
+        const f = list.filter(isFileLike);
+        const plain = list.filter((v) => !isFileLike(v));
+        if (!f.length) {
+            json[key] = value;
+        } else if (Array.isArray(value) && plain.length) {
+            json[key] = plain;
+            const appendKey = key.startsWith("+") || key.endsWith("+") ? key : key + "+";
+            files[appendKey] = (files[appendKey] || []).concat(f);
+        } else {
+            if (Array.isArray(value) && !plain.length && !f.length) json[key] = [];
+            files[key] = (files[key] || []).concat(f);
+        }
+    }
+    return { json, files };
+}
+
+function safeParse(v: any): Record<string, any> {
+    try {
+        return typeof v === "string" ? JSON.parse(v) : {};
+    } catch {
+        return {};
+    }
+}

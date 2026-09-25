@@ -1,1 +1,76 @@
-LyoqCiAqIEVycm9yIHRocm93biBmb3IgZXZlcnkgZmFpbGVkIFJ1c3RhQmFzZSByZXF1ZXN0LgogKgogKiBgc3RhdHVzYCBpcyAwIHdoZW4gdGhlIHJlcXVlc3QgbmV2ZXIgcmVhY2hlZCB0aGUgc2VydmVyCiAqIChuZXR3b3JrIGZhaWx1cmUsIENPUlMsIGNhbmNlbGxhdGlvbikuCiAqLwpleHBvcnQgY2xhc3MgUnVzdGFCYXNlRXJyb3IgZXh0ZW5kcyBFcnJvciB7CiAgICByZWFkb25seSB1cmw6IHN0cmluZzsKICAgIHJlYWRvbmx5IHN0YXR1czogbnVtYmVyOwogICAgLyoqIFBhcnNlZCBKU09OIGJvZHkgcmV0dXJuZWQgYnkgdGhlIHNlcnZlciAoZW1wdHkgb2JqZWN0IHdoZW4gbm9uZSkuICovCiAgICByZWFkb25seSBkYXRhOiBSZWNvcmQ8c3RyaW5nLCBhbnk+OwogICAgLyoqIFRydWUgd2hlbiB0aGUgcmVxdWVzdCB3YXMgY2FuY2VsbGVkIChtYW51YWxseSBvciBieSBhdXRvLWNhbmNlbCkuICovCiAgICByZWFkb25seSBjYW5jZWxsZWQ6IGJvb2xlYW47CiAgICAvKiogT3JpZ2luYWwgdGhyb3duIHZhbHVlLCBpZiB0aGUgZXJyb3Igd3JhcHBlZCBzb21ldGhpbmcgZWxzZS4gKi8KICAgIHJlYWRvbmx5IGNhdXNlPzogdW5rbm93bjsKCiAgICBjb25zdHJ1Y3Rvcihpbml0OiB7CiAgICAgICAgbWVzc2FnZT86IHN0cmluZzsKICAgICAgICB1cmw/OiBzdHJpbmc7CiAgICAgICAgc3RhdHVzPzogbnVtYmVyOwogICAgICAgIGRhdGE/OiBSZWNvcmQ8c3RyaW5nLCBhbnk+OwogICAgICAgIGNhbmNlbGxlZD86IGJvb2xlYW47CiAgICAgICAgY2F1c2U/OiB1bmtub3duOwogICAgfSkgewogICAgICAgIGNvbnN0IGRhdGEgPSBpbml0LmRhdGEgJiYgdHlwZW9mIGluaXQuZGF0YSA9PT0gIm9iamVjdCIgPyBpbml0LmRhdGEgOiB7fTsKICAgICAgICBjb25zdCBtZXNzYWdlID0KICAgICAgICAgICAgaW5pdC5tZXNzYWdlIHx8CiAgICAgICAgICAgICh0eXBlb2YgZGF0YS5tZXNzYWdlID09PSAic3RyaW5nIiAmJiBkYXRhLm1lc3NhZ2UpIHx8CiAgICAgICAgICAgIChpbml0LmNhbmNlbGxlZAogICAgICAgICAgICAgICAgPyAiVGhlIHJlcXVlc3Qgd2FzIGNhbmNlbGxlZC4iCiAgICAgICAgICAgICAgICA6IGluaXQuc3RhdHVzCiAgICAgICAgICAgICAgICAgID8gYFJlcXVlc3QgZmFpbGVkIHdpdGggc3RhdHVzICR7aW5pdC5zdGF0dXN9LmAKICAgICAgICAgICAgICAgICAgOiAiQ291bGQgbm90IHJlYWNoIHRoZSBSdXN0YUJhc2Ugc2VydmVyLiIpOwoKICAgICAgICBzdXBlcihtZXNzYWdlKTsKICAgICAgICB0aGlzLm5hbWUgPSAiUnVzdGFCYXNlRXJyb3IiOwogICAgICAgIHRoaXMudXJsID0gaW5pdC51cmwgfHwgIiI7CiAgICAgICAgdGhpcy5zdGF0dXMgPSBpbml0LnN0YXR1cyB8fCAwOwogICAgICAgIHRoaXMuZGF0YSA9IGRhdGE7CiAgICAgICAgdGhpcy5jYW5jZWxsZWQgPSAhIWluaXQuY2FuY2VsbGVkOwogICAgICAgIHRoaXMuY2F1c2UgPSBpbml0LmNhdXNlOwogICAgICAgIE9iamVjdC5zZXRQcm90b3R5cGVPZih0aGlzLCBSdXN0YUJhc2VFcnJvci5wcm90b3R5cGUpOwogICAgfQoKICAgIC8qKiBGaWVsZCB2YWxpZGF0aW9uIGVycm9ycyByZXR1cm5lZCBieSB0aGUgc2VydmVyLCBrZXllZCBieSBmaWVsZCBuYW1lLiAqLwogICAgZ2V0IGZpZWxkRXJyb3JzKCk6IFJlY29yZDxzdHJpbmcsIHsgY29kZTogc3RyaW5nOyBtZXNzYWdlOiBzdHJpbmcgfT4gewogICAgICAgIHJldHVybiAodGhpcy5kYXRhPy5kYXRhIGFzIGFueSkgfHwge307CiAgICB9CgogICAgLyoqIFdyYXBzIGFueSB0aHJvd24gdmFsdWUgaW50byBhIFJ1c3RhQmFzZUVycm9yIChyZXR1cm5lZCBhcy1pcyBpZiBpdCBhbHJlYWR5IGlzIG9uZSkuICovCiAgICBzdGF0aWMgZnJvbShlcnI6IHVua25vd24sIHVybCA9ICIiKTogUnVzdGFCYXNlRXJyb3IgewogICAgICAgIGlmIChlcnIgaW5zdGFuY2VvZiBSdXN0YUJhc2VFcnJvcikgewogICAgICAgICAgICByZXR1cm4gZXJyOwogICAgICAgIH0KICAgICAgICBjb25zdCBlID0gZXJyIGFzIGFueTsKICAgICAgICBjb25zdCBjYW5jZWxsZWQgPQogICAgICAgICAgICBlPy5uYW1lID09PSAiQWJvcnRFcnJvciIgfHwgZT8ubWVzc2FnZSA9PT0gIkFib3J0ZWQiIHx8IGU/LmNhbmNlbGxlZCA9PT0gdHJ1ZTsKICAgICAgICByZXR1cm4gbmV3IFJ1c3RhQmFzZUVycm9yKHsKICAgICAgICAgICAgdXJsLAogICAgICAgICAgICBjYW5jZWxsZWQsCiAgICAgICAgICAgIG1lc3NhZ2U6IGNhbmNlbGxlZCA/IHVuZGVmaW5lZCA6IGU/Lm1lc3NhZ2UsCiAgICAgICAgICAgIGNhdXNlOiBlcnIsCiAgICAgICAgfSk7CiAgICB9CgogICAgdG9KU09OKCkgewogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIG5hbWU6IHRoaXMubmFtZSwKICAgICAgICAgICAgbWVzc2FnZTogdGhpcy5tZXNzYWdlLAogICAgICAgICAgICB1cmw6IHRoaXMudXJsLAogICAgICAgICAgICBzdGF0dXM6IHRoaXMuc3RhdHVzLAogICAgICAgICAgICBkYXRhOiB0aGlzLmRhdGEsCiAgICAgICAgICAgIGNhbmNlbGxlZDogdGhpcy5jYW5jZWxsZWQsCiAgICAgICAgfTsKICAgIH0KfQo=
+/**
+ * Error thrown for every failed RustaBase request.
+ *
+ * `status` is 0 when the request never reached the server
+ * (network failure, CORS, cancellation).
+ */
+export class RustaBaseError extends Error {
+    readonly url: string;
+    readonly status: number;
+    /** Parsed JSON body returned by the server (empty object when none). */
+    readonly data: Record<string, any>;
+    /** True when the request was cancelled (manually or by auto-cancel). */
+    readonly cancelled: boolean;
+    /** Original thrown value, if the error wrapped something else. */
+    readonly cause?: unknown;
+
+    constructor(init: {
+        message?: string;
+        url?: string;
+        status?: number;
+        data?: Record<string, any>;
+        cancelled?: boolean;
+        cause?: unknown;
+    }) {
+        const data = init.data && typeof init.data === "object" ? init.data : {};
+        const message =
+            init.message ||
+            (typeof data.message === "string" && data.message) ||
+            (init.cancelled
+                ? "The request was cancelled."
+                : init.status
+                  ? `Request failed with status ${init.status}.`
+                  : "Could not reach the RustaBase server.");
+
+        super(message);
+        this.name = "RustaBaseError";
+        this.url = init.url || "";
+        this.status = init.status || 0;
+        this.data = data;
+        this.cancelled = !!init.cancelled;
+        this.cause = init.cause;
+        Object.setPrototypeOf(this, RustaBaseError.prototype);
+    }
+
+    /** Field validation errors returned by the server, keyed by field name. */
+    get fieldErrors(): Record<string, { code: string; message: string }> {
+        return (this.data?.data as any) || {};
+    }
+
+    /** Wraps any thrown value into a RustaBaseError (returned as-is if it already is one). */
+    static from(err: unknown, url = ""): RustaBaseError {
+        if (err instanceof RustaBaseError) {
+            return err;
+        }
+        const e = err as any;
+        const cancelled =
+            e?.name === "AbortError" || e?.message === "Aborted" || e?.cancelled === true;
+        return new RustaBaseError({
+            url,
+            cancelled,
+            message: cancelled ? undefined : e?.message,
+            cause: err,
+        });
+    }
+
+    toJSON() {
+        return {
+            name: this.name,
+            message: this.message,
+            url: this.url,
+            status: this.status,
+            data: this.data,
+            cancelled: this.cancelled,
+        };
+    }
+}

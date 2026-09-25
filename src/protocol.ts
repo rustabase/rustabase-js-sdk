@@ -1,1 +1,11 @@
-LyoqIFJlYWx0aW1lIGV2ZW50IHNlbnQgYnkgdGhlIHNlcnZlciBvbmNlIHRoZSBsaXZlIGNvbm5lY3Rpb24gaXMgcmVhZHkuICovCmV4cG9ydCBjb25zdCBSQl9DT05ORUNUID0gIlJCX0NPTk5FQ1QiOwoKLyoqIE5hbWUgb2YgdGhlIGJ1aWx0LWluIHN1cGVydXNlcnMgY29sbGVjdGlvbi4gKi8KZXhwb3J0IGNvbnN0IFNVUEVSVVNFUlMgPSAiX3N1cGVydXNlcnMiOwoKLyoqIEZpeGVkIGlkIG9mIHRoZSBidWlsdC1pbiBzdXBlcnVzZXJzIGNvbGxlY3Rpb24uICovCmV4cG9ydCBjb25zdCBTVVBFUlVTRVJTX0lEID0gInJiY18zMTQyNjM1ODIzIjsKCi8qKiBEZWZhdWx0IHN0b3JhZ2UgLyBjb29raWUga2V5IGZvciB0aGUgc2lnbmVkLWluIHNlc3Npb24uICovCmV4cG9ydCBjb25zdCBTRVNTSU9OX0tFWSA9ICJyYl9zZXNzaW9uIjsK
+/** Realtime event sent by the server once the live connection is ready. */
+export const RB_CONNECT = "RB_CONNECT";
+
+/** Name of the built-in superusers collection. */
+export const SUPERUSERS = "_superusers";
+
+/** Fixed id of the built-in superusers collection. */
+export const SUPERUSERS_ID = "rbc_3142635823";
+
+/** Default storage / cookie key for the signed-in session. */
+export const SESSION_KEY = "rb_session";

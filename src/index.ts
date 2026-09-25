@@ -1,1 +1,22 @@
-ZXhwb3J0IHsgUnVzdGFCYXNlLCBjcmVhdGVDbGllbnQgfSBmcm9tICIuL2NsaWVudCI7CmV4cG9ydCB0eXBlIHsgQ2xpZW50T3B0aW9ucywgUmVxdWVzdEhvb2ssIFJlc3BvbnNlSG9vayB9IGZyb20gIi4vY2xpZW50IjsKZXhwb3J0IHsgUnVzdGFCYXNlRXJyb3IgfSBmcm9tICIuL2Vycm9ycyI7CmV4cG9ydCB7IFNlc3Npb24sIE1lbW9yeVNlc3Npb24gfSBmcm9tICIuL3Nlc3Npb24vc2Vzc2lvbiI7CmV4cG9ydCB0eXBlIHsgU2Vzc2lvbkxpc3RlbmVyIH0gZnJvbSAiLi9zZXNzaW9uL3Nlc3Npb24iOwpleHBvcnQgeyBCcm93c2VyU2Vzc2lvbiB9IGZyb20gIi4vc2Vzc2lvbi9icm93c2VyIjsKZXhwb3J0IHsgQXN5bmNTZXNzaW9uIH0gZnJvbSAiLi9zZXNzaW9uL2FzeW5jIjsKZXhwb3J0IHR5cGUgeyBBc3luY1Nlc3Npb25PcHRpb25zIH0gZnJvbSAiLi9zZXNzaW9uL2FzeW5jIjsKZXhwb3J0IHsgVGFibGUsIEF1dGhUYWJsZSB9IGZyb20gIi4vZGF0YS90YWJsZSI7CmV4cG9ydCB0eXBlIHsgUGFzc3dvcmRTaWduSW5PcHRpb25zLCBPQXV0aFNpZ25Jbk9wdGlvbnMgfSBmcm9tICIuL2RhdGEvdGFibGUiOwpleHBvcnQgeyBCYXRjaCB9IGZyb20gIi4vZGF0YS9iYXRjaCI7CmV4cG9ydCB7IEZpbGVzIH0gZnJvbSAiLi9kYXRhL2ZpbGVzIjsKZXhwb3J0IHsgUmVhbHRpbWUgfSBmcm9tICIuL3JlYWx0aW1lL3JlYWx0aW1lIjsKZXhwb3J0IHsgQWRtaW4gfSBmcm9tICIuL2FkbWluIjsKZXhwb3J0IHR5cGUgeyBDb2xsZWN0aW9uLCBCYWNrdXAgfSBmcm9tICIuL2FkbWluIjsKZXhwb3J0IHsgUkJfQ09OTkVDVCwgU1VQRVJVU0VSUyB9IGZyb20gIi4vcHJvdG9jb2wiOwpleHBvcnQgeyByZWFkQ2xhaW1zLCB0b2tlbkV4cGlyZWQgfSBmcm9tICIuL2ludGVybmFsL3Rva2VuIjsKZXhwb3J0IHR5cGUgeyBDb29raWVPcHRpb25zIH0gZnJvbSAiLi9pbnRlcm5hbC9jb29raWUiOwpleHBvcnQgKiBmcm9tICIuL3R5cGVzIjsKCmltcG9ydCB7IFJ1c3RhQmFzZSB9IGZyb20gIi4vY2xpZW50IjsKZXhwb3J0IGRlZmF1bHQgUnVzdGFCYXNlOwo=
+export { RustaBase, createClient } from "./client";
+export type { ClientOptions, RequestHook, ResponseHook } from "./client";
+export { RustaBaseError } from "./errors";
+export { Session, MemorySession } from "./session/session";
+export type { SessionListener } from "./session/session";
+export { BrowserSession } from "./session/browser";
+export { AsyncSession } from "./session/async";
+export type { AsyncSessionOptions } from "./session/async";
+export { Table, AuthTable } from "./data/table";
+export type { PasswordSignInOptions, OAuthSignInOptions } from "./data/table";
+export { Batch } from "./data/batch";
+export { Files } from "./data/files";
+export { Realtime } from "./realtime/realtime";
+export { Admin } from "./admin";
+export type { Collection, Backup } from "./admin";
+export { RB_CONNECT, SUPERUSERS } from "./protocol";
+export { readClaims, tokenExpired } from "./internal/token";
+export type { CookieOptions } from "./internal/cookie";
+export * from "./types";
+
+import { RustaBase } from "./client";
+export default RustaBase;

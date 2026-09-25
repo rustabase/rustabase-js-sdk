@@ -1,1 +1,274 @@
-aW1wb3J0IHR5cGUgeyBSdXN0YUJhc2UgfSBmcm9tICIuLi9jbGllbnQiOwppbXBvcnQgeyBDcnVkLCByZWFkUXVlcnkgfSBmcm9tICIuLi9kYXRhL2NydWQiOwppbXBvcnQgeyBzZWcgfSBmcm9tICIuLi9pbnRlcm5hbC9lbmNvZGUiOwppbXBvcnQgdHlwZSB7IEJvZHksIEpzb24sIExpc3RPcHRpb25zLCBQYWdlLCBSZXF1ZXN0T3B0aW9ucyB9IGZyb20gIi4uL3R5cGVzIjsKCi8qKiBTaW1wbGUgUkVTVCByZXNvdXJjZSB3aXRob3V0IHBhZ2luZyAoYXBpIGtleXMsIHdlYmhvb2tzLCBmdW5jdGlvbnMpLiAqLwpjbGFzcyBSZXNvdXJjZTxUPiB7CiAgICBjb25zdHJ1Y3RvcigKICAgICAgICBwcm90ZWN0ZWQgcmVhZG9ubHkgcmI6IFJ1c3RhQmFzZSwKICAgICAgICBwcm90ZWN0ZWQgcmVhZG9ubHkgcGF0aDogc3RyaW5nLAogICAgKSB7fQoKICAgIGxpc3Qob3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8VFtdPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCh0aGlzLnBhdGgsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiR0VUIiB9KTsKICAgIH0KICAgIGdldChpZDogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxUPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCh0aGlzLnBhdGggKyAiLyIgKyBzZWcoaWQpLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIkdFVCIgfSk7CiAgICB9CiAgICBjcmVhdGUoZGF0YTogSnNvbiwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8VD4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QodGhpcy5wYXRoLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIlBPU1QiLCBib2R5OiBkYXRhIH0pOwogICAgfQogICAgdXBkYXRlKGlkOiBzdHJpbmcsIGRhdGE6IEpzb24sIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPFQ+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvIiArIHNlZyhpZCksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUEFUQ0giLCBib2R5OiBkYXRhIH0pOwogICAgfQogICAgYXN5bmMgcmVtb3ZlKGlkOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QodGhpcy5wYXRoICsgIi8iICsgc2VnKGlkKSwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJERUxFVEUiIH0pOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgcHJvdGVjdGVkIGFjdGlvbjxSID0gYW55PihpZDogc3RyaW5nLCBuYW1lOiBzdHJpbmcsIG1ldGhvZDogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucywgYm9keT86IGFueSk6IFByb21pc2U8Uj4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoYCR7dGhpcy5wYXRofS8ke3NlZyhpZCl9LyR7bmFtZX1gLCB7IC4uLm9wdGlvbnMsIG1ldGhvZCwgYm9keSB9KTsKICAgIH0KfQoKZXhwb3J0IGludGVyZmFjZSBDb2xsZWN0aW9uIGV4dGVuZHMgSnNvbiB7CiAgICBpZDogc3RyaW5nOwogICAgbmFtZTogc3RyaW5nOwogICAgdHlwZTogImJhc2UiIHwgImF1dGgiIHwgInZpZXciIHwgc3RyaW5nOwogICAgZmllbGRzOiBKc29uW107CiAgICBzeXN0ZW06IGJvb2xlYW47Cn0KCmV4cG9ydCBjbGFzcyBDb2xsZWN0aW9ucyBleHRlbmRzIENydWQ8Q29sbGVjdGlvbj4gewogICAgY29uc3RydWN0b3IocmI6IFJ1c3RhQmFzZSkgewogICAgICAgIHN1cGVyKHJiLCAiL2FwaS9jb2xsZWN0aW9ucyIpOwogICAgfQogICAgLyoqIFJlcGxhY2VzIHRoZSBzY2hlbWEgd2l0aCB0aGUgZ2l2ZW4gY29sbGVjdGlvbnMuICovCiAgICBhc3luYyBpbXBvcnQoY29sbGVjdGlvbnM6IEpzb25bXSwgZGVsZXRlTWlzc2luZyA9IGZhbHNlLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx0cnVlPiB7CiAgICAgICAgYXdhaXQgdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvaW1wb3J0IiwgewogICAgICAgICAgICAuLi5vcHRpb25zLAogICAgICAgICAgICBtZXRob2Q6ICJQVVQiLAogICAgICAgICAgICBib2R5OiB7IGNvbGxlY3Rpb25zLCBkZWxldGVNaXNzaW5nIH0sCiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICAvKiogRGVsZXRlcyBldmVyeSByZWNvcmQgb2YgYSBjb2xsZWN0aW9uLiAqLwogICAgYXN5bmMgdHJ1bmNhdGUoY29sbGVjdGlvbjogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx0cnVlPiB7CiAgICAgICAgYXdhaXQgdGhpcy5yYi5yZXF1ZXN0KGAke3RoaXMucGF0aH0vJHtzZWcoY29sbGVjdGlvbil9L3RydW5jYXRlYCwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJERUxFVEUiIH0pOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgLyoqIERlZmF1bHQgZmllbGQgc2V0cyBmb3IgZWFjaCBjb2xsZWN0aW9uIHR5cGUuICovCiAgICBzY2FmZm9sZHMob3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8UmVjb3JkPHN0cmluZywgQ29sbGVjdGlvbj4+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvbWV0YS9zY2FmZm9sZHMiLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIkdFVCIgfSk7CiAgICB9CiAgICBvYXV0aFByb3ZpZGVycyhvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uW10+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucGF0aCArICIvbWV0YS9vYXV0aDItcHJvdmlkZXJzIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgLyoqIFJ1bnMgYSB2aWV3IHF1ZXJ5IGFuZCByZXR1cm5zIHNhbXBsZSByb3dzLiAqLwogICAgcHJldmlld1ZpZXcocXVlcnk6IHN0cmluZywgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8SnNvbj4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QodGhpcy5wYXRoICsgIi9tZXRhL2RyeS1ydW4tdmlldyIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IHsgcXVlcnkgfSB9KTsKICAgIH0KfQoKZXhwb3J0IGNsYXNzIFNldHRpbmdzIHsKICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgcmI6IFJ1c3RhQmFzZSkge30KICAgIGdldChvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCgiL2FwaS9zZXR0aW5ncyIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiR0VUIiB9KTsKICAgIH0KICAgIHVwZGF0ZShkYXRhOiBCb2R5LCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCgiL2FwaS9zZXR0aW5ncyIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUEFUQ0giLCBib2R5OiBkYXRhIH0pOwogICAgfQogICAgYXN5bmMgdGVzdFN0b3JhZ2UoZmlsZXN5c3RlbTogInN0b3JhZ2UiIHwgImJhY2t1cHMiID0gInN0b3JhZ2UiLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx0cnVlPiB7CiAgICAgICAgYXdhaXQgdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL3NldHRpbmdzL3Rlc3QvczMiLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIlBPU1QiLCBib2R5OiB7IGZpbGVzeXN0ZW0gfSB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIGFzeW5jIHRlc3RFbWFpbChjb2xsZWN0aW9uOiBzdHJpbmcsIHRvOiBzdHJpbmcsIHRlbXBsYXRlOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvc2V0dGluZ3MvdGVzdC9lbWFpbCIsIHsKICAgICAgICAgICAgLi4ub3B0aW9ucywKICAgICAgICAgICAgbWV0aG9kOiAiUE9TVCIsCiAgICAgICAgICAgIGJvZHk6IHsgZW1haWw6IHRvLCB0ZW1wbGF0ZSwgY29sbGVjdGlvbiB9LAogICAgICAgIH0pOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgYXBwbGVDbGllbnRTZWNyZXQoCiAgICAgICAgaW5wdXQ6IHsgY2xpZW50SWQ6IHN0cmluZzsgdGVhbUlkOiBzdHJpbmc7IGtleUlkOiBzdHJpbmc7IHByaXZhdGVLZXk6IHN0cmluZzsgZHVyYXRpb246IG51bWJlciB9LAogICAgICAgIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30sCiAgICApOiBQcm9taXNlPHsgc2VjcmV0OiBzdHJpbmcgfT4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvc2V0dGluZ3MvYXBwbGUvZ2VuZXJhdGUtY2xpZW50LXNlY3JldCIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IGlucHV0IH0pOwogICAgfQp9CgpleHBvcnQgY2xhc3MgTG9ncyB7CiAgICBjb25zdHJ1Y3Rvcihwcml2YXRlIHJlYWRvbmx5IHJiOiBSdXN0YUJhc2UpIHt9CiAgICBsaXN0KG9wdGlvbnM6IExpc3RPcHRpb25zID0ge30pOiBQcm9taXNlPFBhZ2U8SnNvbj4+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL2xvZ3MiLCB7IC4uLnJlYWRRdWVyeSh7IHBhZ2U6IDEsIHBlclBhZ2U6IDMwLCAuLi5vcHRpb25zIH0pLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgZ2V0KGlkOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb24+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL2xvZ3MvIiArIHNlZyhpZCksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiR0VUIiB9KTsKICAgIH0KICAgIHN0YXRzKG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zICYgeyBmaWx0ZXI/OiBzdHJpbmcgfSA9IHt9KTogUHJvbWlzZTxBcnJheTx7IHRvdGFsOiBudW1iZXI7IGRhdGU6IHN0cmluZyB9Pj4gewogICAgICAgIGNvbnN0IHsgZmlsdGVyLCAuLi5yZXN0IH0gPSBvcHRpb25zOwogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvbG9ncy9zdGF0cyIsIHsgLi4ucmVzdCwgbWV0aG9kOiAiR0VUIiwgcXVlcnk6IHsgZmlsdGVyLCAuLi4ocmVzdC5xdWVyeSB8fCB7fSkgfSB9KTsKICAgIH0KICAgIGFzeW5jIGNsZWFyKG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvbG9ncyIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiREVMRVRFIiB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KfQoKZXhwb3J0IGludGVyZmFjZSBCYWNrdXAgewogICAga2V5OiBzdHJpbmc7CiAgICBzaXplOiBudW1iZXI7CiAgICBtb2RpZmllZDogc3RyaW5nOwp9CgpleHBvcnQgY2xhc3MgQmFja3VwcyB7CiAgICBjb25zdHJ1Y3Rvcihwcml2YXRlIHJlYWRvbmx5IHJiOiBSdXN0YUJhc2UpIHt9CiAgICBsaXN0KG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEJhY2t1cFtdPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCgiL2FwaS9iYWNrdXBzIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgYXN5bmMgY3JlYXRlKG5hbWUgPSAiIiwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8dHJ1ZT4gewogICAgICAgIGF3YWl0IHRoaXMucmIucmVxdWVzdCgiL2FwaS9iYWNrdXBzIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJQT1NUIiwgYm9keTogeyBuYW1lIH0gfSk7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICAvKiogVXBsb2FkcyBhIGJhY2t1cCBhcmNoaXZlOiBgdXBsb2FkKHsgZmlsZTogYmxvYiB9KWAuICovCiAgICBhc3luYyB1cGxvYWQoZGF0YTogQm9keSwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8dHJ1ZT4gewogICAgICAgIGF3YWl0IHRoaXMucmIucmVxdWVzdCgiL2FwaS9iYWNrdXBzL3VwbG9hZCIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IGRhdGEgfSk7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICBhc3luYyByZW1vdmUoa2V5OiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvYmFja3Vwcy8iICsgc2VnKGtleSksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiREVMRVRFIiB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIGFzeW5jIHJlc3RvcmUoa2V5OiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QoYC9hcGkvYmFja3Vwcy8ke3NlZyhrZXkpfS9yZXN0b3JlYCwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJQT1NUIiB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIC8qKiBEb3dubG9hZCBsaW5rOyBnZXQgdGhlIHRva2VuIHdpdGggYHJiLmZpbGVzLnRva2VuKClgLiAqLwogICAgZG93bmxvYWRVcmwoa2V5OiBzdHJpbmcsIHRva2VuOiBzdHJpbmcpOiBzdHJpbmcgewogICAgICAgIHJldHVybiB0aGlzLnJiLnVybChgL2FwaS9iYWNrdXBzLyR7c2VnKGtleSl9P3Rva2VuPSR7c2VnKHRva2VuKX1gKTsKICAgIH0KfQoKZXhwb3J0IGNsYXNzIENyb25zIHsKICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgcmI6IFJ1c3RhQmFzZSkge30KICAgIGxpc3Qob3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8QXJyYXk8eyBpZDogc3RyaW5nOyBleHByZXNzaW9uOiBzdHJpbmcgfT4+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL2Nyb25zIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgYXN5bmMgcnVuKGpvYklkOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHRydWU+IHsKICAgICAgICBhd2FpdCB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvY3JvbnMvIiArIHNlZyhqb2JJZCksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIgfSk7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9Cn0KCmV4cG9ydCBjbGFzcyBBcGlLZXlzIGV4dGVuZHMgUmVzb3VyY2U8SnNvbj4gewogICAgY29uc3RydWN0b3IocmI6IFJ1c3RhQmFzZSkgewogICAgICAgIHN1cGVyKHJiLCAiL2FwaS9hcGkta2V5cyIpOwogICAgfQogICAgLyoqIElzc3VlcyBhIG5ldyBzZWNyZXQgZm9yIHRoZSBrZXkuIFRoZSBzZWNyZXQgaXMgb25seSBzaG93biBvbmNlLiAqLwogICAgcm90YXRlKGlkOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb24+IHsKICAgICAgICByZXR1cm4gdGhpcy5hY3Rpb24oaWQsICJyb3RhdGUiLCAiUE9TVCIsIG9wdGlvbnMpOwogICAgfQp9CgpleHBvcnQgY2xhc3MgV2ViaG9va3MgZXh0ZW5kcyBSZXNvdXJjZTxKc29uPiB7CiAgICBjb25zdHJ1Y3RvcihyYjogUnVzdGFCYXNlKSB7CiAgICAgICAgc3VwZXIocmIsICIvYXBpL3dlYmhvb2tzIik7CiAgICB9CiAgICBzdGF0cyhvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCh0aGlzLnBhdGggKyAiL3N0YXRzIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgdGVzdChpZDogc3RyaW5nLCBwYXlsb2FkOiBKc29uID0ge30sIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb24+IHsKICAgICAgICByZXR1cm4gdGhpcy5hY3Rpb24oaWQsICJ0ZXN0IiwgIlBPU1QiLCBvcHRpb25zLCBwYXlsb2FkKTsKICAgIH0KfQoKZXhwb3J0IGNsYXNzIEZ1bmN0aW9ucyBleHRlbmRzIFJlc291cmNlPEpzb24+IHsKICAgIGNvbnN0cnVjdG9yKHJiOiBSdXN0YUJhc2UpIHsKICAgICAgICBzdXBlcihyYiwgIi9hcGkvZnVuY3Rpb25zIik7CiAgICB9CiAgICBzdGF0cyhvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCh0aGlzLnBhdGggKyAiL3N0YXRzIiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJHRVQiIH0pOwogICAgfQogICAgZHVwbGljYXRlKGlkOiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb24+IHsKICAgICAgICByZXR1cm4gdGhpcy5hY3Rpb24oaWQsICJkdXBsaWNhdGUiLCAiUE9TVCIsIG9wdGlvbnMpOwogICAgfQogICAgLyoqIFJ1bnMgYSBmdW5jdGlvbiB3aXRoIGEgdGVzdCBwYXlsb2FkLiAqLwogICAgdGVzdChpZDogc3RyaW5nLCBwYXlsb2FkOiBKc29uID0ge30sIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb24+IHsKICAgICAgICByZXR1cm4gdGhpcy5hY3Rpb24oaWQsICJ0ZXN0IiwgIlBPU1QiLCBvcHRpb25zLCBwYXlsb2FkKTsKICAgIH0KICAgIGxvZ3MoaWQ6IHN0cmluZywgZmlsdGVyOiB7IHN0YXR1cz86IHN0cmluZzsgbGltaXQ/OiBudW1iZXIgfSA9IHt9LCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uW10+IHsKICAgICAgICByZXR1cm4gdGhpcy5hY3Rpb24oaWQsICJsb2dzIiwgIkdFVCIsIHsgLi4ub3B0aW9ucywgcXVlcnk6IHsgLi4uZmlsdGVyLCAuLi4ob3B0aW9ucy5xdWVyeSB8fCB7fSkgfSB9KTsKICAgIH0KICAgIGFzeW5jIGNsZWFyTG9ncyhpZDogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx0cnVlPiB7CiAgICAgICAgYXdhaXQgdGhpcy5hY3Rpb24oaWQsICJsb2dzIiwgIkRFTEVURSIsIG9wdGlvbnMpOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQp9CgovKiogUm93IGxldmVsIHNlY3VyaXR5IHJ1bGVzIGZvciBkYXRhYmFzZSB0YWJsZXMuICovCmV4cG9ydCBjbGFzcyBSbHMgewogICAgY29uc3RydWN0b3IocHJpdmF0ZSByZWFkb25seSByYjogUnVzdGFCYXNlKSB7fQogICAgcHJpdmF0ZSBwID0gKHRhYmxlOiBzdHJpbmcsIHJlc3QgPSAiIikgPT4gYC9hcGkvcmxzL3RhYmxlcy8ke3NlZyh0YWJsZSl9JHtyZXN0fWA7CgogICAgdGVtcGxhdGVzKG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPEpzb25bXT4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvcmxzL3RlbXBsYXRlcyIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiR0VUIiB9KTsKICAgIH0KICAgIHRhYmxlcyhvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uW10+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL3Jscy90YWJsZXMiLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIkdFVCIgfSk7CiAgICB9CiAgICBwb2xpY2llcyh0YWJsZTogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uW10+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KHRoaXMucCh0YWJsZSwgIi9wb2xpY2llcyIpLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIkdFVCIgfSk7CiAgICB9CiAgICBjcmVhdGVQb2xpY3kodGFibGU6IHN0cmluZywgZGF0YTogSnNvbiwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8SnNvbj4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QodGhpcy5wKHRhYmxlLCAiL3BvbGljaWVzIiksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IGRhdGEgfSk7CiAgICB9CiAgICB1cGRhdGVQb2xpY3kodGFibGU6IHN0cmluZywgbmFtZTogc3RyaW5nLCBkYXRhOiBKc29uLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxKc29uPiB7CiAgICAgICAgcmV0dXJuIHRoaXMucmIucmVxdWVzdCh0aGlzLnAodGFibGUsICIvcG9saWNpZXMvIiArIHNlZyhuYW1lKSksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUEFUQ0giLCBib2R5OiBkYXRhIH0pOwogICAgfQogICAgYXN5bmMgcmVtb3ZlUG9saWN5KHRhYmxlOiBzdHJpbmcsIG5hbWU6IHN0cmluZywgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8dHJ1ZT4gewogICAgICAgIGF3YWl0IHRoaXMucmIucmVxdWVzdCh0aGlzLnAodGFibGUsICIvcG9saWNpZXMvIiArIHNlZyhuYW1lKSksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiREVMRVRFIiB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIC8qKiBUdXJucyBSTFMgb24gb3Igb2ZmIGZvciBhIHRhYmxlLiAqLwogICAgYXN5bmMgc2V0RW5hYmxlZCh0YWJsZTogc3RyaW5nLCBzZXR0aW5nczogeyBlbmFibGVkOiBib29sZWFuOyBmb3JjZT86IGJvb2xlYW4gfSwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8dHJ1ZT4gewogICAgICAgIGF3YWl0IHRoaXMucmIucmVxdWVzdCh0aGlzLnAodGFibGUsICIvcmxzIiksIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IHNldHRpbmdzIH0pOwogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgcHJldmlldyhkYXRhOiBKc29uLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTx7IHNxbDogc3RyaW5nOyBlcnJvcjogc3RyaW5nIH0+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL3Jscy9wcmV2aWV3IiwgeyAuLi5vcHRpb25zLCBtZXRob2Q6ICJQT1NUIiwgYm9keTogZGF0YSB9KTsKICAgIH0KICAgIHRlc3QoZGF0YTogSnNvbiwgb3B0aW9uczogUmVxdWVzdE9wdGlvbnMgPSB7fSk6IFByb21pc2U8SnNvbj4gewogICAgICAgIHJldHVybiB0aGlzLnJiLnJlcXVlc3QoIi9hcGkvcmxzL3Rlc3QiLCB7IC4uLm9wdGlvbnMsIG1ldGhvZDogIlBPU1QiLCBib2R5OiBkYXRhIH0pOwogICAgfQp9CgovKiogU3VwZXJ1c2VyLW9ubHkgdG9vbHM6IGByYi5hZG1pbmAuICovCmV4cG9ydCBjbGFzcyBBZG1pbiB7CiAgICByZWFkb25seSBjb2xsZWN0aW9uczogQ29sbGVjdGlvbnM7CiAgICByZWFkb25seSBzZXR0aW5nczogU2V0dGluZ3M7CiAgICByZWFkb25seSBsb2dzOiBMb2dzOwogICAgcmVhZG9ubHkgYmFja3VwczogQmFja3VwczsKICAgIHJlYWRvbmx5IGNyb25zOiBDcm9uczsKICAgIHJlYWRvbmx5IGFwaUtleXM6IEFwaUtleXM7CiAgICByZWFkb25seSB3ZWJob29rczogV2ViaG9va3M7CiAgICByZWFkb25seSBmdW5jdGlvbnM6IEZ1bmN0aW9uczsKICAgIHJlYWRvbmx5IHJsczogUmxzOwoKICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgcmVhZG9ubHkgcmI6IFJ1c3RhQmFzZSkgewogICAgICAgIHRoaXMuY29sbGVjdGlvbnMgPSBuZXcgQ29sbGVjdGlvbnMocmIpOwogICAgICAgIHRoaXMuc2V0dGluZ3MgPSBuZXcgU2V0dGluZ3MocmIpOwogICAgICAgIHRoaXMubG9ncyA9IG5ldyBMb2dzKHJiKTsKICAgICAgICB0aGlzLmJhY2t1cHMgPSBuZXcgQmFja3VwcyhyYik7CiAgICAgICAgdGhpcy5jcm9ucyA9IG5ldyBDcm9ucyhyYik7CiAgICAgICAgdGhpcy5hcGlLZXlzID0gbmV3IEFwaUtleXMocmIpOwogICAgICAgIHRoaXMud2ViaG9va3MgPSBuZXcgV2ViaG9va3MocmIpOwogICAgICAgIHRoaXMuZnVuY3Rpb25zID0gbmV3IEZ1bmN0aW9ucyhyYik7CiAgICAgICAgdGhpcy5ybHMgPSBuZXcgUmxzKHJiKTsKICAgIH0KCiAgICAvKiogUnVucyByYXcgU1FMLiAqLwogICAgc3FsKHF1ZXJ5OiBzdHJpbmcsIG9wdGlvbnM6IFJlcXVlc3RPcHRpb25zID0ge30pOiBQcm9taXNlPHsgY29sdW1uczogc3RyaW5nW107IHJvd3M6IGFueVtdOyBbazogc3RyaW5nXTogYW55IH0+IHsKICAgICAgICByZXR1cm4gdGhpcy5yYi5yZXF1ZXN0KCIvYXBpL3NxbCIsIHsgLi4ub3B0aW9ucywgbWV0aG9kOiAiUE9TVCIsIGJvZHk6IHsgcXVlcnkgfSB9KTsKICAgIH0KfQo=
+import type { RustaBase } from "../client";
+import { Crud, readQuery } from "../data/crud";
+import { seg } from "../internal/encode";
+import type { Body, Json, ListOptions, Page, RequestOptions } from "../types";
+
+/** Simple REST resource without paging (api keys, webhooks, functions). */
+class Resource<T> {
+    constructor(
+        protected readonly rb: RustaBase,
+        protected readonly path: string,
+    ) {}
+
+    list(options: RequestOptions = {}): Promise<T[]> {
+        return this.rb.request(this.path, { ...options, method: "GET" });
+    }
+    get(id: string, options: RequestOptions = {}): Promise<T> {
+        return this.rb.request(this.path + "/" + seg(id), { ...options, method: "GET" });
+    }
+    create(data: Json, options: RequestOptions = {}): Promise<T> {
+        return this.rb.request(this.path, { ...options, method: "POST", body: data });
+    }
+    update(id: string, data: Json, options: RequestOptions = {}): Promise<T> {
+        return this.rb.request(this.path + "/" + seg(id), { ...options, method: "PATCH", body: data });
+    }
+    async remove(id: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
+        return true;
+    }
+    protected action<R = any>(id: string, name: string, method: string, options: RequestOptions, body?: any): Promise<R> {
+        return this.rb.request(`${this.path}/${seg(id)}/${name}`, { ...options, method, body });
+    }
+}
+
+export interface Collection extends Json {
+    id: string;
+    name: string;
+    type: "base" | "auth" | "view" | string;
+    fields: Json[];
+    system: boolean;
+}
+
+export class Collections extends Crud<Collection> {
+    constructor(rb: RustaBase) {
+        super(rb, "/api/collections");
+    }
+    /** Replaces the schema with the given collections. */
+    async import(collections: Json[], deleteMissing = false, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(this.path + "/import", {
+            ...options,
+            method: "PUT",
+            body: { collections, deleteMissing },
+        });
+        return true;
+    }
+    /** Deletes every record of a collection. */
+    async truncate(collection: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(`${this.path}/${seg(collection)}/truncate`, { ...options, method: "DELETE" });
+        return true;
+    }
+    /** Default field sets for each collection type. */
+    scaffolds(options: RequestOptions = {}): Promise<Record<string, Collection>> {
+        return this.rb.request(this.path + "/meta/scaffolds", { ...options, method: "GET" });
+    }
+    oauthProviders(options: RequestOptions = {}): Promise<Json[]> {
+        return this.rb.request(this.path + "/meta/oauth2-providers", { ...options, method: "GET" });
+    }
+    /** Runs a view query and returns sample rows. */
+    previewView(query: string, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request(this.path + "/meta/dry-run-view", { ...options, method: "POST", body: { query } });
+    }
+}
+
+export class Settings {
+    constructor(private readonly rb: RustaBase) {}
+    get(options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request("/api/settings", { ...options, method: "GET" });
+    }
+    update(data: Body, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request("/api/settings", { ...options, method: "PATCH", body: data });
+    }
+    async testStorage(filesystem: "storage" | "backups" = "storage", options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/settings/test/s3", { ...options, method: "POST", body: { filesystem } });
+        return true;
+    }
+    async testEmail(collection: string, to: string, template: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/settings/test/email", {
+            ...options,
+            method: "POST",
+            body: { email: to, template, collection },
+        });
+        return true;
+    }
+    appleClientSecret(
+        input: { clientId: string; teamId: string; keyId: string; privateKey: string; duration: number },
+        options: RequestOptions = {},
+    ): Promise<{ secret: string }> {
+        return this.rb.request("/api/settings/apple/generate-client-secret", { ...options, method: "POST", body: input });
+    }
+}
+
+export class Logs {
+    constructor(private readonly rb: RustaBase) {}
+    list(options: ListOptions = {}): Promise<Page<Json>> {
+        return this.rb.request("/api/logs", { ...readQuery({ page: 1, perPage: 30, ...options }), method: "GET" });
+    }
+    get(id: string, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request("/api/logs/" + seg(id), { ...options, method: "GET" });
+    }
+    stats(options: RequestOptions & { filter?: string } = {}): Promise<Array<{ total: number; date: string }>> {
+        const { filter, ...rest } = options;
+        return this.rb.request("/api/logs/stats", { ...rest, method: "GET", query: { filter, ...(rest.query || {}) } });
+    }
+    async clear(options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/logs", { ...options, method: "DELETE" });
+        return true;
+    }
+}
+
+export interface Backup {
+    key: string;
+    size: number;
+    modified: string;
+}
+
+export class Backups {
+    constructor(private readonly rb: RustaBase) {}
+    list(options: RequestOptions = {}): Promise<Backup[]> {
+        return this.rb.request("/api/backups", { ...options, method: "GET" });
+    }
+    async create(name = "", options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/backups", { ...options, method: "POST", body: { name } });
+        return true;
+    }
+    /** Uploads a backup archive: `upload({ file: blob })`. */
+    async upload(data: Body, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/backups/upload", { ...options, method: "POST", body: data });
+        return true;
+    }
+    async remove(key: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/backups/" + seg(key), { ...options, method: "DELETE" });
+        return true;
+    }
+    async restore(key: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(`/api/backups/${seg(key)}/restore`, { ...options, method: "POST" });
+        return true;
+    }
+    /** Download link; get the token with `rb.files.token()`. */
+    downloadUrl(key: string, token: string): string {
+        return this.rb.url(`/api/backups/${seg(key)}?token=${seg(token)}`);
+    }
+}
+
+export class Crons {
+    constructor(private readonly rb: RustaBase) {}
+    list(options: RequestOptions = {}): Promise<Array<{ id: string; expression: string }>> {
+        return this.rb.request("/api/crons", { ...options, method: "GET" });
+    }
+    async run(jobId: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request("/api/crons/" + seg(jobId), { ...options, method: "POST" });
+        return true;
+    }
+}
+
+export class ApiKeys extends Resource<Json> {
+    constructor(rb: RustaBase) {
+        super(rb, "/api/api-keys");
+    }
+    /** Issues a new secret for the key. The secret is only shown once. */
+    rotate(id: string, options: RequestOptions = {}): Promise<Json> {
+        return this.action(id, "rotate", "POST", options);
+    }
+}
+
+export class Webhooks extends Resource<Json> {
+    constructor(rb: RustaBase) {
+        super(rb, "/api/webhooks");
+    }
+    stats(options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
+    }
+    test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
+        return this.action(id, "test", "POST", options, payload);
+    }
+}
+
+export class Functions extends Resource<Json> {
+    constructor(rb: RustaBase) {
+        super(rb, "/api/functions");
+    }
+    stats(options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
+    }
+    duplicate(id: string, options: RequestOptions = {}): Promise<Json> {
+        return this.action(id, "duplicate", "POST", options);
+    }
+    /** Runs a function with a test payload. */
+    test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
+        return this.action(id, "test", "POST", options, payload);
+    }
+    logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<Json[]> {
+        return this.action(id, "logs", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
+    }
+    async clearLogs(id: string, options: RequestOptions = {}): Promise<true> {
+        await this.action(id, "logs", "DELETE", options);
+        return true;
+    }
+}
+
+/** Row level security rules for database tables. */
+export class Rls {
+    constructor(private readonly rb: RustaBase) {}
+    private p = (table: string, rest = "") => `/api/rls/tables/${seg(table)}${rest}`;
+
+    templates(options: RequestOptions = {}): Promise<Json[]> {
+        return this.rb.request("/api/rls/templates", { ...options, method: "GET" });
+    }
+    tables(options: RequestOptions = {}): Promise<Json[]> {
+        return this.rb.request("/api/rls/tables", { ...options, method: "GET" });
+    }
+    policies(table: string, options: RequestOptions = {}): Promise<Json[]> {
+        return this.rb.request(this.p(table, "/policies"), { ...options, method: "GET" });
+    }
+    createPolicy(table: string, data: Json, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request(this.p(table, "/policies"), { ...options, method: "POST", body: data });
+    }
+    updatePolicy(table: string, name: string, data: Json, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request(this.p(table, "/policies/" + seg(name)), { ...options, method: "PATCH", body: data });
+    }
+    async removePolicy(table: string, name: string, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(this.p(table, "/policies/" + seg(name)), { ...options, method: "DELETE" });
+        return true;
+    }
+    /** Turns RLS on or off for a table. */
+    async setEnabled(table: string, settings: { enabled: boolean; force?: boolean }, options: RequestOptions = {}): Promise<true> {
+        await this.rb.request(this.p(table, "/rls"), { ...options, method: "POST", body: settings });
+        return true;
+    }
+    preview(data: Json, options: RequestOptions = {}): Promise<{ sql: string; error: string }> {
+        return this.rb.request("/api/rls/preview", { ...options, method: "POST", body: data });
+    }
+    test(data: Json, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request("/api/rls/test", { ...options, method: "POST", body: data });
+    }
+}
+
+/** Superuser-only tools: `rb.admin`. */
+export class Admin {
+    readonly collections: Collections;
+    readonly settings: Settings;
+    readonly logs: Logs;
+    readonly backups: Backups;
+    readonly crons: Crons;
+    readonly apiKeys: ApiKeys;
+    readonly webhooks: Webhooks;
+    readonly functions: Functions;
+    readonly rls: Rls;
+
+    constructor(private readonly rb: RustaBase) {
+        this.collections = new Collections(rb);
+        this.settings = new Settings(rb);
+        this.logs = new Logs(rb);
+        this.backups = new Backups(rb);
+        this.crons = new Crons(rb);
+        this.apiKeys = new ApiKeys(rb);
+        this.webhooks = new Webhooks(rb);
+        this.functions = new Functions(rb);
+        this.rls = new Rls(rb);
+    }
+
+    /** Runs raw SQL. */
+    sql(query: string, options: RequestOptions = {}): Promise<{ columns: string[]; rows: any[]; [k: string]: any }> {
+        return this.rb.request("/api/sql", { ...options, method: "POST", body: { query } });
+    }
+}

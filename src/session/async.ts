@@ -1,1 +1,58 @@
-aW1wb3J0IHR5cGUgeyBSb3cgfSBmcm9tICIuLi90eXBlcyI7CmltcG9ydCB7IFNlc3Npb24gfSBmcm9tICIuL3Nlc3Npb24iOwoKZXhwb3J0IGludGVyZmFjZSBBc3luY1Nlc3Npb25PcHRpb25zIHsKICAgIC8qKiBQZXJzaXN0cyB0aGUgc2VyaWFsaXNlZCBzZXNzaW9uIChlLmcuIFJlYWN0IE5hdGl2ZSBBc3luY1N0b3JhZ2Uuc2V0SXRlbSkuICovCiAgICBzYXZlOiAodmFsdWU6IHN0cmluZykgPT4gUHJvbWlzZTx2b2lkPiB8IHZvaWQ7CiAgICAvKiogUmVtb3ZlcyB0aGUgcGVyc2lzdGVkIHNlc3Npb24uIERlZmF1bHRzIHRvIGBzYXZlKCIiKWAuICovCiAgICByZW1vdmU/OiAoKSA9PiBQcm9taXNlPHZvaWQ+IHwgdm9pZDsKICAgIC8qKiBQcmV2aW91c2x5IHNhdmVkIHZhbHVlLCBvciBhIHByb21pc2UgdGhhdCByZXNvbHZlcyB0byBpdC4gKi8KICAgIGluaXRpYWw/OiBzdHJpbmcgfCBudWxsIHwgUHJvbWlzZTxzdHJpbmcgfCBudWxsIHwgdW5kZWZpbmVkPjsKfQoKLyoqCiAqIFNlc3Npb24gYmFja2VkIGJ5IGFueSBhc3luYyBzdG9yYWdlLiBXcml0ZXMgcnVuIGluIG9yZGVyLCBvbmUgYXQgYSB0aW1lLgogKgogKiAgICAgbmV3IEFzeW5jU2Vzc2lvbih7CiAqICAgICAgIHNhdmU6ICh2KSA9PiBBc3luY1N0b3JhZ2Uuc2V0SXRlbSgicmJfc2Vzc2lvbiIsIHYpLAogKiAgICAgICBpbml0aWFsOiBBc3luY1N0b3JhZ2UuZ2V0SXRlbSgicmJfc2Vzc2lvbiIpLAogKiAgICAgfSkKICovCmV4cG9ydCBjbGFzcyBBc3luY1Nlc3Npb24gZXh0ZW5kcyBTZXNzaW9uIHsKICAgIHByaXZhdGUgcmVhZG9ubHkgb3B0czogQXN5bmNTZXNzaW9uT3B0aW9uczsKICAgIHByaXZhdGUgY2hhaW46IFByb21pc2U8dW5rbm93bj4gPSBQcm9taXNlLnJlc29sdmUoKTsKCiAgICBjb25zdHJ1Y3RvcihvcHRzOiBBc3luY1Nlc3Npb25PcHRpb25zKSB7CiAgICAgICAgc3VwZXIoKTsKICAgICAgICB0aGlzLm9wdHMgPSBvcHRzOwogICAgICAgIHRoaXMuY2hhaW4gPSBQcm9taXNlLnJlc29sdmUob3B0cy5pbml0aWFsKQogICAgICAgICAgICAudGhlbigocmF3KSA9PiB7CiAgICAgICAgICAgICAgICBpZiAoIXJhdykgcmV0dXJuOwogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBjb25zdCBwYXJzZWQgPSBKU09OLnBhcnNlKHJhdyk7CiAgICAgICAgICAgICAgICAgICAgc3VwZXIuc2V0KHBhcnNlZD8udG9rZW4gfHwgIiIsIHBhcnNlZD8ucmVjb3JkIHx8IG51bGwpOwogICAgICAgICAgICAgICAgfSBjYXRjaCB7fQogICAgICAgICAgICB9KQogICAgICAgICAgICAuY2F0Y2goKCkgPT4ge30pOwogICAgfQoKICAgIC8qKiBSZXNvbHZlcyBvbmNlIHRoZSBpbml0aWFsIHZhbHVlIGlzIGxvYWRlZCBhbmQgcGVuZGluZyB3cml0ZXMgaGF2ZSBmaW5pc2hlZC4gKi8KICAgIHJlYWR5KCk6IFByb21pc2U8dm9pZD4gewogICAgICAgIHJldHVybiB0aGlzLmNoYWluLnRoZW4oKCkgPT4gdW5kZWZpbmVkKTsKICAgIH0KCiAgICBzZXQodG9rZW46IHN0cmluZywgcmVjb3JkPzogUm93IHwgbnVsbCk6IHZvaWQgewogICAgICAgIHN1cGVyLnNldCh0b2tlbiwgcmVjb3JkKTsKICAgICAgICBjb25zdCB2YWx1ZSA9IHRva2VuID8gSlNPTi5zdHJpbmdpZnkoeyB0b2tlbiwgcmVjb3JkOiByZWNvcmQgPz8gbnVsbCB9KSA6ICIiOwogICAgICAgIHRoaXMuZW5xdWV1ZSgoKSA9PiB0aGlzLm9wdHMuc2F2ZSh2YWx1ZSkpOwogICAgfQoKICAgIGNsZWFyKCk6IHZvaWQgewogICAgICAgIHN1cGVyLmNsZWFyKCk7CiAgICAgICAgdGhpcy5lbnF1ZXVlKCgpID0+ICh0aGlzLm9wdHMucmVtb3ZlID8gdGhpcy5vcHRzLnJlbW92ZSgpIDogdGhpcy5vcHRzLnNhdmUoIiIpKSk7CiAgICB9CgogICAgcHJpdmF0ZSBlbnF1ZXVlKHRhc2s6ICgpID0+IHVua25vd24pOiB2b2lkIHsKICAgICAgICB0aGlzLmNoYWluID0gdGhpcy5jaGFpbi50aGVuKHRhc2spLmNhdGNoKCgpID0+IHt9KTsKICAgIH0KfQo=
+import type { Row } from "../types";
+import { Session } from "./session";
+
+export interface AsyncSessionOptions {
+    /** Persists the serialised session (e.g. React Native AsyncStorage.setItem). */
+    save: (value: string) => Promise<void> | void;
+    /** Removes the persisted session. Defaults to `save("")`. */
+    remove?: () => Promise<void> | void;
+    /** Previously saved value, or a promise that resolves to it. */
+    initial?: string | null | Promise<string | null | undefined>;
+}
+
+/**
+ * Session backed by any async storage. Writes run in order, one at a time.
+ *
+ *     new AsyncSession({
+ *       save: (v) => AsyncStorage.setItem("rb_session", v),
+ *       initial: AsyncStorage.getItem("rb_session"),
+ *     })
+ */
+export class AsyncSession extends Session {
+    private readonly opts: AsyncSessionOptions;
+    private chain: Promise<unknown> = Promise.resolve();
+
+    constructor(opts: AsyncSessionOptions) {
+        super();
+        this.opts = opts;
+        this.chain = Promise.resolve(opts.initial)
+            .then((raw) => {
+                if (!raw) return;
+                try {
+                    const parsed = JSON.parse(raw);
+                    super.set(parsed?.token || "", parsed?.record || null);
+                } catch {}
+            })
+            .catch(() => {});
+    }
+
+    /** Resolves once the initial value is loaded and pending writes have finished. */
+    ready(): Promise<void> {
+        return this.chain.then(() => undefined);
+    }
+
+    set(token: string, record?: Row | null): void {
+        super.set(token, record);
+        const value = token ? JSON.stringify({ token, record: record ?? null }) : "";
+        this.enqueue(() => this.opts.save(value));
+    }
+
+    clear(): void {
+        super.clear();
+        this.enqueue(() => (this.opts.remove ? this.opts.remove() : this.opts.save("")));
+    }
+
+    private enqueue(task: () => unknown): void {
+        this.chain = this.chain.then(task).catch(() => {});
+    }
+}

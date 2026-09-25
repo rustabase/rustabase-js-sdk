@@ -1,1 +1,61 @@
-ewogICAgInZlcnNpb24iOiAiMS4wLjAiLAogICAgIm5hbWUiOiAicnVzdGFiYXNlLWpzLXNkayIsCiAgICAiZGVzY3JpcHRpb24iOiAiT2ZmaWNpYWwgSmF2YVNjcmlwdCBhbmQgVHlwZVNjcmlwdCBTREsgZm9yIFJ1c3RhQmFzZSIsCiAgICAiYXV0aG9yIjogIlJ1c3RhQmFzZSBjb250cmlidXRvcnMiLAogICAgImxpY2Vuc2UiOiAiTUlUIiwKICAgICJyZXBvc2l0b3J5IjogewogICAgICAgICJ0eXBlIjogImdpdCIsCiAgICAgICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vcnVzdGFiYXNlL3J1c3RhYmFzZS1qcy1zZGsuZ2l0IgogICAgfSwKICAgICJleHBvcnRzIjogewogICAgICAgICIuIjogewogICAgICAgICAgICAidHlwZXMiOiAiLi9kaXN0L2luZGV4LmQudHMiLAogICAgICAgICAgICAiaW1wb3J0IjogIi4vZGlzdC9ydXN0YWJhc2UuZXMubWpzIiwKICAgICAgICAgICAgInJlcXVpcmUiOiAiLi9kaXN0L3J1c3RhYmFzZS5janMuanMiCiAgICAgICAgfSwKICAgICAgICAiLi91bWQiOiAiLi9kaXN0L3J1c3RhYmFzZS51bWQuanMiCiAgICB9LAogICAgIm1haW4iOiAiLi9kaXN0L3J1c3RhYmFzZS5janMuanMiLAogICAgIm1vZHVsZSI6ICIuL2Rpc3QvcnVzdGFiYXNlLmVzLm1qcyIsCiAgICAicmVhY3QtbmF0aXZlIjogIi4vZGlzdC9ydXN0YWJhc2UuZXMuanMiLAogICAgInR5cGVzIjogIi4vZGlzdC9pbmRleC5kLnRzIiwKICAgICJmaWxlcyI6IFsKICAgICAgICAiZGlzdCIsCiAgICAgICAgIkxJQ0VOU0UubWQiLAogICAgICAgICJSRUFETUUubWQiCiAgICBdLAogICAgImtleXdvcmRzIjogWwogICAgICAgICJydXN0YWJhc2UiLAogICAgICAgICJydXN0YWJhc2UtanMiLAogICAgICAgICJwb3N0Z3Jlc3FsIiwKICAgICAgICAiYmFja2VuZC1hcy1hLXNlcnZpY2UiLAogICAgICAgICJqcy1zZGsiLAogICAgICAgICJkYXRhYmFzZS1jbGllbnQiCiAgICBdLAogICAgInByZXR0aWVyIjogewogICAgICAgICJ0YWJXaWR0aCI6IDQsCiAgICAgICAgInByaW50V2lkdGgiOiA5MCwKICAgICAgICAiYnJhY2tldFNhbWVMaW5lIjogdHJ1ZQogICAgfSwKICAgICJzY3JpcHRzIjogewogICAgICAgICJmb3JtYXQiOiAibnB4IHByZXR0aWVyIC4vc3JjIC4vdGVzdHMgLS13cml0ZSIsCiAgICAgICAgImJ1aWxkIjogInJtIC1yZiBkaXN0ICYmIHJvbGx1cCAtYyIsCiAgICAgICAgImRldiI6ICJyb2xsdXAgLWMgLXciLAogICAgICAgICJ0ZXN0IjogInZpdGVzdCBydW4iLAogICAgICAgICJwcmVwdWJsaXNoT25seSI6ICJucG0gcnVuIGJ1aWxkIgogICAgfSwKICAgICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAgICAgIkByb2xsdXAvcGx1Z2luLXRlcnNlciI6ICJeMC40LjMiLAogICAgICAgICJAcm9sbHVwL3BsdWdpbi10eXBlc2NyaXB0IjogIl4xMi4zLjAiLAogICAgICAgICJwcmV0dGllciI6ICIzLjIuNCIsCiAgICAgICAgInJvbGx1cCI6ICJeNC4wLjAiLAogICAgICAgICJ0c2xpYiI6ICJeMi44LjEiLAogICAgICAgICJ0eXBlc2NyaXB0IjogIl41LjEuNiIsCiAgICAgICAgInZpdGVzdCI6ICJeMi4wLjAiCiAgICB9LAogICAgImhvbWVwYWdlIjogImh0dHBzOi8vZ2l0aHViLmNvbS9ydXN0YWJhc2UvcnVzdGFiYXNlLWpzLXNkayIsCiAgICAiYnVncyI6IHsKICAgICAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9ydXN0YWJhc2UvcnVzdGFiYXNlLWpzLXNkay9pc3N1ZXMiCiAgICB9Cn0K
+{
+    "version": "1.0.0",
+    "name": "rustabase-js-sdk",
+    "description": "Official JavaScript and TypeScript SDK for RustaBase",
+    "author": "RustaBase contributors",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rustabase/rustabase-js-sdk.git"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/rustabase.es.mjs",
+            "require": "./dist/rustabase.cjs.js"
+        },
+        "./umd": "./dist/rustabase.umd.js"
+    },
+    "main": "./dist/rustabase.cjs.js",
+    "module": "./dist/rustabase.es.mjs",
+    "react-native": "./dist/rustabase.es.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "LICENSE.md",
+        "README.md"
+    ],
+    "keywords": [
+        "rustabase",
+        "rustabase-js",
+        "postgresql",
+        "backend-as-a-service",
+        "js-sdk",
+        "database-client"
+    ],
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 90,
+        "bracketSameLine": true
+    },
+    "scripts": {
+        "format": "npx prettier ./src ./tests --write",
+        "build": "rm -rf dist && rollup -c",
+        "dev": "rollup -c -w",
+        "test": "vitest run",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-typescript": "^12.3.0",
+        "prettier": "3.2.4",
+        "rollup": "^4.0.0",
+        "tslib": "^2.8.1",
+        "typescript": "^5.1.6",
+        "vitest": "^2.0.0"
+    },
+    "homepage": "https://github.com/rustabase/rustabase-js-sdk",
+    "bugs": {
+        "url": "https://github.com/rustabase/rustabase-js-sdk/issues"
+    }
+}

@@ -1,1 +1,95 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGV4cGVjdCwgaXQgfSBmcm9tICJ2aXRlc3QiOwppbXBvcnQgeyBjcmVhdGVDbGllbnQsIE1lbW9yeVNlc3Npb24sIFJ1c3RhQmFzZUVycm9yIH0gZnJvbSAiLi4vc3JjIjsKaW1wb3J0IHsgZmFrZVRva2VuLCBtb2NrRmV0Y2ggfSBmcm9tICIuL2hlbHBlcnMiOwoKY29uc3QgbWFrZSA9IChyZXBseT86IFBhcmFtZXRlcnM8dHlwZW9mIG1vY2tGZXRjaD5bMF0pID0+IHsKICAgIGNvbnN0IG0gPSBtb2NrRmV0Y2gocmVwbHkpOwogICAgY29uc3QgcmIgPSBjcmVhdGVDbGllbnQoImh0dHBzOi8vYXBpLmV4YW1wbGUuY29tLyIsIHsgc2Vzc2lvbjogbmV3IE1lbW9yeVNlc3Npb24oKSwgZmV0Y2g6IG0uZmV0Y2ggfSk7CiAgICByZXR1cm4geyByYiwgLi4ubSB9Owp9OwoKZGVzY3JpYmUoImNsaWVudCIsICgpID0+IHsKICAgIGl0KCJidWlsZHMgdXJscyIsICgpID0+IHsKICAgICAgICBjb25zdCB7IHJiIH0gPSBtYWtlKCk7CiAgICAgICAgZXhwZWN0KHJiLnVybCgiL2FwaS9oZWFsdGgiKSkudG9CZSgiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vYXBpL2hlYWx0aCIpOwogICAgICAgIGV4cGVjdChyYi51cmwoImFwaS94IikpLnRvQmUoImh0dHBzOi8vYXBpLmV4YW1wbGUuY29tL2FwaS94Iik7CiAgICB9KTsKCiAgICBpdCgic2VuZHMganNvbiB3aXRoIGxhbmd1YWdlIGFuZCBhdXRoIGhlYWRlcnMiLCBhc3luYyAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiwgY2FsbHMgfSA9IG1ha2UoKCkgPT4gKHsgYm9keTogeyBvazogdHJ1ZSB9IH0pKTsKICAgICAgICByYi5zZXNzaW9uLnNldCgidG9rIiwgbnVsbCk7CiAgICAgICAgY29uc3Qgb3V0ID0gYXdhaXQgcmIucmVxdWVzdCgiL2FwaS94IiwgeyBtZXRob2Q6ICJQT1NUIiwgYm9keTogeyBhOiAxIH0sIHF1ZXJ5OiB7IHE6ICJhIGIiLCBuOiBbMSwgMl0gfSB9KTsKICAgICAgICBleHBlY3Qob3V0KS50b0VxdWFsKHsgb2s6IHRydWUgfSk7CiAgICAgICAgZXhwZWN0KGNhbGxzWzBdLnVybCkudG9CZSgiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vYXBpL3g/cT1hJTIwYiZuPTEmbj0yIik7CiAgICAgICAgZXhwZWN0KGNhbGxzWzBdLmluaXQuYm9keSkudG9CZSgneyJhIjoxfScpOwogICAgICAgIGV4cGVjdChjYWxsc1swXS5pbml0LmhlYWRlcnMpLnRvTWF0Y2hPYmplY3QoewogICAgICAgICAgICAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL2pzb24iLAogICAgICAgICAgICAiQWNjZXB0LUxhbmd1YWdlIjogImVuLVVTIiwKICAgICAgICAgICAgQXV0aG9yaXphdGlvbjogInRvayIsCiAgICAgICAgfSk7CiAgICB9KTsKCiAgICBpdCgidGhyb3dzIFJ1c3RhQmFzZUVycm9yIG9uIDR4eCIsIGFzeW5jICgpID0+IHsKICAgICAgICBjb25zdCB7IHJiIH0gPSBtYWtlKCgpID0+ICh7IHN0YXR1czogNDAwLCBib2R5OiB7IG1lc3NhZ2U6ICJCYWQiLCBkYXRhOiB7IHRpdGxlOiB7IGNvZGU6ICJ4IiwgbWVzc2FnZTogInkiIH0gfSB9IH0pKTsKICAgICAgICBjb25zdCBlcnIgPSBhd2FpdCByYi5yZXF1ZXN0KCIvYXBpL3giKS5jYXRjaCgoZSkgPT4gZSk7CiAgICAgICAgZXhwZWN0KGVycikudG9CZUluc3RhbmNlT2YoUnVzdGFCYXNlRXJyb3IpOwogICAgICAgIGV4cGVjdChlcnIuc3RhdHVzKS50b0JlKDQwMCk7CiAgICAgICAgZXhwZWN0KGVyci5tZXNzYWdlKS50b0JlKCJCYWQiKTsKICAgICAgICBleHBlY3QoZXJyLmZpZWxkRXJyb3JzLnRpdGxlLmNvZGUpLnRvQmUoIngiKTsKICAgIH0pOwoKICAgIGl0KCJhdXRvLWNhbmNlbHMgZHVwbGljYXRlIHJlcXVlc3RzIiwgYXN5bmMgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIgfSA9IG1ha2UoKTsKICAgICAgICBjb25zdCBhID0gcmIucmVxdWVzdCgiL2FwaS94Iik7CiAgICAgICAgY29uc3QgYiA9IHJiLnJlcXVlc3QoIi9hcGkveCIpOwogICAgICAgIGNvbnN0IFtyYSwgcmJiXSA9IGF3YWl0IFByb21pc2UuYWxsU2V0dGxlZChbYSwgYl0pOwogICAgICAgIGV4cGVjdChyYS5zdGF0dXMpLnRvQmUoInJlamVjdGVkIik7CiAgICAgICAgZXhwZWN0KChyYSBhcyBhbnkpLnJlYXNvbi5jYW5jZWxsZWQpLnRvQmUodHJ1ZSk7CiAgICAgICAgZXhwZWN0KHJiYi5zdGF0dXMpLnRvQmUoImZ1bGZpbGxlZCIpOwogICAgfSk7CgogICAgaXQoImRvZXMgbm90IGNhbmNlbCB3aXRoIHJlcXVlc3RLZXkgbnVsbCIsIGFzeW5jICgpID0+IHsKICAgICAgICBjb25zdCB7IHJiIH0gPSBtYWtlKCk7CiAgICAgICAgY29uc3QgcmVzID0gYXdhaXQgUHJvbWlzZS5hbGxTZXR0bGVkKFsKICAgICAgICAgICAgcmIucmVxdWVzdCgiL2FwaS94IiwgeyByZXF1ZXN0S2V5OiBudWxsIH0pLAogICAgICAgICAgICByYi5yZXF1ZXN0KCIvYXBpL3giLCB7IHJlcXVlc3RLZXk6IG51bGwgfSksCiAgICAgICAgXSk7CiAgICAgICAgZXhwZWN0KHJlcy5ldmVyeSgocikgPT4gci5zdGF0dXMgPT09ICJmdWxmaWxsZWQiKSkudG9CZSh0cnVlKTsKICAgIH0pOwoKICAgIGl0KCJydW5zIHJlcXVlc3QgYW5kIHJlc3BvbnNlIGhvb2tzIiwgYXN5bmMgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIsIGNhbGxzIH0gPSBtYWtlKCgpID0+ICh7IGJvZHk6IHsgdjogMSB9IH0pKTsKICAgICAgICByYi5vblJlcXVlc3QgPSAodXJsLCBpbml0KSA9PiAoeyB1cmw6IHVybCArICI/aG9va2VkPTEiLCBpbml0IH0pOwogICAgICAgIHJiLm9uUmVzcG9uc2UgPSAoX3JlcywgZGF0YSkgPT4gKHsgLi4uZGF0YSwgZXh0cmE6IHRydWUgfSk7CiAgICAgICAgZXhwZWN0KGF3YWl0IHJiLnJlcXVlc3QoIi9hcGkveCIpKS50b0VxdWFsKHsgdjogMSwgZXh0cmE6IHRydWUgfSk7CiAgICAgICAgZXhwZWN0KGNhbGxzWzBdLnVybCkudG9Db250YWluKCJob29rZWQ9MSIpOwogICAgfSk7CgogICAgaXQoImJpbmRzIGZpbHRlciB2YWx1ZXMgc2FmZWx5IiwgKCkgPT4gewogICAgICAgIGNvbnN0IHsgcmIgfSA9IG1ha2UoKTsKICAgICAgICBleHBlY3QocmIuZmlsdGVyKCJhID0gezphfSAmJiBiID0gezpifSAmJiBjID0gezpjfSAmJiBkID0gezpkfSIsIHsgYTogJ3gieScsIGI6IDIsIGM6IG51bGwsIGQ6IFsxXSB9KSkudG9CZSgKICAgICAgICAgICAgJ2EgPSAieFxcInkiICYmIGIgPSAyICYmIGMgPSBudWxsICYmIGQgPSAiWzFdIicsCiAgICAgICAgKTsKICAgIH0pOwoKICAgIGl0KCJzZXNzaW9uIGtub3dzIHN1cGVydXNlcnMiLCAoKSA9PiB7CiAgICAgICAgY29uc3QgeyByYiB9ID0gbWFrZSgpOwogICAgICAgIHJiLnNlc3Npb24uc2V0KGZha2VUb2tlbih7IHR5cGU6ICJhdXRoIiwgY29sbGVjdGlvbklkOiAicmJjXzMxNDI2MzU4MjMiLCBleHA6IDk5OTk5OTk5OTkgfSkpOwogICAgICAgIGV4cGVjdChyYi5zZXNzaW9uLmlzU3VwZXJ1c2VyKS50b0JlKHRydWUpOwogICAgICAgIGV4cGVjdChyYi5zZXNzaW9uLmlzVmFsaWQpLnRvQmUodHJ1ZSk7CiAgICAgICAgcmIuc2Vzc2lvbi5zZXQoZmFrZVRva2VuKHsgdHlwZTogImF1dGgiLCBleHA6IDEgfSksIHsgaWQ6ICIxIiwgY29sbGVjdGlvbklkOiAiYyIsIGNvbGxlY3Rpb25OYW1lOiAidXNlcnMiIH0pOwogICAgICAgIGV4cGVjdChyYi5zZXNzaW9uLmlzU3VwZXJ1c2VyKS50b0JlKGZhbHNlKTsKICAgICAgICBleHBlY3QocmIuc2Vzc2lvbi5pc1VzZXIpLnRvQmUodHJ1ZSk7CiAgICAgICAgZXhwZWN0KHJiLnNlc3Npb24uaXNWYWxpZCkudG9CZShmYWxzZSk7CiAgICB9KTsKCiAgICBpdCgicm91bmQtdHJpcHMgdGhlIHNlc3Npb24gdGhyb3VnaCBhIGNvb2tpZSIsICgpID0+IHsKICAgICAgICBjb25zdCBhID0gbmV3IE1lbW9yeVNlc3Npb24oKTsKICAgICAgICBhLnNldChmYWtlVG9rZW4oeyBleHA6IDk5OTk5OTk5OTkgfSksIHsgaWQ6ICIxIiwgY29sbGVjdGlvbklkOiAiYyIsIGNvbGxlY3Rpb25OYW1lOiAidXNlcnMiIH0pOwogICAgICAgIGNvbnN0IGhlYWRlciA9IGEudG9Db29raWUoKS5zcGxpdCgiOyIpWzBdOwogICAgICAgIGNvbnN0IGIgPSBuZXcgTWVtb3J5U2Vzc2lvbigpOwogICAgICAgIGIubG9hZENvb2tpZShoZWFkZXIpOwogICAgICAgIGV4cGVjdChiLnRva2VuKS50b0JlKGEudG9rZW4pOwogICAgICAgIGV4cGVjdChiLnJlY29yZD8uaWQpLnRvQmUoIjEiKTsKICAgIH0pOwp9KTsK
+import { describe, expect, it } from "vitest";
+import { createClient, MemorySession, RustaBaseError } from "../src";
+import { fakeToken, mockFetch } from "./helpers";
+
+const make = (reply?: Parameters<typeof mockFetch>[0]) => {
+    const m = mockFetch(reply);
+    const rb = createClient("https://api.example.com/", { session: new MemorySession(), fetch: m.fetch });
+    return { rb, ...m };
+};
+
+describe("client", () => {
+    it("builds urls", () => {
+        const { rb } = make();
+        expect(rb.url("/api/health")).toBe("https://api.example.com/api/health");
+        expect(rb.url("api/x")).toBe("https://api.example.com/api/x");
+    });
+
+    it("sends json with language and auth headers", async () => {
+        const { rb, calls } = make(() => ({ body: { ok: true } }));
+        rb.session.set("tok", null);
+        const out = await rb.request("/api/x", { method: "POST", body: { a: 1 }, query: { q: "a b", n: [1, 2] } });
+        expect(out).toEqual({ ok: true });
+        expect(calls[0].url).toBe("https://api.example.com/api/x?q=a%20b&n=1&n=2");
+        expect(calls[0].init.body).toBe('{"a":1}');
+        expect(calls[0].init.headers).toMatchObject({
+            "Content-Type": "application/json",
+            "Accept-Language": "en-US",
+            Authorization: "tok",
+        });
+    });
+
+    it("throws RustaBaseError on 4xx", async () => {
+        const { rb } = make(() => ({ status: 400, body: { message: "Bad", data: { title: { code: "x", message: "y" } } } }));
+        const err = await rb.request("/api/x").catch((e) => e);
+        expect(err).toBeInstanceOf(RustaBaseError);
+        expect(err.status).toBe(400);
+        expect(err.message).toBe("Bad");
+        expect(err.fieldErrors.title.code).toBe("x");
+    });
+
+    it("auto-cancels duplicate requests", async () => {
+        const { rb } = make();
+        const a = rb.request("/api/x");
+        const b = rb.request("/api/x");
+        const [ra, rbb] = await Promise.allSettled([a, b]);
+        expect(ra.status).toBe("rejected");
+        expect((ra as any).reason.cancelled).toBe(true);
+        expect(rbb.status).toBe("fulfilled");
+    });
+
+    it("does not cancel with requestKey null", async () => {
+        const { rb } = make();
+        const res = await Promise.allSettled([
+            rb.request("/api/x", { requestKey: null }),
+            rb.request("/api/x", { requestKey: null }),
+        ]);
+        expect(res.every((r) => r.status === "fulfilled")).toBe(true);
+    });
+
+    it("runs request and response hooks", async () => {
+        const { rb, calls } = make(() => ({ body: { v: 1 } }));
+        rb.onRequest = (url, init) => ({ url: url + "?hooked=1", init });
+        rb.onResponse = (_res, data) => ({ ...data, extra: true });
+        expect(await rb.request("/api/x")).toEqual({ v: 1, extra: true });
+        expect(calls[0].url).toContain("hooked=1");
+    });
+
+    it("binds filter values safely", () => {
+        const { rb } = make();
+        expect(rb.filter("a = {:a} && b = {:b} && c = {:c} && d = {:d}", { a: 'x"y', b: 2, c: null, d: [1] })).toBe(
+            'a = "x\\"y" && b = 2 && c = null && d = "[1]"',
+        );
+    });
+
+    it("session knows superusers", () => {
+        const { rb } = make();
+        rb.session.set(fakeToken({ type: "auth", collectionId: "rbc_3142635823", exp: 9999999999 }));
+        expect(rb.session.isSuperuser).toBe(true);
+        expect(rb.session.isValid).toBe(true);
+        rb.session.set(fakeToken({ type: "auth", exp: 1 }), { id: "1", collectionId: "c", collectionName: "users" });
+        expect(rb.session.isSuperuser).toBe(false);
+        expect(rb.session.isUser).toBe(true);
+        expect(rb.session.isValid).toBe(false);
+    });
+
+    it("round-trips the session through a cookie", () => {
+        const a = new MemorySession();
+        a.set(fakeToken({ exp: 9999999999 }), { id: "1", collectionId: "c", collectionName: "users" });
+        const header = a.toCookie().split(";")[0];
+        const b = new MemorySession();
+        b.loadCookie(header);
+        expect(b.token).toBe(a.token);
+        expect(b.record?.id).toBe("1");
+    });
+});

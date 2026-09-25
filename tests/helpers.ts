@@ -1,1 +1,33 @@
-aW1wb3J0IHsgdmkgfSBmcm9tICJ2aXRlc3QiOwoKZXhwb3J0IGludGVyZmFjZSBDYWxsIHsKICAgIHVybDogc3RyaW5nOwogICAgaW5pdDogUmVxdWVzdEluaXQgJiBSZWNvcmQ8c3RyaW5nLCBhbnk+Owp9CgovKiogQSBmZXRjaCBtb2NrIHRoYXQgcmVjb3JkcyBjYWxscyBhbmQgcmVwbGllcyB3aXRoIGByZXBseSh1cmwsIGluaXQpYC4gKi8KZXhwb3J0IGZ1bmN0aW9uIG1vY2tGZXRjaChyZXBseTogKHVybDogc3RyaW5nLCBpbml0OiBhbnkpID0+IHsgc3RhdHVzPzogbnVtYmVyOyBib2R5PzogYW55IH0gPSAoKSA9PiAoeyBib2R5OiB7fSB9KSkgewogICAgY29uc3QgY2FsbHM6IENhbGxbXSA9IFtdOwogICAgY29uc3QgZm4gPSB2aS5mbihhc3luYyAodXJsOiBzdHJpbmcsIGluaXQ6IGFueSkgPT4gewogICAgICAgIGNhbGxzLnB1c2goeyB1cmwsIGluaXQgfSk7CiAgICAgICAgYXdhaXQgbmV3IFByb21pc2UoKHIpID0+IHNldFRpbWVvdXQociwgMCkpOwogICAgICAgIGlmIChpbml0Py5zaWduYWw/LmFib3J0ZWQpIHsKICAgICAgICAgICAgY29uc3QgZSA9IG5ldyBFcnJvcigiQWJvcnRlZCIpOwogICAgICAgICAgICBlLm5hbWUgPSAiQWJvcnRFcnJvciI7CiAgICAgICAgICAgIHRocm93IGU7CiAgICAgICAgfQogICAgICAgIGNvbnN0IHIgPSByZXBseSh1cmwsIGluaXQpOwogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIHVybCwKICAgICAgICAgICAgc3RhdHVzOiByLnN0YXR1cyA/PyAyMDAsCiAgICAgICAgICAgIGpzb246IGFzeW5jICgpID0+IHIuYm9keSA/PyB7fSwKICAgICAgICB9IGFzIGFueTsKICAgIH0pOwogICAgcmV0dXJuIHsgZmV0Y2g6IGZuIGFzIHVua25vd24gYXMgdHlwZW9mIGZldGNoLCBjYWxscyB9Owp9CgovKiogQnVpbGRzIGFuIHVuc2lnbmVkIEpXVCB3aXRoIHRoZSBnaXZlbiBjbGFpbXMuICovCmV4cG9ydCBmdW5jdGlvbiBmYWtlVG9rZW4oY2xhaW1zOiBSZWNvcmQ8c3RyaW5nLCBhbnk+KTogc3RyaW5nIHsKICAgIGNvbnN0IGVuYyA9IChvOiBhbnkpID0+IEJ1ZmZlci5mcm9tKEpTT04uc3RyaW5naWZ5KG8pKS50b1N0cmluZygiYmFzZTY0dXJsIik7CiAgICByZXR1cm4gYCR7ZW5jKHsgYWxnOiAiSFMyNTYiLCB0eXA6ICJKV1QiIH0pfS4ke2VuYyhjbGFpbXMpfS5zaWdgOwp9Cg==
+import { vi } from "vitest";
+
+export interface Call {
+    url: string;
+    init: RequestInit & Record<string, any>;
+}
+
+/** A fetch mock that records calls and replies with `reply(url, init)`. */
+export function mockFetch(reply: (url: string, init: any) => { status?: number; body?: any } = () => ({ body: {} })) {
+    const calls: Call[] = [];
+    const fn = vi.fn(async (url: string, init: any) => {
+        calls.push({ url, init });
+        await new Promise((r) => setTimeout(r, 0));
+        if (init?.signal?.aborted) {
+            const e = new Error("Aborted");
+            e.name = "AbortError";
+            throw e;
+        }
+        const r = reply(url, init);
+        return {
+            url,
+            status: r.status ?? 200,
+            json: async () => r.body ?? {},
+        } as any;
+    });
+    return { fetch: fn as unknown as typeof fetch, calls };
+}
+
+/** Builds an unsigned JWT with the given claims. */
+export function fakeToken(claims: Record<string, any>): string {
+    const enc = (o: any) => Buffer.from(JSON.stringify(o)).toString("base64url");
+    return `${enc({ alg: "HS256", typ: "JWT" })}.${enc(claims)}.sig`;
+}

@@ -1,1 +1,257 @@
-aW1wb3J0IHsgQWRtaW4gfSBmcm9tICIuL2FkbWluIjsKaW1wb3J0IHsgQmF0Y2ggfSBmcm9tICIuL2RhdGEvYmF0Y2giOwppbXBvcnQgeyBGaWxlcyB9IGZyb20gIi4vZGF0YS9maWxlcyI7CmltcG9ydCB7IEF1dGhUYWJsZSwgVGFibGUgfSBmcm9tICIuL2RhdGEvdGFibGUiOwppbXBvcnQgeyBSdXN0YUJhc2VFcnJvciB9IGZyb20gIi4vZXJyb3JzIjsKaW1wb3J0IHsgcHJlcGFyZUJvZHksIGlzRm9ybURhdGEgfSBmcm9tICIuL2ludGVybmFsL2JvZHkiOwppbXBvcnQgeyBiaW5kRmlsdGVyLCBqb2luVXJsLCB3aXRoUXVlcnkgfSBmcm9tICIuL2ludGVybmFsL2VuY29kZSI7CmltcG9ydCB7IHRva2VuRXhwaXJlZCB9IGZyb20gIi4vaW50ZXJuYWwvdG9rZW4iOwppbXBvcnQgeyBSZWFsdGltZSB9IGZyb20gIi4vcmVhbHRpbWUvcmVhbHRpbWUiOwppbXBvcnQgeyBCcm93c2VyU2Vzc2lvbiB9IGZyb20gIi4vc2Vzc2lvbi9icm93c2VyIjsKaW1wb3J0IHsgTWVtb3J5U2Vzc2lvbiwgU2Vzc2lvbiB9IGZyb20gIi4vc2Vzc2lvbi9zZXNzaW9uIjsKaW1wb3J0IHR5cGUgeyBKc29uLCBSZXF1ZXN0T3B0aW9ucywgUm93IH0gZnJvbSAiLi90eXBlcyI7CgpleHBvcnQgaW50ZXJmYWNlIENsaWVudE9wdGlvbnMgewogICAgLyoqIFdoZXJlIHRoZSBzZXNzaW9uIGlzIGtlcHQuIERlZmF1bHRzIHRvIGxvY2FsU3RvcmFnZSBpbiBicm93c2VycywgbWVtb3J5IGVsc2V3aGVyZS4gKi8KICAgIHNlc3Npb24/OiBTZXNzaW9uOwogICAgLyoqIFNlbnQgYXMgYEFjY2VwdC1MYW5ndWFnZWAuIERlZmF1bHQgImVuLVVTIi4gKi8KICAgIGxhbmc/OiBzdHJpbmc7CiAgICAvKiogQ3VzdG9tIGZldGNoIGltcGxlbWVudGF0aW9uIChlLmcuIGZvciBTU1IgZnJhbWV3b3JrcykuICovCiAgICBmZXRjaD86IHR5cGVvZiBmZXRjaDsKICAgIC8qKiBDYW5jZWwgb2xkZXIgZHVwbGljYXRlIHJlcXVlc3RzIGF1dG9tYXRpY2FsbHkuIERlZmF1bHQgdHJ1ZS4gKi8KICAgIGF1dG9DYW5jZWw/OiBib29sZWFuOwp9CgovKiogUnVucyBiZWZvcmUgZWFjaCByZXF1ZXN0LiBSZXR1cm4gYSBuZXcgdXJsL2luaXQgdG8gY2hhbmdlIHdoYXQgaXMgc2VudC4gKi8KZXhwb3J0IHR5cGUgUmVxdWVzdEhvb2sgPSAoCiAgICB1cmw6IHN0cmluZywKICAgIGluaXQ6IFJlcXVlc3RJbml0ICYgUmVxdWVzdE9wdGlvbnMsCikgPT4KICAgIHwgdm9pZAogICAgfCB7IHVybD86IHN0cmluZzsgaW5pdD86IFJlcXVlc3RJbml0ICYgUmVxdWVzdE9wdGlvbnMgfQogICAgfCBQcm9taXNlPHZvaWQgfCB7IHVybD86IHN0cmluZzsgaW5pdD86IFJlcXVlc3RJbml0ICYgUmVxdWVzdE9wdGlvbnMgfT47CgovKiogUnVucyBhZnRlciBlYWNoIHJlc3BvbnNlLiBXaGF0ZXZlciBpdCByZXR1cm5zIGJlY29tZXMgdGhlIHJlc3VsdCBkYXRhLiAqLwpleHBvcnQgdHlwZSBSZXNwb25zZUhvb2sgPSAocmVzcG9uc2U6IFJlc3BvbnNlLCBkYXRhOiBhbnkpID0+IGFueSB8IFByb21pc2U8YW55PjsKCi8qKgogKiBUaGUgUnVzdGFCYXNlIGNsaWVudC4KICoKICogICAgIGNvbnN0IHJiID0gY3JlYXRlQ2xpZW50KCJodHRwczovL215LWFwcC5ydXN0YWJhc2UubmV0Iik7CiAqICAgICBjb25zdCBwb3N0cyA9IGF3YWl0IHJiLmZyb20oInBvc3RzIikubGlzdCh7IHNvcnQ6ICItY3JlYXRlZCIgfSk7CiAqLwpleHBvcnQgY2xhc3MgUnVzdGFCYXNlIHsKICAgIC8qKiBTZXJ2ZXIgYWRkcmVzcyAoYWJzb2x1dGUsIG9yIHJlbGF0aXZlIHRvIHRoZSBjdXJyZW50IHBhZ2UgaW4gYnJvd3NlcnMpLiAqLwogICAgcmVhZG9ubHkgYmFzZVVybDogc3RyaW5nOwogICAgcmVhZG9ubHkgc2Vzc2lvbjogU2Vzc2lvbjsKICAgIGxhbmc6IHN0cmluZzsKICAgIGF1dG9DYW5jZWw6IGJvb2xlYW47CiAgICBvblJlcXVlc3Q/OiBSZXF1ZXN0SG9vazsKICAgIG9uUmVzcG9uc2U/OiBSZXNwb25zZUhvb2s7CgogICAgcmVhZG9ubHkgcmVhbHRpbWU6IFJlYWx0aW1lOwogICAgcmVhZG9ubHkgZmlsZXM6IEZpbGVzOwogICAgcmVhZG9ubHkgYWRtaW46IEFkbWluOwoKICAgIHByaXZhdGUgcmVhZG9ubHkgZmV0Y2hJbXBsPzogdHlwZW9mIGZldGNoOwogICAgcHJpdmF0ZSByZWFkb25seSBjb250cm9sbGVycyA9IG5ldyBNYXA8c3RyaW5nLCBBYm9ydENvbnRyb2xsZXI+KCk7CiAgICBwcml2YXRlIHJlYWRvbmx5IHRhYmxlcyA9IG5ldyBNYXA8c3RyaW5nLCBUYWJsZT4oKTsKICAgIHByaXZhdGUga2VlcEFsaXZlPzogewogICAgICAgIGxlZXdheTogbnVtYmVyOwogICAgICAgIHJ1bjogKCkgPT4gUHJvbWlzZTx1bmtub3duPjsKICAgICAgICBzdG9wOiAoKSA9PiB2b2lkOwogICAgfTsKCiAgICBjb25zdHJ1Y3RvcihiYXNlVXJsID0gIi8iLCBvcHRpb25zOiBDbGllbnRPcHRpb25zID0ge30pIHsKICAgICAgICB0aGlzLmJhc2VVcmwgPSBiYXNlVXJsOwogICAgICAgIHRoaXMubGFuZyA9IG9wdGlvbnMubGFuZyB8fCAiZW4tVVMiOwogICAgICAgIHRoaXMuYXV0b0NhbmNlbCA9IG9wdGlvbnMuYXV0b0NhbmNlbCA/PyB0cnVlOwogICAgICAgIHRoaXMuZmV0Y2hJbXBsID0gb3B0aW9ucy5mZXRjaDsKICAgICAgICB0aGlzLnNlc3Npb24gPQogICAgICAgICAgICBvcHRpb25zLnNlc3Npb24gfHwKICAgICAgICAgICAgKHR5cGVvZiB3aW5kb3cgIT09ICJ1bmRlZmluZWQiICYmICh3aW5kb3cgYXMgYW55KS5EZW5vID09PSB1bmRlZmluZWQKICAgICAgICAgICAgICAgID8gbmV3IEJyb3dzZXJTZXNzaW9uKCkKICAgICAgICAgICAgICAgIDogbmV3IE1lbW9yeVNlc3Npb24oKSk7CgogICAgICAgIHRoaXMucmVhbHRpbWUgPSBuZXcgUmVhbHRpbWUodGhpcyk7CiAgICAgICAgdGhpcy5maWxlcyA9IG5ldyBGaWxlcyh0aGlzKTsKICAgICAgICB0aGlzLmFkbWluID0gbmV3IEFkbWluKHRoaXMpOwogICAgfQoKICAgIC8qKiBXb3JrcyB3aXRoIHRoZSByZWNvcmRzIG9mIGEgY29sbGVjdGlvbi4gKi8KICAgIGZyb208VCBleHRlbmRzIFJvdyA9IFJvdz4oY29sbGVjdGlvbjogc3RyaW5nKTogVGFibGU8VD4gewogICAgICAgIGxldCB0ID0gdGhpcy50YWJsZXMuZ2V0KGNvbGxlY3Rpb24pOwogICAgICAgIGlmICghdCkgewogICAgICAgICAgICB0ID0gbmV3IFRhYmxlKHRoaXMsIGNvbGxlY3Rpb24pOwogICAgICAgICAgICB0aGlzLnRhYmxlcy5zZXQoY29sbGVjdGlvbiwgdCk7CiAgICAgICAgfQogICAgICAgIHJldHVybiB0IGFzIFRhYmxlPFQ+OwogICAgfQoKICAgIC8qKiBTaWduLWluLCBzaWduLXVwIGhlbHBlcnMgYW5kIHJlY29yZHMgZm9yIGFuIGF1dGggY29sbGVjdGlvbiAoZS5nLiAidXNlcnMiKS4gKi8KICAgIGF1dGg8VCBleHRlbmRzIFJvdyA9IFJvdz4oY29sbGVjdGlvbiA9ICJ1c2VycyIpOiBBdXRoVGFibGU8VD4gewogICAgICAgIGNvbnN0IGtleSA9ICJhdXRoOiIgKyBjb2xsZWN0aW9uOwogICAgICAgIGxldCB0ID0gdGhpcy50YWJsZXMuZ2V0KGtleSk7CiAgICAgICAgaWYgKCF0KSB7CiAgICAgICAgICAgIHQgPSBuZXcgQXV0aFRhYmxlKHRoaXMsIGNvbGxlY3Rpb24pOwogICAgICAgICAgICB0aGlzLnRhYmxlcy5zZXQoa2V5LCB0KTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHQgYXMgQXV0aFRhYmxlPFQ+OwogICAgfQoKICAgIC8qKiBTaWducyBvdXQgbG9jYWxseSAoY2xlYXJzIHRoZSBzYXZlZCBzZXNzaW9uKS4gKi8KICAgIHNpZ25PdXQoKTogdm9pZCB7CiAgICAgICAgdGhpcy5zZXNzaW9uLmNsZWFyKCk7CiAgICB9CgogICAgLyoqIFN0YXJ0cyBhIGJhdGNoIG9mIHJlY29yZCB3cml0ZXMgdGhhdCBydW4gdG9nZXRoZXIgaW4gb25lIHRyYW5zYWN0aW9uLiAqLwogICAgYmF0Y2goKTogQmF0Y2ggewogICAgICAgIHJldHVybiBuZXcgQmF0Y2godGhpcyk7CiAgICB9CgogICAgLyoqIENoZWNrcyB0aGUgc2VydmVyIHN0YXR1cy4gKi8KICAgIGhlYWx0aChvcHRpb25zPzogUmVxdWVzdE9wdGlvbnMpOiBQcm9taXNlPHsgY29kZTogbnVtYmVyOyBtZXNzYWdlOiBzdHJpbmc7IGRhdGE6IEpzb24gfT4gewogICAgICAgIHJldHVybiB0aGlzLnJlcXVlc3QoIi9hcGkvaGVhbHRoIiwgb3B0aW9ucyk7CiAgICB9CgogICAgLyoqIFNhZmVseSBpbnNlcnRzIHZhbHVlcyBpbnRvIGEgZmlsdGVyLCBlLmcuIGByYi5maWx0ZXIoInRpdGxlID0gezp0fSIsIHsgdCB9KWAuICovCiAgICBmaWx0ZXIoZXhwcmVzc2lvbjogc3RyaW5nLCBwYXJhbXM/OiBKc29uKTogc3RyaW5nIHsKICAgICAgICByZXR1cm4gYmluZEZpbHRlcihleHByZXNzaW9uLCBwYXJhbXMpOwogICAgfQoKICAgIC8qKiBGdWxsIHVybCBmb3IgYSBzZXJ2ZXIgcGF0aC4gKi8KICAgIHVybChwYXRoID0gIiIpOiBzdHJpbmcgewogICAgICAgIGxldCBiYXNlID0gdGhpcy5iYXNlVXJsOwogICAgICAgIGlmICgKICAgICAgICAgICAgdHlwZW9mIHdpbmRvdyAhPT0gInVuZGVmaW5lZCIgJiYKICAgICAgICAgICAgd2luZG93LmxvY2F0aW9uICYmCiAgICAgICAgICAgICEvXmh0dHBzPzpcL1wvLy50ZXN0KGJhc2UpCiAgICAgICAgKSB7CiAgICAgICAgICAgIGNvbnN0IG9yaWdpbiA9ICh3aW5kb3cubG9jYXRpb24ub3JpZ2luIHx8ICIiKS5yZXBsYWNlKC9cLyQvLCAiIik7CiAgICAgICAgICAgIGJhc2UgPSBiYXNlLnN0YXJ0c1dpdGgoIi8iKQogICAgICAgICAgICAgICAgPyBvcmlnaW4gKyBiYXNlCiAgICAgICAgICAgICAgICA6IGpvaW5Vcmwob3JpZ2luICsgKHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZSB8fCAiLyIpLnJlcGxhY2UoL1teL10qJC8sICIiKSwgYmFzZSk7CiAgICAgICAgfQogICAgICAgIHJldHVybiBqb2luVXJsKGJhc2UsIHBhdGgpOwogICAgfQoKICAgIC8qKiBDYW5jZWxzIGEgcGVuZGluZyByZXF1ZXN0IGJ5IGl0cyBrZXkuICovCiAgICBjYW5jZWwocmVxdWVzdEtleTogc3RyaW5nKTogdm9pZCB7CiAgICAgICAgdGhpcy5jb250cm9sbGVycy5nZXQocmVxdWVzdEtleSk/LmFib3J0KCk7CiAgICAgICAgdGhpcy5jb250cm9sbGVycy5kZWxldGUocmVxdWVzdEtleSk7CiAgICB9CgogICAgLyoqIENhbmNlbHMgZXZlcnkgcGVuZGluZyByZXF1ZXN0LiAqLwogICAgY2FuY2VsQWxsKCk6IHZvaWQgewogICAgICAgIGZvciAoY29uc3QgYyBvZiB0aGlzLmNvbnRyb2xsZXJzLnZhbHVlcygpKSBjLmFib3J0KCk7CiAgICAgICAgdGhpcy5jb250cm9sbGVycy5jbGVhcigpOwogICAgfQoKICAgIC8qKgogICAgICogTG93LWxldmVsIHJlcXVlc3QgaGVscGVyIHVzZWQgYnkgZXZlcnkgbWV0aG9kLiBUaHJvd3MgYFJ1c3RhQmFzZUVycm9yYAogICAgICogZm9yIG5ldHdvcmsgZmFpbHVyZXMsIGNhbmNlbGxhdGlvbnMgYW5kIHJlc3BvbnNlcyB3aXRoIHN0YXR1cyA+PSA0MDAuCiAgICAgKi8KICAgIGFzeW5jIHJlcXVlc3Q8VCA9IGFueT4ocGF0aDogc3RyaW5nLCBvcHRpb25zOiBSZXF1ZXN0T3B0aW9ucyA9IHt9KTogUHJvbWlzZTxUPiB7CiAgICAgICAgY29uc3QgeyBxdWVyeSwgaGVhZGVycywgYm9keSwgcmVxdWVzdEtleSwgZmV0Y2g6IGZldGNoT3ZlcnJpZGUsIC4uLnJlc3QgfSA9IG9wdGlvbnM7CiAgICAgICAgY29uc3QgbWV0aG9kID0gKG9wdGlvbnMubWV0aG9kIHx8ICJHRVQiKS50b1VwcGVyQ2FzZSgpOwogICAgICAgIGNvbnN0IHNraXBLZWVwQWxpdmUgPSAocmVzdCBhcyBhbnkpLl9fbm9LZWVwQWxpdmU7CiAgICAgICAgZGVsZXRlIChyZXN0IGFzIGFueSkuX19ub0tlZXBBbGl2ZTsKCiAgICAgICAgaWYgKHRoaXMua2VlcEFsaXZlICYmICFza2lwS2VlcEFsaXZlICYmIHRoaXMuc2Vzc2lvbi50b2tlbikgewogICAgICAgICAgICBpZiAodG9rZW5FeHBpcmVkKHRoaXMuc2Vzc2lvbi50b2tlbiwgdGhpcy5rZWVwQWxpdmUubGVld2F5KSkgewogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBhd2FpdCB0aGlzLmtlZXBBbGl2ZS5ydW4oKTsKICAgICAgICAgICAgICAgIH0gY2F0Y2ggewogICAgICAgICAgICAgICAgICAgIC8vIHRoZSByZXF1ZXN0IGJlbG93IHdpbGwgc3VyZmFjZSBhbnkgYXV0aCBwcm9ibGVtCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGNvbnN0IGZpbmFsSGVhZGVyczogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHsgLi4uKGhlYWRlcnMgfHwge30pIH07CiAgICAgICAgY29uc3QgcHJlcGFyZWQgPSBwcmVwYXJlQm9keShib2R5KTsKICAgICAgICBjb25zdCBoYXMgPSAobmFtZTogc3RyaW5nKSA9PgogICAgICAgICAgICBPYmplY3Qua2V5cyhmaW5hbEhlYWRlcnMpLnNvbWUoKGspID0+IGsudG9Mb3dlckNhc2UoKSA9PT0gbmFtZS50b0xvd2VyQ2FzZSgpKTsKCiAgICAgICAgaWYgKCFoYXMoIkNvbnRlbnQtVHlwZSIpICYmICFpc0Zvcm1EYXRhKHByZXBhcmVkKSAmJiBwcmVwYXJlZCAhPT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgIGZpbmFsSGVhZGVyc1siQ29udGVudC1UeXBlIl0gPSAiYXBwbGljYXRpb24vanNvbiI7CiAgICAgICAgfQogICAgICAgIGlmICghaGFzKCJBY2NlcHQtTGFuZ3VhZ2UiKSkgZmluYWxIZWFkZXJzWyJBY2NlcHQtTGFuZ3VhZ2UiXSA9IHRoaXMubGFuZzsKICAgICAgICBpZiAoIWhhcygiQXV0aG9yaXphdGlvbiIpICYmIHRoaXMuc2Vzc2lvbi50b2tlbikgewogICAgICAgICAgICBmaW5hbEhlYWRlcnNbIkF1dGhvcml6YXRpb24iXSA9IHRoaXMuc2Vzc2lvbi50b2tlbjsKICAgICAgICB9CgogICAgICAgIGxldCBpbml0OiBSZXF1ZXN0SW5pdCAmIFJlcXVlc3RPcHRpb25zID0gewogICAgICAgICAgICAuLi5yZXN0LAogICAgICAgICAgICBtZXRob2QsCiAgICAgICAgICAgIGhlYWRlcnM6IGZpbmFsSGVhZGVycywKICAgICAgICAgICAgYm9keToKICAgICAgICAgICAgICAgIHByZXBhcmVkICE9PSB1bmRlZmluZWQgJiYKICAgICAgICAgICAgICAgIHR5cGVvZiBwcmVwYXJlZCA9PT0gIm9iamVjdCIgJiYKICAgICAgICAgICAgICAgICFpc0Zvcm1EYXRhKHByZXBhcmVkKSAmJgogICAgICAgICAgICAgICAgISh0eXBlb2YgQmxvYiAhPT0gInVuZGVmaW5lZCIgJiYgcHJlcGFyZWQgaW5zdGFuY2VvZiBCbG9iKQogICAgICAgICAgICAgICAgICAgID8gSlNPTi5zdHJpbmdpZnkocHJlcGFyZWQpCiAgICAgICAgICAgICAgICAgICAgOiBwcmVwYXJlZCwKICAgICAgICB9OwoKICAgICAgICBsZXQga2V5OiBzdHJpbmcgfCBudWxsID0gbnVsbDsKICAgICAgICBpZiAodGhpcy5hdXRvQ2FuY2VsICYmIHJlcXVlc3RLZXkgIT09IG51bGwgJiYgIW9wdGlvbnMuc2lnbmFsKSB7CiAgICAgICAgICAgIGtleSA9IHJlcXVlc3RLZXkgfHwgbWV0aG9kICsgIiAiICsgcGF0aDsKICAgICAgICAgICAgdGhpcy5jYW5jZWwoa2V5KTsKICAgICAgICAgICAgY29uc3QgY29udHJvbGxlciA9IG5ldyBBYm9ydENvbnRyb2xsZXIoKTsKICAgICAgICAgICAgdGhpcy5jb250cm9sbGVycy5zZXQoa2V5LCBjb250cm9sbGVyKTsKICAgICAgICAgICAgaW5pdC5zaWduYWwgPSBjb250cm9sbGVyLnNpZ25hbDsKICAgICAgICB9CgogICAgICAgIGxldCB1cmwgPSB3aXRoUXVlcnkodGhpcy51cmwocGF0aCksIHF1ZXJ5KTsKCiAgICAgICAgaWYgKHRoaXMub25SZXF1ZXN0KSB7CiAgICAgICAgICAgIGNvbnN0IGNoYW5nZWQgPSBhd2FpdCB0aGlzLm9uUmVxdWVzdCh1cmwsIGluaXQpOwogICAgICAgICAgICBpZiAoY2hhbmdlZCkgewogICAgICAgICAgICAgICAgdXJsID0gY2hhbmdlZC51cmwgPz8gdXJsOwogICAgICAgICAgICAgICAgaW5pdCA9IGNoYW5nZWQuaW5pdCA/PyBpbml0OwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBjb25zdCBkb0ZldGNoID0gZmV0Y2hPdmVycmlkZSB8fCB0aGlzLmZldGNoSW1wbCB8fCBmZXRjaDsKICAgICAgICB0cnkgewogICAgICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGRvRmV0Y2godXJsLCBpbml0KTsKICAgICAgICAgICAgbGV0IGRhdGE6IGFueSA9IHt9OwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTsKICAgICAgICAgICAgfSBjYXRjaCAoZXJyOiBhbnkpIHsKICAgICAgICAgICAgICAgIGlmIChpbml0LnNpZ25hbD8uYWJvcnRlZCB8fCBlcnI/Lm5hbWUgPT09ICJBYm9ydEVycm9yIikgdGhyb3cgZXJyOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmICh0aGlzLm9uUmVzcG9uc2UpIGRhdGEgPSBhd2FpdCB0aGlzLm9uUmVzcG9uc2UocmVzcG9uc2UsIGRhdGEpOwogICAgICAgICAgICBpZiAocmVzcG9uc2Uuc3RhdHVzID49IDQwMCkgewogICAgICAgICAgICAgICAgdGhyb3cgbmV3IFJ1c3RhQmFzZUVycm9yKHsgdXJsOiByZXNwb25zZS51cmwgfHwgdXJsLCBzdGF0dXM6IHJlc3BvbnNlLnN0YXR1cywgZGF0YSB9KTsKICAgICAgICAgICAgfQogICAgICAgICAgICByZXR1cm4gZGF0YSBhcyBUOwogICAgICAgIH0gY2F0Y2ggKGVycikgewogICAgICAgICAgICB0aHJvdyBSdXN0YUJhc2VFcnJvci5mcm9tKGVyciwgdXJsKTsKICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICBpZiAoa2V5ICYmIHRoaXMuY29udHJvbGxlcnMuZ2V0KGtleSk/LnNpZ25hbCA9PT0gaW5pdC5zaWduYWwpIHsKICAgICAgICAgICAgICAgIHRoaXMuY29udHJvbGxlcnMuZGVsZXRlKGtleSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgLyoqIEBpbnRlcm5hbCBLZWVwcyB0aGUgY3VycmVudCBzZXNzaW9uIGZyZXNoIGJlZm9yZSByZXF1ZXN0cy4gKi8KICAgIF9zZXRLZWVwQWxpdmUobGVld2F5OiBudW1iZXIgfCB1bmRlZmluZWQsIHJ1bjogKCkgPT4gUHJvbWlzZTx1bmtub3duPik6IHZvaWQgewogICAgICAgIHRoaXMua2VlcEFsaXZlPy5zdG9wKCk7CiAgICAgICAgdGhpcy5rZWVwQWxpdmUgPSB1bmRlZmluZWQ7CiAgICAgICAgaWYgKCFsZWV3YXkpIHJldHVybjsKCiAgICAgICAgY29uc3Qgb3duZXIgPSB0aGlzLnNlc3Npb24ucmVjb3JkOwogICAgICAgIGNvbnN0IG9mZiA9IHRoaXMuc2Vzc2lvbi5vbkNoYW5nZSgodG9rZW4sIHJlY29yZCkgPT4gewogICAgICAgICAgICBpZiAoIXRva2VuIHx8IHJlY29yZD8uaWQgIT09IG93bmVyPy5pZCB8fCByZWNvcmQ/LmNvbGxlY3Rpb25JZCAhPT0gb3duZXI/LmNvbGxlY3Rpb25JZCkgewogICAgICAgICAgICAgICAgdGhpcy5fc2V0S2VlcEFsaXZlKHVuZGVmaW5lZCwgcnVuKTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgICAgIHRoaXMua2VlcEFsaXZlID0geyBsZWV3YXksIHJ1biwgc3RvcDogb2ZmIH07CiAgICB9Cn0KCi8qKiBDcmVhdGVzIGEgUnVzdGFCYXNlIGNsaWVudC4gKi8KZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUNsaWVudChiYXNlVXJsID0gIi8iLCBvcHRpb25zPzogQ2xpZW50T3B0aW9ucyk6IFJ1c3RhQmFzZSB7CiAgICByZXR1cm4gbmV3IFJ1c3RhQmFzZShiYXNlVXJsLCBvcHRpb25zKTsKfQo=
+import { Admin } from "./admin";
+import { Batch } from "./data/batch";
+import { Files } from "./data/files";
+import { AuthTable, Table } from "./data/table";
+import { RustaBaseError } from "./errors";
+import { prepareBody, isFormData } from "./internal/body";
+import { bindFilter, joinUrl, withQuery } from "./internal/encode";
+import { tokenExpired } from "./internal/token";
+import { Realtime } from "./realtime/realtime";
+import { BrowserSession } from "./session/browser";
+import { MemorySession, Session } from "./session/session";
+import type { Json, RequestOptions, Row } from "./types";
+
+export interface ClientOptions {
+    /** Where the session is kept. Defaults to localStorage in browsers, memory elsewhere. */
+    session?: Session;
+    /** Sent as `Accept-Language`. Default "en-US". */
+    lang?: string;
+    /** Custom fetch implementation (e.g. for SSR frameworks). */
+    fetch?: typeof fetch;
+    /** Cancel older duplicate requests automatically. Default true. */
+    autoCancel?: boolean;
+}
+
+/** Runs before each request. Return a new url/init to change what is sent. */
+export type RequestHook = (
+    url: string,
+    init: RequestInit & RequestOptions,
+) =>
+    | void
+    | { url?: string; init?: RequestInit & RequestOptions }
+    | Promise<void | { url?: string; init?: RequestInit & RequestOptions }>;
+
+/** Runs after each response. Whatever it returns becomes the result data. */
+export type ResponseHook = (response: Response, data: any) => any | Promise<any>;
+
+/**
+ * The RustaBase client.
+ *
+ *     const rb = createClient("https://my-app.rustabase.net");
+ *     const posts = await rb.from("posts").list({ sort: "-created" });
+ */
+export class RustaBase {
+    /** Server address (absolute, or relative to the current page in browsers). */
+    readonly baseUrl: string;
+    readonly session: Session;
+    lang: string;
+    autoCancel: boolean;
+    onRequest?: RequestHook;
+    onResponse?: ResponseHook;
+
+    readonly realtime: Realtime;
+    readonly files: Files;
+    readonly admin: Admin;
+
+    private readonly fetchImpl?: typeof fetch;
+    private readonly controllers = new Map<string, AbortController>();
+    private readonly tables = new Map<string, Table>();
+    private keepAlive?: {
+        leeway: number;
+        run: () => Promise<unknown>;
+        stop: () => void;
+    };
+
+    constructor(baseUrl = "/", options: ClientOptions = {}) {
+        this.baseUrl = baseUrl;
+        this.lang = options.lang || "en-US";
+        this.autoCancel = options.autoCancel ?? true;
+        this.fetchImpl = options.fetch;
+        this.session =
+            options.session ||
+            (typeof window !== "undefined" && (window as any).Deno === undefined
+                ? new BrowserSession()
+                : new MemorySession());
+
+        this.realtime = new Realtime(this);
+        this.files = new Files(this);
+        this.admin = new Admin(this);
+    }
+
+    /** Works with the records of a collection. */
+    from<T extends Row = Row>(collection: string): Table<T> {
+        let t = this.tables.get(collection);
+        if (!t) {
+            t = new Table(this, collection);
+            this.tables.set(collection, t);
+        }
+        return t as Table<T>;
+    }
+
+    /** Sign-in, sign-up helpers and records for an auth collection (e.g. "users"). */
+    auth<T extends Row = Row>(collection = "users"): AuthTable<T> {
+        const key = "auth:" + collection;
+        let t = this.tables.get(key);
+        if (!t) {
+            t = new AuthTable(this, collection);
+            this.tables.set(key, t);
+        }
+        return t as AuthTable<T>;
+    }
+
+    /** Signs out locally (clears the saved session). */
+    signOut(): void {
+        this.session.clear();
+    }
+
+    /** Starts a batch of record writes that run together in one transaction. */
+    batch(): Batch {
+        return new Batch(this);
+    }
+
+    /** Checks the server status. */
+    health(options?: RequestOptions): Promise<{ code: number; message: string; data: Json }> {
+        return this.request("/api/health", options);
+    }
+
+    /** Safely inserts values into a filter, e.g. `rb.filter("title = {:t}", { t })`. */
+    filter(expression: string, params?: Json): string {
+        return bindFilter(expression, params);
+    }
+
+    /** Full url for a server path. */
+    url(path = ""): string {
+        let base = this.baseUrl;
+        if (
+            typeof window !== "undefined" &&
+            window.location &&
+            !/^https?:\/\//.test(base)
+        ) {
+            const origin = (window.location.origin || "").replace(/\/$/, "");
+            base = base.startsWith("/")
+                ? origin + base
+                : joinUrl(origin + (window.location.pathname || "/").replace(/[^/]*$/, ""), base);
+        }
+        return joinUrl(base, path);
+    }
+
+    /** Cancels a pending request by its key. */
+    cancel(requestKey: string): void {
+        this.controllers.get(requestKey)?.abort();
+        this.controllers.delete(requestKey);
+    }
+
+    /** Cancels every pending request. */
+    cancelAll(): void {
+        for (const c of this.controllers.values()) c.abort();
+        this.controllers.clear();
+    }
+
+    /**
+     * Low-level request helper used by every method. Throws `RustaBaseError`
+     * for network failures, cancellations and responses with status >= 400.
+     */
+    async request<T = any>(path: string, options: RequestOptions = {}): Promise<T> {
+        const { query, headers, body, requestKey, fetch: fetchOverride, ...rest } = options;
+        const method = (options.method || "GET").toUpperCase();
+        const skipKeepAlive = (rest as any).__noKeepAlive;
+        delete (rest as any).__noKeepAlive;
+
+        if (this.keepAlive && !skipKeepAlive && this.session.token) {
+            if (tokenExpired(this.session.token, this.keepAlive.leeway)) {
+                try {
+                    await this.keepAlive.run();
+                } catch {
+                    // the request below will surface any auth problem
+                }
+            }
+        }
+
+        const finalHeaders: Record<string, string> = { ...(headers || {}) };
+        const prepared = prepareBody(body);
+        const has = (name: string) =>
+            Object.keys(finalHeaders).some((k) => k.toLowerCase() === name.toLowerCase());
+
+        if (!has("Content-Type") && !isFormData(prepared) && prepared !== undefined) {
+            finalHeaders["Content-Type"] = "application/json";
+        }
+        if (!has("Accept-Language")) finalHeaders["Accept-Language"] = this.lang;
+        if (!has("Authorization") && this.session.token) {
+            finalHeaders["Authorization"] = this.session.token;
+        }
+
+        let init: RequestInit & RequestOptions = {
+            ...rest,
+            method,
+            headers: finalHeaders,
+            body:
+                prepared !== undefined &&
+                typeof prepared === "object" &&
+                !isFormData(prepared) &&
+                !(typeof Blob !== "undefined" && prepared instanceof Blob)
+                    ? JSON.stringify(prepared)
+                    : prepared,
+        };
+
+        let key: string | null = null;
+        if (this.autoCancel && requestKey !== null && !options.signal) {
+            key = requestKey || method + " " + path;
+            this.cancel(key);
+            const controller = new AbortController();
+            this.controllers.set(key, controller);
+            init.signal = controller.signal;
+        }
+
+        let url = withQuery(this.url(path), query);
+
+        if (this.onRequest) {
+            const changed = await this.onRequest(url, init);
+            if (changed) {
+                url = changed.url ?? url;
+                init = changed.init ?? init;
+            }
+        }
+
+        const doFetch = fetchOverride || this.fetchImpl || fetch;
+        try {
+            const response = await doFetch(url, init);
+            let data: any = {};
+            try {
+                data = await response.json();
+            } catch (err: any) {
+                if (init.signal?.aborted || err?.name === "AbortError") throw err;
+            }
+            if (this.onResponse) data = await this.onResponse(response, data);
+            if (response.status >= 400) {
+                throw new RustaBaseError({ url: response.url || url, status: response.status, data });
+            }
+            return data as T;
+        } catch (err) {
+            throw RustaBaseError.from(err, url);
+        } finally {
+            if (key && this.controllers.get(key)?.signal === init.signal) {
+                this.controllers.delete(key);
+            }
+        }
+    }
+
+    /** @internal Keeps the current session fresh before requests. */
+    _setKeepAlive(leeway: number | undefined, run: () => Promise<unknown>): void {
+        this.keepAlive?.stop();
+        this.keepAlive = undefined;
+        if (!leeway) return;
+
+        const owner = this.session.record;
+        const off = this.session.onChange((token, record) => {
+            if (!token || record?.id !== owner?.id || record?.collectionId !== owner?.collectionId) {
+                this._setKeepAlive(undefined, run);
+            }
+        });
+        this.keepAlive = { leeway, run, stop: off };
+    }
+}
+
+/** Creates a RustaBase client. */
+export function createClient(baseUrl = "/", options?: ClientOptions): RustaBase {
+    return new RustaBase(baseUrl, options);
+}
