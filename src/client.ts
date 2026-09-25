@@ -223,6 +223,9 @@ export class RustaBase {
             }
             if (this.onResponse) data = await this.onResponse(response, data);
             if (response.status >= 400) {
+                if (!data || typeof data !== "object" || !Object.keys(data).length) {
+                    data = { code: response.status, message: response.statusText || "Request failed.", data: {} };
+                }
                 throw new RustaBaseError({ url: response.url || url, status: response.status, data });
             }
             return data as T;
