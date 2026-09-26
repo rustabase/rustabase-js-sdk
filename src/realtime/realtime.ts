@@ -233,9 +233,9 @@ export class Realtime {
         this.source = null;
         this.clientId = "";
         this.sentTopics = [];
-        if (wasConnected || resetRetries) {
+        if (wasConnected) {
             const active = this.activeTopics();
-            if (wasConnected) this.onDisconnect?.(active);
+            if (active.length) this.onDisconnect?.(active);
         }
     }
 }
