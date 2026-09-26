@@ -56,7 +56,9 @@ export class RustaBaseError extends Error {
         const cancelled =
             e?.name === "AbortError" || e?.message === "Aborted" || e?.cancelled === true;
         return new RustaBaseError({
-            url,
+            url: url || e?.url || "",
+            status: typeof e?.status === "number" ? e.status : 0,
+            data: e?.data && typeof e.data === "object" ? e.data : undefined,
             cancelled,
             message: cancelled ? undefined : e?.message,
             cause: err,
