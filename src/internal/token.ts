@@ -29,6 +29,7 @@ export function readClaims(token: string): Record<string, any> {
 export function tokenExpired(token: string, leewaySeconds = 0): boolean {
     const claims = readClaims(token);
     if (!Object.keys(claims).length) return true;
-    if (!claims.exp) return false;
+    if (claims.exp === undefined || claims.exp === null) return false;
+    if (typeof claims.exp !== "number" || !isFinite(claims.exp)) return true;
     return claims.exp - leewaySeconds <= Date.now() / 1000;
 }
