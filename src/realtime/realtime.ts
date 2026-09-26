@@ -88,7 +88,8 @@ export class Realtime {
     async unsubscribeByPrefix(prefix: string): Promise<void> {
         let changed = false;
         for (const key of [...this.topics.keys()]) {
-            if ((key + "?").startsWith(prefix)) {
+            const base = baseTopic(key);
+            if (base === prefix || base.startsWith(prefix + "/")) {
                 this.detach(key);
                 changed = true;
             }
