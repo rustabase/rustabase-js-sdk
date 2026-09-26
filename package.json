@@ -20,6 +20,7 @@
     "module": "./dist/rustabase.es.mjs",
     "react-native": "./dist/rustabase.es.mjs",
     "types": "./dist/index.d.ts",
+    "sideEffects": false,
     "files": [
         "dist",
         "LICENSE.md",
