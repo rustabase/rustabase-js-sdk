@@ -44,7 +44,9 @@ export const seg = (value: string) => encodeURIComponent(value);
 export function bindFilter(expression: string, params?: Json): string {
     if (!params) return expression;
     return expression.replace(/\{:([\w]+)\}/g, (match, name: string) =>
-        name in params ? filterLiteral(params[name]) : match,
+        Object.prototype.hasOwnProperty.call(params, name)
+            ? filterLiteral(params[name])
+            : match,
     );
 }
 
