@@ -54,6 +54,9 @@ export class Batch {
 
     /** Sends every queued write. */
     send(options: RequestOptions = {}): Promise<BatchResult[]> {
+        if (!this.steps.length) {
+            return Promise.reject(new Error("The batch is empty — queue at least one write."));
+        }
         const form = new FormData();
         const requests = this.steps.map((s, i) => {
             for (const [field, list] of Object.entries(s.files)) {
