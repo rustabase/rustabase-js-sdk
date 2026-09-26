@@ -82,3 +82,27 @@ describe("token", () => {
         expect(tokenExpired(fakeToken({ id: "x" }))).toBe(false);
     });
 });
+
+describe("realtime", () => {
+    it("rolls back the listener when the first connect fails", async () => {
+        const rb = createClient("http://example.test", { fetch: mockFetch().fetch });
+        const rt = rb.realtime;
+        rt.maxRetries = 0;
+        const orig = (globalThis as any).EventSource;
+        (globalThis as any).EventSource = class {
+            onerror: (() => void) | null = null;
+            constructor() {
+                setTimeout(() => this.onerror?.(), 0);
+            }
+            addEventListener() {}
+            removeEventListener() {}
+            close() {}
+        };
+        try {
+            await expect(rt.subscribe("posts/*", () => {})).rejects.toBeInstanceOf(RustaBaseError);
+            expect((rt as any).topics.size).toBe(0);
+        } finally {
+            (globalThis as any).EventSource = orig;
+        }
+    });
+});
