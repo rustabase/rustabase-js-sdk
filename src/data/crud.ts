@@ -91,6 +91,7 @@ export class Crud<T> {
 
     /** Updates a row. */
     update(id: string, data: Body = {}, options: ReadOptions = {}): Promise<T> {
+        if (!id) return missingId(this.rb, this.path);
         return this.rb.request(this.path + "/" + seg(id), {
             ...readQuery(options),
             method: "PATCH",
@@ -100,8 +101,18 @@ export class Crud<T> {
 
     /** Deletes a row. */
     async remove(id: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
+        if (!id) await missingId(this.rb, this.path);
+        else await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
         return true;
     }
 }
 
+function missingId(rb: RustaBase, path: string): Promise<never> {
+    return Promise.reject(
+        new RustaBaseError({
+            status: 404,
+            url: rb.url(path + "/"),
+            data: { code: 404, message: "An id is required.", data: {} },
+        }),
+    );
+}
