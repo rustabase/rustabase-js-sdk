@@ -1,6 +1,6 @@
 {
-    "version": "1.0.2",
-    "name": "rustabase-js-sdk",
+    "version": "1.0.3",
+    "name": "rustabase",
     "description": "Official JavaScript and TypeScript SDK for RustaBase",
     "author": "RustaBase contributors",
     "license": "MIT",
