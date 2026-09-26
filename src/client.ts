@@ -99,8 +99,9 @@ export class RustaBase {
         return t as AuthTable<T>;
     }
 
-    /** Signs out locally (clears the saved session). */
+    /** Signs out locally (clears the saved session and cancels pending requests). */
     signOut(): void {
+        this.cancelAll();
         this.session.clear();
     }
 
