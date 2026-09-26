@@ -22,6 +22,7 @@ export class Files {
         options: FileUrlOptions = {},
     ): string {
         const collection = record?.collectionId || record?.collectionName;
+        filename = (filename || "").trim();
         if (!filename || !record?.id || !collection) return "";
         const { download, ...rest } = options;
         const query: Record<string, any> = { ...rest };
