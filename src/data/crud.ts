@@ -33,6 +33,9 @@ export class Crud<T> {
     /** Every row, walking through all pages. */
     async all(options: AllOptions = {}): Promise<T[]> {
         const { chunk = 1000, ...rest } = options;
+        if (!Number.isInteger(chunk) || chunk < 1) {
+            throw new Error("all() needs a chunk of at least 1.");
+        }
         const out: T[] = [];
         for (let page = 1; ; page++) {
             const res = await this.list({
@@ -101,3 +104,4 @@ export class Crud<T> {
         return true;
     }
 }
+
