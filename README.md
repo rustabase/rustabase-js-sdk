@@ -32,6 +32,28 @@ const stop = await rb.from("posts").subscribe("*", ({ action, record }) => conso
 await stop();
 ```
 
+
+## Error handling
+
+Every failure throws a `RustaBaseError`:
+
+```js
+try {
+    await rb.from("posts").get("RECORD_ID");
+} catch (err) {
+    if (err instanceof RustaBaseError) {
+        err.status;      // HTTP status, 0 when the request never reached the server
+        err.data;        // parsed error body from the server
+        err.fieldErrors; // per-field validation errors, keyed by field name
+        err.cancelled;   // true when the request was cancelled
+    }
+}
+```
+
+Duplicate requests are cancelled automatically (the newest one wins). Pass
+`requestKey: null` to opt out for one request, or `autoCancel: false` for the
+whole client. `rb.signOut()` also cancels everything still in flight.
+
 ## Sessions
 
 | Class | Where it keeps the session |
