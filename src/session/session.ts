@@ -96,7 +96,8 @@ export class Session {
         };
         if (!opts.expires) {
             const exp = readClaims(this._token).exp;
-            opts.expires = new Date(exp ? exp * 1000 : 0);
+            const ms = typeof exp === "number" && isFinite(exp) ? exp * 1000 : 0;
+            opts.expires = new Date(ms);
         }
 
         const full = writeCookie(
