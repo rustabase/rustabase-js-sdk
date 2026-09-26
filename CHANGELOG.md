@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Renamed the package to `rustabase` — install with `npm install rustabase`.
+- Added the GitHub release workflow that publishes to npm automatically.
+
 ## 1.0.2
 
 - Non-JSON error responses now keep the HTTP status text as the error message.
