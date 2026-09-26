@@ -15,7 +15,9 @@ export { Admin } from "./admin";
 export type { Collection, Backup } from "./admin";
 export { RB_CONNECT, SUPERUSERS } from "./protocol";
 export { readClaims, tokenExpired } from "./internal/token";
-export { bindFilter, joinUrl, withQuery, toQueryString } from "./internal/encode";
+export { bindFilter, joinUrl, withQuery, toQueryString, seg } from "./internal/encode";
+export { readQuery } from "./data/crud";
+export { isFileLike, isFormData, prepareBody, splitBody } from "./internal/body";
 export type { CookieOptions } from "./internal/cookie";
 export * from "./types";
 
