@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.0.2
+
+- Non-JSON error responses now keep the HTTP status text as the error message.
+- A `null` JSON response body is treated as an empty object instead of leaking through.
+- The default auto-cancel key now includes the query string, so the same path with different filters no longer cancels itself.
+- `all()` rejects a `chunk` smaller than 1 instead of looping forever.
+- `update()` and `remove()` reject a missing id with a clear 404 error, like `get()`.
+- `batch.send()` rejects an empty batch with a clear error.
+- `files.url()` trims the file name before building the url.
+- `isFormData()` no longer crashes on null-prototype objects.
+- `session.toCookie()` ignores a non-numeric `exp` claim instead of producing an invalid expiry date.
+- `realtime.subscribe()` rolls back its listener when the first connection fails.
+- `realtime.onDisconnect` is no longer called when no topics were active.
+- Fixed base64url padding for tokens whose payload ends on a 1-character remainder.
+- `signOut()` now also cancels pending requests.
+- `session.set()` only notifies listeners when the token or record actually changed.
+- Exported `readQuery`, `seg`, `isFileLike`, `isFormData`, `prepareBody` and `splitBody`.
+- Marked the package as side-effect free for better tree-shaking.
+
 ## 1.0.1
 
 - Fixed the `react-native` package entry pointing at a non-existent build file.
