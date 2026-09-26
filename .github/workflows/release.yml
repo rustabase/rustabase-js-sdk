@@ -1,6 +1,6 @@
-# Builds, tests, and publishes rustabase-js-sdk to npm.
+# Builds, tests, and publishes the rustabase JS SDK to npm.
 #
-# Trigger: a GitHub Release is published (which also creates the git tag v*).
+# Trigger: a GitHub Release is published (which also creates the git tag vV).
 # Also runnable manually from the Actions tab.
 #
 # Setup (one-time):
@@ -9,7 +9,7 @@
 #      Automation type, or a Granular token scoped to this package).
 #   2. Enable 2FA on the npm account and, if using Granular tokens, allow
 #      publishing to the package.
-#   3. Make the repo public (required for npm provenance and recommended for an
+#   3. Make the repo public (required for npm provenance and recommended for an#
 #      open-source SDK).
 #   4. To release: bump version in package.json + CHANGELOG.md, commit, tag as
 #      vX.Y.Z, push the tag, then publish a GitHub Release for that tag.
@@ -55,6 +55,11 @@ jobs:
 
       - name: Verify package contents
         run: npm pack --dry-run
+
+      - name: Configure npm registry auth
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to npm
         run: npm publish --provenance --access public
