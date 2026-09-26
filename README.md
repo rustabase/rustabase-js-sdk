@@ -3,13 +3,13 @@
 Official JavaScript / TypeScript client for [RustaBase](https://rustabase.com). Works in browsers, Node.js 18+, Deno, Bun and React Native.
 
 ```sh
-npm install rustabase-js-sdk
+npm install rustabase
 ```
 
 ## Quick start
 
 ```js
-import { createClient } from "rustabase-js-sdk";
+import { createClient } from "rustabase";
 
 const rb = createClient("https://my-app.rustabase.net");
 
