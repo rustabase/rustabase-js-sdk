@@ -34,7 +34,7 @@ jobs:
   publish:
     name: Build, test & publish
     runs-on: ubuntu-latest
-    environment: NPM_TOKEN
+    environment: NPM Deployments
 
     steps:
       - name: Checkout
