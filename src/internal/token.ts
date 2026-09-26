@@ -1,6 +1,6 @@
 function decodeBase64Url(input: string): string {
     const b64 = input.replace(/-/g, "+").replace(/_/g, "/");
-    const padded = b64 + "===".slice((b64.length + 3) % 4);
+    const padded = b64 + "=".repeat((4 - (b64.length % 4)) % 4);
     if (typeof atob === "function") {
         const bin = atob(padded);
         const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
