@@ -195,7 +195,7 @@ export class RustaBase {
 
         let key: string | null = null;
         if (this.autoCancel && requestKey !== null && !options.signal) {
-            key = requestKey || method + " " + path;
+            key = requestKey || method + " " + withQuery(path, query);
             this.cancel(key);
             const controller = new AbortController();
             this.controllers.set(key, controller);
