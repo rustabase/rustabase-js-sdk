@@ -63,11 +63,17 @@ export class Realtime {
         list.push(listener);
         this.topics.set(key, list);
 
-        if (!this.source) {
-            await this.connect();
-        } else {
-            this.source.addEventListener(key, listener);
-            if (list.length === 1) await this.sync();
+        try {
+            if (!this.source) {
+                await this.connect();
+            } else {
+                this.source.addEventListener(key, listener);
+                if (list.length === 1) await this.sync();
+            }
+        } catch (err) {
+            // roll back the listener so a failed subscribe() leaves no state behind
+            await this.removeListener(key, listener);
+            throw err;
         }
 
         return () => this.removeListener(key, listener);
