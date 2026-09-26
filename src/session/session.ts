@@ -40,10 +40,13 @@ export class Session {
         return readClaims(this._token).type === "auth" && !this.isSuperuser;
     }
 
-    /** Stores a new token and record and notifies listeners. */
+    /** Stores a new token and record and notifies listeners when anything changed. */
     set(token: string, record?: Row | null): void {
-        this._token = token || "";
-        this._record = record ?? null;
+        const next = token || "";
+        const nextRecord = record ?? null;
+        if (next === this._token && nextRecord === this._record) return;
+        this._token = next;
+        this._record = nextRecord;
         this.emit();
     }
 
