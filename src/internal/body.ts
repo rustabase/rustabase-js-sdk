@@ -10,10 +10,9 @@ export function isFileLike(value: any): boolean {
 
 export function isFormData(value: any): value is FormData {
     if (!value || typeof value !== "object") return false;
-    return (
-        (typeof FormData !== "undefined" && value instanceof FormData) ||
-        value.constructor?.name === "FormData"
-    );
+    if (typeof FormData !== "undefined" && value instanceof FormData) return true;
+    // null-prototype objects have no constructor — read the tag instead
+    return Object.prototype.toString.call(value) === "[object FormData]";
 }
 
 function hasFiles(body: Record<string, any>): boolean {
