@@ -50,3 +50,8 @@ jobs:
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN2 }}
+
+      - name: Tag release as latest
+        run: npm dist-tag add rustabase@$(node -p "require('./package.json').version") latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN2 }}
