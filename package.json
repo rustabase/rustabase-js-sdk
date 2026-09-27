@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.1.0",
     "name": "rustabase",
     "description": "Official JavaScript and TypeScript SDK for RustaBase",
     "author": "RustaBase contributors",
@@ -44,11 +44,12 @@
         "build": "rm -rf dist && rollup -c",
         "dev": "rollup -c -w",
         "test": "vitest run",
-        "typecheck": "tsc --noEmit",
+        "typecheck": "tsgo --noEmit",
         "prepublishOnly": "npm run build"
     },
     "devDependencies": {
         "@rollup/plugin-terser": "^0.4.3",
+        "@typescript/native-preview": "latest",
         "@rollup/plugin-typescript": "^12.3.0",
         "prettier": "3.2.4",
         "rollup": "^4.0.0",
