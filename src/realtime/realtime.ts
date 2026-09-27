@@ -19,6 +19,7 @@ export class Realtime {
     onDisconnect?: (activeTopics: string[]) => void;
     /** Max reconnect attempts before giving up. */
     maxRetries = Infinity;
+    withCredentials = false;
 
     private readonly rb: RustaBase;
     private source: EventSource | null = null;
@@ -47,8 +48,12 @@ export class Realtime {
 
         let key = topic;
         if (options && (options.query || options.headers)) {
-            const packed = JSON.stringify({ query: clean(options.query), headers: options.headers });
-            key += (key.includes("?") ? "&" : "?") + "options=" + encodeURIComponent(packed);
+            const packed = JSON.stringify({
+                query: clean(options.query),
+                headers: options.headers,
+            });
+            key +=
+                (key.includes("?") ? "&" : "?") + "options=" + encodeURIComponent(packed);
         }
 
         const listener: Listener = (e) => {
@@ -123,7 +128,8 @@ export class Realtime {
     }
 
     private detach(key: string): void {
-        for (const l of this.topics.get(key) || []) this.source?.removeEventListener(key, l);
+        for (const l of this.topics.get(key) || [])
+            this.source?.removeEventListener(key, l);
         this.topics.delete(key);
     }
 
@@ -155,7 +161,10 @@ export class Realtime {
     }
 
     private connect(): Promise<void> {
-        if (this.retries > 0) return new Promise((resolve, reject) => this.waiting.push({ resolve, reject }));
+        if (this.retries > 0)
+            return new Promise((resolve, reject) =>
+                this.waiting.push({ resolve, reject }),
+            );
 
         return new Promise<void>((resolve, reject) => {
             this.waiting.push({ resolve, reject });
@@ -172,7 +181,9 @@ export class Realtime {
             CONNECT_TIMEOUT_MS,
         );
 
-        const source = new EventSource(this.rb.url("/api/realtime"));
+        const source = new EventSource(this.rb.url("/api/realtime"), {
+            withCredentials: this.withCredentials || this.rb.credentials === "include",
+        });
         this.source = source;
         source.onerror = () => this.handleError(new Error("The live connection failed."));
 
