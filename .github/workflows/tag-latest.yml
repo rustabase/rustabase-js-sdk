@@ -1,0 +1,26 @@
+name: Tag latest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  tag:
+    name: Tag current version as latest
+    runs-on: ubuntu-latest
+    environment: NPM_TOKEN
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure npm registry auth
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN2 }}
+
+      - name: Tag latest
+        run: npm dist-tag add rustabase@$(node -p "require('./package.json').version") latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN2 }}
