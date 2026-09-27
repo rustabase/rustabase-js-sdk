@@ -9,6 +9,14 @@ export interface Row {
 export type Json = Record<string, any>;
 export type Body = Json | FormData;
 
+export interface RetryOptions {
+    attempts?: number;
+    delay?: number;
+    statuses?: number[];
+    /** Allow retries for non-idempotent writes. Disabled by default. */
+    unsafe?: boolean;
+}
+
 /** Options accepted by every request. */
 export interface RequestOptions {
     /** Extra query string values. */
@@ -26,6 +34,10 @@ export interface RequestOptions {
     /** Custom fetch implementation for this call. */
     fetch?: typeof fetch;
     signal?: AbortSignal;
+    /** Abort after this many milliseconds. */
+    timeout?: number;
+    /** Retry transient failures. */
+    retry?: number | RetryOptions;
     [fetchOption: string]: any;
 }
 
@@ -61,6 +73,19 @@ export interface AuthResult<T = Row> {
     token: string;
     record: T;
     meta?: Json;
+}
+
+export interface HealthData extends Json {
+    canBackup?: boolean;
+    realIP?: string;
+    cpuCores?: number;
+    memoryTotal?: number;
+}
+
+export interface HealthResult {
+    code: number;
+    message: string;
+    data: HealthData;
 }
 
 export interface AuthMethods {
