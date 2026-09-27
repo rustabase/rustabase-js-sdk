@@ -1,20 +1,3 @@
-# Builds, tests, and publishes the rustabase JS SDK to npm.
-#
-# Trigger: a GitHub Release is published (which also creates the git tag v*).
-# Also runnable manually from the Actions tab.
-#
-# Setup (one-time):
-#   1. Add an environment secret named NPM_TOKEN (repo Settings -> Environments
-#      -> NPM_TOKEN) containing an npm access token with "Publish" permission
-#      (npmjs.com -> Access Tokens -> Classic token, Automation type, or a
-#      Granular token scoped to this package with 2FA bypass enabled).
-#   2. Enable 2FA on the npm account and, if using Granular tokens, allow
-#      publishing to the package.
-#   3. Make the repo public (required for npm provenance and recommended for an
-#      open-source SDK).
-#   4. To release: bump version in package.json + CHANGELOG.md, commit, tag as
-#      vX.Y.Z, push the tag, then publish a GitHub Release for that tag.
-
 name: Release to npm
 
 on:
@@ -34,7 +17,7 @@ jobs:
   publish:
     name: Build, test & publish
     runs-on: ubuntu-latest
-    environment: NPM Deployments
+    environment: NPM_TOKEN
 
     steps:
       - name: Checkout
