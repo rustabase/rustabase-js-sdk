@@ -31,17 +31,24 @@ export class Batch {
     /** Queue writes for one collection. */
     from(collection: string) {
         const path = "/api/collections/" + seg(collection) + "/records";
-        const add = (method: string, url: string, body?: Body, options: ReadOptions = {}) => {
+        const add = (
+            method: string,
+            url: string,
+            body?: Body,
+            options: ReadOptions = {},
+        ) => {
             const { query, headers } = readQuery(options);
             const { json, files } = splitBody(body);
             this.steps.push({ method, url: withQuery(url, query), headers, json, files });
         };
         return {
-            create: (data: Body, options?: ReadOptions) => add("POST", path, data, options),
+            create: (data: Body, options?: ReadOptions) =>
+                add("POST", path, data, options),
             update: (id: string, data: Body, options?: ReadOptions) =>
                 add("PATCH", path + "/" + seg(id), data, options),
             /** Updates when `data.id` exists, otherwise creates. */
-            upsert: (data: Body, options?: ReadOptions) => add("PUT", path, data, options),
+            upsert: (data: Body, options?: ReadOptions) =>
+                add("PUT", path, data, options),
             remove: (id: string, options?: ReadOptions) =>
                 add("DELETE", path + "/" + seg(id), undefined, options),
         };
@@ -53,9 +60,11 @@ export class Batch {
     }
 
     /** Sends every queued write. */
-    send(options: RequestOptions = {}): Promise<BatchResult[]> {
+    async send(options: RequestOptions = {}): Promise<BatchResult[]> {
         if (!this.steps.length) {
-            return Promise.reject(new Error("The batch is empty — queue at least one write."));
+            return Promise.reject(
+                new Error("The batch is empty — queue at least one write."),
+            );
         }
         const form = new FormData();
         const requests = this.steps.map((s, i) => {
@@ -65,6 +74,12 @@ export class Batch {
             return { method: s.method, url: s.url, headers: s.headers, body: s.json };
         });
         form.append("@jsonPayload", JSON.stringify({ requests }));
-        return this.rb.request("/api/batch", { ...options, method: "POST", body: form });
+        const result = await this.rb.request<BatchResult[]>("/api/batch", {
+            ...options,
+            method: "POST",
+            body: form,
+        });
+        this.steps.length = 0;
+        return result;
     }
 }
