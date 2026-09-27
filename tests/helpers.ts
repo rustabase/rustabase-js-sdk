@@ -6,7 +6,11 @@ export interface Call {
 }
 
 /** A fetch mock that records calls and replies with `reply(url, init)`. */
-export function mockFetch(reply: (url: string, init: any) => { status?: number; body?: any } = () => ({ body: {} })) {
+export function mockFetch(
+    reply: (url: string, init: any) => { status?: number; body?: any } = () => ({
+        body: {},
+    }),
+) {
     const calls: Call[] = [];
     const fn = vi.fn(async (url: string, init: any) => {
         calls.push({ url, init });
@@ -17,10 +21,15 @@ export function mockFetch(reply: (url: string, init: any) => { status?: number; 
             throw e;
         }
         const r = reply(url, init);
+        const body = r.body ?? {};
         return {
             url,
             status: r.status ?? 200,
-            json: async () => r.body ?? {},
+            ok: (r.status ?? 200) < 400,
+            statusText: (r.status ?? 200) >= 400 ? "Request failed" : "OK",
+            headers: new Headers(),
+            text: async () => JSON.stringify(body),
+            json: async () => body,
         } as any;
     });
     return { fetch: fn as unknown as typeof fetch, calls };
