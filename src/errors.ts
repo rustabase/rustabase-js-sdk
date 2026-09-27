@@ -13,6 +13,8 @@ export class RustaBaseError extends Error {
     readonly cancelled: boolean;
     /** Original thrown value, if the error wrapped something else. */
     readonly cause?: unknown;
+    readonly mfaId: string;
+    readonly retryAfter: number | null;
 
     constructor(init: {
         message?: string;
@@ -21,6 +23,7 @@ export class RustaBaseError extends Error {
         data?: Record<string, any>;
         cancelled?: boolean;
         cause?: unknown;
+        retryAfter?: number | null;
     }) {
         const data = init.data && typeof init.data === "object" ? init.data : {};
         const message =
@@ -39,6 +42,8 @@ export class RustaBaseError extends Error {
         this.data = data;
         this.cancelled = !!init.cancelled;
         this.cause = init.cause;
+        this.mfaId = typeof data.mfaId === "string" ? data.mfaId : "";
+        this.retryAfter = init.retryAfter ?? null;
         Object.setPrototypeOf(this, RustaBaseError.prototype);
     }
 
@@ -62,6 +67,7 @@ export class RustaBaseError extends Error {
             cancelled,
             message: cancelled ? undefined : e?.message,
             cause: err,
+            retryAfter: typeof e?.retryAfter === "number" ? e.retryAfter : null,
         });
     }
 
@@ -73,6 +79,8 @@ export class RustaBaseError extends Error {
             status: this.status,
             data: this.data,
             cancelled: this.cancelled,
+            mfaId: this.mfaId,
+            retryAfter: this.retryAfter,
         };
     }
 }
