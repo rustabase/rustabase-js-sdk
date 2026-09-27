@@ -63,9 +63,13 @@ export class Table<T extends Row = Row> extends Crud<T> {
         callback: (event: RealtimeEvent<T>) => void,
         options?: ReadOptions & { filter?: string },
     ): Promise<Unsubscribe> {
-        if (!target) throw new Error("subscribe() needs a target: \"*\" or a row id.");
+        if (!target) throw new Error('subscribe() needs a target: "*" or a row id.');
         const topic = this.collection + "/" + target;
-        return this.rb.realtime.subscribe(topic, callback as any, options && readQuery(options));
+        return this.rb.realtime.subscribe(
+            topic,
+            callback as any,
+            options && readQuery(options),
+        );
     }
 
     /** Stops live updates for one target, or for the whole collection when omitted. */
@@ -75,7 +79,10 @@ export class Table<T extends Row = Row> extends Crud<T> {
     }
 
     private matchesCollection(record: Row): boolean {
-        return record.collectionId === this.collection || record.collectionName === this.collection;
+        return (
+            record.collectionId === this.collection ||
+            record.collectionName === this.collection
+        );
     }
 }
 
@@ -84,6 +91,7 @@ export interface PasswordSignInOptions extends ReadOptions {
      * Refresh the token automatically when it is this many seconds from expiring.
      */
     keepAlive?: number;
+    mfaId?: string;
 }
 
 export interface OAuthSignInOptions extends ReadOptions {
@@ -102,7 +110,10 @@ export interface OAuthSignInOptions extends ReadOptions {
 export class AuthTable<T extends Row = Row> extends Table<T> {
     /** Which sign-in methods the collection allows. */
     methods(options: RequestOptions = {}): Promise<AuthMethods> {
-        return this.rb.request(this.base + "/auth-methods", { ...options, method: "GET" });
+        return this.rb.request(this.base + "/auth-methods", {
+            ...options,
+            method: "GET",
+        });
     }
 
     /** Signs in with email/username and password. */
@@ -111,12 +122,12 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
         password: string,
         options: PasswordSignInOptions = {},
     ): Promise<AuthResult<T>> {
-        const { keepAlive, ...rest } = options;
+        const { keepAlive, mfaId, ...rest } = options;
         const send = (o: ReadOptions) =>
             this.rb.request(this.base + "/auth-with-password", {
                 ...readQuery(o),
                 method: "POST",
-                body: { identity, password },
+                body: { identity, password, ...(mfaId ? { mfaId } : {}) },
                 __noKeepAlive: true,
             });
 
@@ -128,7 +139,8 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
                     await this.refresh({ requestKey: null });
                 } catch (err) {
                     // superuser tokens can't always be refreshed — sign in again
-                    if (this.collection !== SUPERUSERS && !this.rb.session.isSuperuser) throw err;
+                    if (this.collection !== SUPERUSERS && !this.rb.session.isSuperuser)
+                        throw err;
                     this.save(await send({ requestKey: null }));
                 }
             });
@@ -146,12 +158,17 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
     }
 
     /** Signs in with a one-time code. */
-    async signInWithOtp(otpId: string, code: string, options: ReadOptions = {}): Promise<AuthResult<T>> {
+    async signInWithOtp(
+        otpId: string,
+        code: string,
+        options: ReadOptions & { mfaId?: string } = {},
+    ): Promise<AuthResult<T>> {
+        const { mfaId, ...rest } = options;
         return this.save(
             await this.rb.request(this.base + "/auth-with-otp", {
-                ...readQuery(options),
+                ...readQuery(rest),
                 method: "POST",
-                body: { otpId, password: code },
+                body: { otpId, password: code, ...(mfaId ? { mfaId } : {}) },
             }),
         );
     }
@@ -162,7 +179,13 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
      * handler so the popup isn't blocked.
      */
     signInWithOAuth(options: OAuthSignInOptions): Promise<AuthResult<T>> {
-        const { provider: providerName, scopes, createData, openUrl, ...requestOptions } = options;
+        const {
+            provider: providerName,
+            scopes,
+            createData,
+            openUrl,
+            ...requestOptions
+        } = options;
 
         // open the popup synchronously (Safari blocks popups opened after an await)
         let popup: Window | null = openUrl ? null : openPopup();
@@ -179,23 +202,34 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
             };
 
             try {
-                const methods = await this.methods({ requestKey: requestOptions.requestKey });
-                const provider = methods.oauth2.providers.find((p) => p.name === providerName);
-                if (!provider) throw new Error(`Unknown sign-in provider "${providerName}".`);
+                const methods = await this.methods({
+                    requestKey: requestOptions.requestKey,
+                });
+                const provider = methods.oauth2.providers.find(
+                    (p) => p.name === providerName,
+                );
+                if (!provider)
+                    throw new Error(`Unknown sign-in provider "${providerName}".`);
 
                 const redirectUrl = this.rb.url("/api/oauth2-redirect");
 
                 live.onDisconnect = (active) => {
-                    if (active.length) fail(new Error("The live connection was interrupted."));
+                    if (active.length)
+                        fail(new Error("The live connection was interrupted."));
                 };
 
                 await live.subscribe("@oauth2", async (e: any) => {
                     try {
                         if (!e?.state || e.state !== live.clientId) {
-                            throw new Error("The sign-in response didn't match this request.");
+                            throw new Error(
+                                "The sign-in response didn't match this request.",
+                            );
                         }
                         if (e.error || !e.code) {
-                            throw new Error("The provider returned an error: " + (e.error || "no code"));
+                            throw new Error(
+                                "The provider returned an error: " +
+                                    (e.error || "no code"),
+                            );
                         }
                         const result = await this.signInWithOAuthCode(
                             provider.name,
@@ -212,7 +246,9 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
                     }
                 });
 
-                const authUrl = new URL(provider.authURL + encodeURIComponent(redirectUrl));
+                const authUrl = new URL(
+                    provider.authURL + encodeURIComponent(redirectUrl),
+                );
                 authUrl.searchParams.set("state", live.clientId);
                 if (scopes?.length) authUrl.searchParams.set("scope", scopes.join(" "));
                 const target = authUrl.toString();
@@ -237,13 +273,21 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
         codeVerifier: string,
         redirectUrl: string,
         createData?: Json,
-        options: ReadOptions = {},
+        options: ReadOptions & { mfaId?: string } = {},
     ): Promise<AuthResult<T>> {
+        const { mfaId, ...rest } = options;
         return this.save(
             await this.rb.request(this.base + "/auth-with-oauth2", {
-                ...readQuery(options),
+                ...readQuery(rest),
                 method: "POST",
-                body: { provider, code, codeVerifier, redirectURL: redirectUrl, createData },
+                body: {
+                    provider,
+                    code,
+                    codeVerifier,
+                    redirectURL: redirectUrl,
+                    createData,
+                    ...(mfaId ? { mfaId } : {}),
+                },
             }),
         );
     }
@@ -272,7 +316,10 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
                 ...readQuery(options),
                 method: "POST",
                 body: { duration: durationSeconds },
-                headers: { ...(options.headers || {}), Authorization: this.rb.session.token },
+                headers: {
+                    ...(options.headers || {}),
+                    Authorization: this.rb.session.token,
+                },
             },
         );
         const client = new RustaBase(this.rb.baseUrl, {
@@ -293,7 +340,11 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
         passwordConfirm: string,
         options: RequestOptions = {},
     ): Promise<true> {
-        return this.post("/confirm-password-reset", { token, password, passwordConfirm }, options);
+        return this.post(
+            "/confirm-password-reset",
+            { token, password, passwordConfirm },
+            options,
+        );
     }
 
     requestVerification(email: string, options: RequestOptions = {}): Promise<true> {
@@ -301,11 +352,19 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
     }
 
     /** Confirms an email address. Marks the signed-in record as verified when it matches. */
-    async confirmVerification(token: string, options: RequestOptions = {}): Promise<true> {
+    async confirmVerification(
+        token: string,
+        options: RequestOptions = {},
+    ): Promise<true> {
         await this.post("/confirm-verification", { token }, options);
         const claims = readClaims(token);
         const current = this.rb.session.record;
-        if (current && !current.verified && current.id === claims.id && current.collectionId === claims.collectionId) {
+        if (
+            current &&
+            !current.verified &&
+            current.id === claims.id &&
+            current.collectionId === claims.collectionId
+        ) {
             this.rb.session.set(this.rb.session.token, { ...current, verified: true });
         }
         return true;
@@ -316,11 +375,19 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
     }
 
     /** Confirms an email change. Signs out when it applies to the signed-in record. */
-    async confirmEmailChange(token: string, password: string, options: RequestOptions = {}): Promise<true> {
+    async confirmEmailChange(
+        token: string,
+        password: string,
+        options: RequestOptions = {},
+    ): Promise<true> {
         await this.post("/confirm-email-change", { token, password }, options);
         const claims = readClaims(token);
         const current = this.rb.session.record;
-        if (current && current.id === claims.id && current.collectionId === claims.collectionId) {
+        if (
+            current &&
+            current.id === claims.id &&
+            current.collectionId === claims.collectionId
+        ) {
             this.rb.session.clear();
         }
         return true;
