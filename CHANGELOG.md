@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0
+
+- Added typed MFA challenge support across password, OTP, and OAuth sign-in.
+- Added safe retries with exponential backoff and `Retry-After` support.
+- Added request timeouts and cross-origin credential configuration.
+- Realtime connections can include credentials for cross-origin cookie sessions.
+- Malformed success responses now fail clearly instead of returning an empty object.
+- Batch builders reset after successful sends and can be reused safely.
+- Added typed health response data and current TypeScript compiler support.
+
 ## 1.0.3
 
 - Renamed the package to `rustabase` — install with `npm install rustabase`.

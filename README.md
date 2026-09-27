@@ -54,6 +54,12 @@ Duplicate requests are cancelled automatically (the newest one wins). Pass
 `requestKey: null` to opt out for one request, or `autoCancel: false` for the
 whole client. `rb.signOut()` also cancels everything still in flight.
 
+Transient reads can retry with exponential backoff. Writes are not retried unless explicitly enabled:
+
+```js
+const rb = createClient(URL, { timeout: 10_000, retry: { attempts: 3, delay: 250 } });
+```
+
 ## Sessions
 
 | Class | Where it keeps the session |
@@ -91,6 +97,16 @@ const { otpId } = await users.requestOtp(email);
 await users.signInWithOtp(otpId, "123456");
 await users.refresh();
 await users.methods();
+
+// MFA: repeat sign-in with the challenge id returned by the server
+try {
+    await users.signInWithPassword(email, password);
+} catch (error) {
+    if (error instanceof RustaBaseError && error.mfaId) {
+        const { otpId } = await users.requestOtp(email);
+        await users.signInWithOtp(otpId, code, { mfaId: error.mfaId });
+    }
+}
 
 await users.requestPasswordReset(email);
 await users.confirmPasswordReset(token, password, passwordConfirm);
