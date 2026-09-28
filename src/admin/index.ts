@@ -1,5 +1,6 @@
 import type { RustaBase } from "../client";
 import { Crud, readQuery } from "../data/crud";
+import { RustaBaseError } from "../errors";
 import { seg } from "../internal/encode";
 import type { Body, Json, ListOptions, Page, RequestOptions } from "../types";
 import type {
@@ -290,6 +291,10 @@ export class Functions extends Resource<Json> {
         options: RequestOptions = {},
     ): Promise<R> {
         const { method = "POST", body, query, secret } = input;
+        name = (name || "").trim();
+        if (!name) {
+            return Promise.reject(new RustaBaseError({ message: "A function name is required." }));
+        }
         return this.rb.request<R>("/edge-hook/" + seg(name), {
             ...options,
             method,
