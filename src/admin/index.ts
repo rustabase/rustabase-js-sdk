@@ -278,7 +278,7 @@ export class Functions extends Resource<Json> {
         return this.action(id, "test", "POST", options, payload);
     }
     logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<FunctionLog[]> {
-        return this.action(id, "logs", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
+        return this.action(id, "logs", "GET", { ...options, query: { ...historyQuery(filter), ...(options.query || {}) } });
     }
     /**
      * Calls an HTTP-triggered function through the public `/edge-hook/{name}`
