@@ -35,3 +35,11 @@ describe("admin.functions.logs", () => {
         expect(calls[0].url).toBe("http://x/api/functions/f1/logs?status=error&limit=500");
     });
 });
+
+describe("admin.functions.invoke validation", () => {
+    it("rejects an empty name without a request", async () => {
+        const { rb, calls } = make();
+        await expect(rb.admin.functions.invoke("  ")).rejects.toThrow("function name");
+        expect(calls).toHaveLength(0);
+    });
+});
