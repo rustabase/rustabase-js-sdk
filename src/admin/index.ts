@@ -2,6 +2,17 @@ import type { RustaBase } from "../client";
 import { Crud, readQuery } from "../data/crud";
 import { seg } from "../internal/encode";
 import type { Body, Json, ListOptions, Page, RequestOptions } from "../types";
+import type {
+    EmailTemplate,
+    FunctionLog,
+    RlsTestInput,
+    RlsTestResult,
+    RunStatsMap,
+    SqlResult,
+    WebhookDelivery,
+} from "./types";
+
+export type * from "./types";
 
 /** Simple REST resource without paging (api keys, webhooks, functions). */
 class Resource<T> {
@@ -82,7 +93,7 @@ export class Settings {
         await this.rb.request("/api/settings/test/s3", { ...options, method: "POST", body: { filesystem } });
         return true;
     }
-    async testEmail(collection: string, to: string, template: string, options: RequestOptions = {}): Promise<true> {
+    async testEmail(collection: string, to: string, template: EmailTemplate, options: RequestOptions = {}): Promise<true> {
         await this.rb.request("/api/settings/test/email", {
             ...options,
             method: "POST",
@@ -175,7 +186,7 @@ export class Webhooks extends Resource<Json> {
     constructor(rb: RustaBase) {
         super(rb, "/api/webhooks");
     }
-    stats(options: RequestOptions = {}): Promise<Json> {
+    stats(options: RequestOptions = {}): Promise<RunStatsMap> {
         return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
     }
     test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
@@ -186,7 +197,7 @@ export class Webhooks extends Resource<Json> {
         id: string,
         filter: { status?: "success" | "error"; limit?: number } = {},
         options: RequestOptions = {},
-    ): Promise<Json[]> {
+    ): Promise<WebhookDelivery[]> {
         return this.action(id, "deliveries", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
     }
     /** Deletes the stored delivery history of a webhook. */
@@ -200,7 +211,7 @@ export class Functions extends Resource<Json> {
     constructor(rb: RustaBase) {
         super(rb, "/api/functions");
     }
-    stats(options: RequestOptions = {}): Promise<Json> {
+    stats(options: RequestOptions = {}): Promise<RunStatsMap> {
         return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
     }
     duplicate(id: string, options: RequestOptions = {}): Promise<Json> {
@@ -210,7 +221,7 @@ export class Functions extends Resource<Json> {
     test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
         return this.action(id, "test", "POST", options, payload);
     }
-    logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<Json[]> {
+    logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<FunctionLog[]> {
         return this.action(id, "logs", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
     }
     /**
@@ -269,7 +280,7 @@ export class Rls {
     preview(data: Json, options: RequestOptions = {}): Promise<{ sql: string; error: string }> {
         return this.rb.request("/api/rls/preview", { ...options, method: "POST", body: data });
     }
-    test(data: Json, options: RequestOptions = {}): Promise<Json> {
+    test(data: RlsTestInput, options: RequestOptions = {}): Promise<RlsTestResult> {
         return this.rb.request("/api/rls/test", { ...options, method: "POST", body: data });
     }
 }
@@ -299,7 +310,7 @@ export class Admin {
     }
 
     /** Runs raw SQL. */
-    sql(query: string, options: RequestOptions = {}): Promise<{ columns: string[]; rows: any[]; [k: string]: any }> {
+    sql(query: string, options: RequestOptions = {}): Promise<SqlResult> {
         return this.rb.request("/api/sql", { ...options, method: "POST", body: { query } });
     }
 }
