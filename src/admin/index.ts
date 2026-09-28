@@ -81,6 +81,16 @@ export class Collections extends Crud<Collection> {
     }
 }
 
+/** Unsaved S3 settings accepted by `settings.testStorage()`. */
+export interface S3Overrides {
+    bucket?: string;
+    region?: string;
+    endpoint?: string;
+    accessKey?: string;
+    secret?: string;
+    forcePathStyle?: boolean;
+}
+
 export class Settings {
     constructor(private readonly rb: RustaBase) {}
     get(options: RequestOptions = {}): Promise<Json> {
@@ -89,8 +99,16 @@ export class Settings {
     update(data: Body, options: RequestOptions = {}): Promise<Json> {
         return this.rb.request("/api/settings", { ...options, method: "PATCH", body: data });
     }
-    async testStorage(filesystem: "storage" | "backups" = "storage", options: RequestOptions = {}): Promise<true> {
-        await this.rb.request("/api/settings/test/s3", { ...options, method: "POST", body: { filesystem } });
+    /**
+     * Checks the S3 connection. Pass `overrides` to test settings that are
+     * not saved yet (bucket, region, endpoint, accessKey, secret, forcePathStyle).
+     */
+    async testStorage(
+        filesystem: "storage" | "backups" = "storage",
+        options: RequestOptions & { overrides?: S3Overrides } = {},
+    ): Promise<true> {
+        const { overrides, ...rest } = options;
+        await this.rb.request("/api/settings/test/s3", { ...rest, method: "POST", body: { ...(overrides || {}), filesystem } });
         return true;
     }
     async testEmail(collection: string, to: string, template: EmailTemplate, options: RequestOptions = {}): Promise<true> {
