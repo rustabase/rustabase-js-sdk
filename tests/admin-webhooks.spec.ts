@@ -17,6 +17,14 @@ describe("admin.webhooks", () => {
         expect(calls[0].url).toBe("http://x/api/webhooks/wh1/deliveries?status=error&limit=20");
     });
 
+    it("clamps the delivery limit to 1-500", async () => {
+        const { rb, calls } = make(() => ({ body: [] }));
+        await rb.admin.webhooks.deliveries("a", { limit: 2000 });
+        await rb.admin.webhooks.deliveries("a", { limit: 0 });
+        expect(calls[0].url).toContain("limit=500");
+        expect(calls[1].url).toContain("limit=1");
+    });
+
     it("clears deliveries", async () => {
         const { rb, calls } = make();
         await expect(rb.admin.webhooks.clearDeliveries("wh 1")).resolves.toBe(true);
