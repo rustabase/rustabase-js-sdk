@@ -14,6 +14,13 @@ import type {
 
 export type * from "./types";
 
+/** The Go server keeps 1-500 history rows per request and silently falls back to 100 otherwise. */
+function historyQuery(filter: { status?: string; limit?: number }): Json {
+    const q: Json = { ...filter };
+    if (typeof filter.limit === "number") q.limit = Math.min(500, Math.max(1, Math.floor(filter.limit)));
+    return q;
+}
+
 /** Simple REST resource without paging (api keys, webhooks, functions). */
 class Resource<T> {
     constructor(
@@ -244,7 +251,10 @@ export class Webhooks extends Resource<Json> {
         filter: { status?: "success" | "error"; limit?: number } = {},
         options: RequestOptions = {},
     ): Promise<WebhookDelivery[]> {
-        return this.action(id, "deliveries", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
+        return this.action(id, "deliveries", "GET", {
+            ...options,
+            query: { ...historyQuery(filter), ...(options.query || {}) },
+        });
     }
     /** Deletes the stored delivery history of a webhook. */
     async clearDeliveries(id: string, options: RequestOptions = {}): Promise<true> {
