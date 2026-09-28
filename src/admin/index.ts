@@ -213,6 +213,24 @@ export class Functions extends Resource<Json> {
     logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<Json[]> {
         return this.action(id, "logs", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
     }
+    /**
+     * Calls an HTTP-triggered function through the public `/edge-hook/{name}`
+     * route. Pass `secret` when the function is protected.
+     */
+    invoke<R = any>(
+        name: string,
+        input: { method?: string; body?: any; query?: Json; secret?: string } = {},
+        options: RequestOptions = {},
+    ): Promise<R> {
+        const { method = "POST", body, query, secret } = input;
+        return this.rb.request<R>("/edge-hook/" + seg(name), {
+            ...options,
+            method,
+            body,
+            query: { ...(query || {}), ...(options.query || {}) },
+            headers: { ...(options.headers || {}), ...(secret ? { "X-Edge-Secret": secret } : {}) },
+        });
+    }
     async clearLogs(id: string, options: RequestOptions = {}): Promise<true> {
         await this.action(id, "logs", "DELETE", options);
         return true;
