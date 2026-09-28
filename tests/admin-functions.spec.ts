@@ -27,3 +27,11 @@ describe("admin.functions.invoke", () => {
         expect(calls[0].init.headers["X-Edge-Secret"]).toBeUndefined();
     });
 });
+
+describe("admin.functions.logs", () => {
+    it("clamps the log limit", async () => {
+        const { rb, calls } = make(() => ({ body: [] }));
+        await rb.admin.functions.logs("f1", { status: "error", limit: 999 });
+        expect(calls[0].url).toBe("http://x/api/functions/f1/logs?status=error&limit=500");
+    });
+});
