@@ -181,6 +181,19 @@ export class Webhooks extends Resource<Json> {
     test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
         return this.action(id, "test", "POST", options, payload);
     }
+    /** Latest delivery attempts of a webhook, newest first. */
+    deliveries(
+        id: string,
+        filter: { status?: "success" | "error"; limit?: number } = {},
+        options: RequestOptions = {},
+    ): Promise<Json[]> {
+        return this.action(id, "deliveries", "GET", { ...options, query: { ...filter, ...(options.query || {}) } });
+    }
+    /** Deletes the stored delivery history of a webhook. */
+    async clearDeliveries(id: string, options: RequestOptions = {}): Promise<true> {
+        await this.action(id, "deliveries", "DELETE", options);
+        return true;
+    }
 }
 
 export class Functions extends Resource<Json> {
