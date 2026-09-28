@@ -109,17 +109,45 @@ export class Settings {
     }
 }
 
+/** Activity filters understood by the logs endpoints. */
+export interface LogFilters {
+    /** Only requests made by clients (hides superuser dashboard traffic). */
+    clientOnly?: boolean;
+    /** Only entries created at or after this time. */
+    since?: string | Date;
+    /** Minimum log level. */
+    minLevel?: number;
+    /** Free text search across message and request data. */
+    search?: string;
+}
+
+function logFilterQuery(f: LogFilters): Json {
+    const q: Json = {};
+    if (f.clientOnly) q.clientOnly = true;
+    if (f.since) q.since = f.since;
+    if (f.minLevel !== undefined) q.minLevel = f.minLevel;
+    if (f.search) q.search = f.search;
+    return q;
+}
+
 export class Logs {
     constructor(private readonly rb: RustaBase) {}
-    list(options: ListOptions = {}): Promise<Page<Json>> {
-        return this.rb.request("/api/logs", { ...readQuery({ page: 1, perPage: 30, ...options }), method: "GET" });
+    list(options: ListOptions & LogFilters = {}): Promise<Page<Json>> {
+        const { clientOnly, since, minLevel, search, ...rest } = options;
+        const req = readQuery({ page: 1, perPage: 30, ...rest });
+        req.query = { ...logFilterQuery({ clientOnly, since, minLevel, search }), ...(req.query || {}) };
+        return this.rb.request("/api/logs", { ...req, method: "GET" });
     }
     get(id: string, options: RequestOptions = {}): Promise<Json> {
         return this.rb.request("/api/logs/" + seg(id), { ...options, method: "GET" });
     }
-    stats(options: RequestOptions & { filter?: string } = {}): Promise<Array<{ total: number; date: string }>> {
-        const { filter, ...rest } = options;
-        return this.rb.request("/api/logs/stats", { ...rest, method: "GET", query: { filter, ...(rest.query || {}) } });
+    stats(options: RequestOptions & LogFilters & { filter?: string } = {}): Promise<Array<{ total: number; date: string }>> {
+        const { filter, clientOnly, since, minLevel, search, ...rest } = options;
+        return this.rb.request("/api/logs/stats", {
+            ...rest,
+            method: "GET",
+            query: { filter, ...logFilterQuery({ clientOnly, since, minLevel, search }), ...(rest.query || {}) },
+        });
     }
     async clear(options: RequestOptions = {}): Promise<true> {
         await this.rb.request("/api/logs", { ...options, method: "DELETE" });
