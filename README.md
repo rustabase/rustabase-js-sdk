@@ -139,6 +139,12 @@ const results = await batch.send();
 
 `rb.admin.collections`, `settings`, `logs`, `backups`, `crons`, `apiKeys`, `webhooks`, `functions`, `rls` and `rb.admin.sql(query)`.
 
+```ts
+await rb.admin.webhooks.deliveries(hookId, { status: "error" });
+await rb.admin.functions.invoke("hello", { body: { a: 1 } });
+await rb.admin.logs.list({ clientOnly: true, minLevel: 4 });
+```
+
 ## Errors and cancelling
 
 Every failure throws a `RustaBaseError`:
