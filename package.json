@@ -57,7 +57,7 @@
         "typescript": "^5.1.6",
         "vitest": "^2.0.0"
     },
-    "homepage": "https://github.com/rustabase/rustabase-js-sdk",
+    "homepage": "https://rustabase.com",
     "bugs": {
         "url": "https://github.com/rustabase/rustabase-js-sdk/issues"
     }
