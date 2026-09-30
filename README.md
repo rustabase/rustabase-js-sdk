@@ -1,6 +1,19 @@
+<div align="center">
+
 # RustaBase JavaScript SDK
 
-Official JavaScript / TypeScript client for [RustaBase](https://rustabase.com). Works in browsers, Node.js 18+, Deno, Bun and React Native.
+**Official JavaScript & TypeScript client for [RustaBase](https://rustabase.com/): one Rust backend, everything you need.**
+
+[![npm](https://img.shields.io/npm/v/rustabase?color=f97316&label=npm)](https://www.npmjs.com/package/rustabase)
+[![downloads](https://img.shields.io/npm/dm/rustabase?color=0ea5e9)](https://www.npmjs.com/package/rustabase)
+[![license](https://img.shields.io/badge/license-MIT-22c55e)](LICENSE.md)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-RustaBase-0a66c2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/rustabase)
+
+[Website](https://rustabase.com/) · [npm](https://www.npmjs.com/package/rustabase) · [Dart SDK](https://github.com/rustabase/rustabase-dart-sdk) · [LinkedIn](https://www.linkedin.com/company/rustabase)
+
+</div>
+
+Works in browsers, Node.js 18+, Deno, Bun and React Native. Fully typed, zero config.
 
 ```sh
 npm install rustabase
@@ -32,33 +45,6 @@ const stop = await rb.from("posts").subscribe("*", ({ action, record }) => conso
 await stop();
 ```
 
-
-## Error handling
-
-Every failure throws a `RustaBaseError`:
-
-```js
-try {
-    await rb.from("posts").get("RECORD_ID");
-} catch (err) {
-    if (err instanceof RustaBaseError) {
-        err.status;      // HTTP status, 0 when the request never reached the server
-        err.data;        // parsed error body from the server
-        err.fieldErrors; // per-field validation errors, keyed by field name
-        err.cancelled;   // true when the request was cancelled
-    }
-}
-```
-
-Duplicate requests are cancelled automatically (the newest one wins). Pass
-`requestKey: null` to opt out for one request, or `autoCancel: false` for the
-whole client. `rb.signOut()` also cancels everything still in flight.
-
-Transient reads can retry with exponential backoff. Writes are not retried unless explicitly enabled:
-
-```js
-const rb = createClient(URL, { timeout: 10_000, retry: { attempts: 3, delay: 250 } });
-```
 
 ## Sessions
 
@@ -161,6 +147,12 @@ try {
 
 Identical requests cancel the older one. Pass `requestKey: null` to opt out, a custom `requestKey` to group requests, or set `rb.autoCancel = false`. Use `rb.cancel(key)` / `rb.cancelAll()` to cancel manually.
 
+Transient reads can retry with exponential backoff. Writes are not retried unless explicitly enabled:
+
+```js
+const rb = createClient(URL, { timeout: 10_000, retry: { attempts: 3, delay: 250 } });
+```
+
 ## Hooks
 
 ```js
@@ -168,6 +160,14 @@ rb.onRequest = (url, init) => ({ url, init: { ...init, headers: { ...init.header
 rb.onResponse = (response, data) => data;
 ```
 
+## Links
+
+- Website: [rustabase.com](https://rustabase.com/)
+- npm: [npmjs.com/package/rustabase](https://www.npmjs.com/package/rustabase)
+- JavaScript SDK: [github.com/rustabase/rustabase-js-sdk](https://github.com/rustabase/rustabase-js-sdk)
+- Dart / Flutter SDK: [github.com/rustabase/rustabase-dart-sdk](https://github.com/rustabase/rustabase-dart-sdk)
+- LinkedIn: [linkedin.com/company/rustabase](https://www.linkedin.com/company/rustabase)
+
 ## License
 
-MIT
+MIT © RustaBase contributors
