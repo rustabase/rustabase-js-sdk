@@ -31,8 +31,7 @@ export class Session {
     get isSuperuser(): boolean {
         const claims = readClaims(this._token);
         if (claims.type !== "auth") return false;
-        if (this._record?.collectionName)
-            return this._record.collectionName === SUPERUSERS;
+        if (this._record?.collectionName) return this._record.collectionName === SUPERUSERS;
         return claims.collectionId === SUPERUSERS_ID;
     }
 
@@ -112,18 +111,8 @@ export class Session {
         if (full.length <= 4096 || !this._record) return full;
 
         const r = this._record;
-        const slim = {
-            id: r.id,
-            email: r.email,
-            collectionId: r.collectionId,
-            collectionName: r.collectionName,
-            verified: r.verified,
-        };
-        return writeCookie(
-            name,
-            JSON.stringify({ token: this._token, record: slim }),
-            opts,
-        );
+        const slim = { id: r.id, email: r.email, collectionId: r.collectionId, collectionName: r.collectionName, verified: r.verified };
+        return writeCookie(name, JSON.stringify({ token: this._token, record: slim }), opts);
     }
 }
 

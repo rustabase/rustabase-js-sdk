@@ -3,8 +3,7 @@ export function isFileLike(value: any): boolean {
     if (value == null) return false;
     if (typeof Blob !== "undefined" && value instanceof Blob) return true;
     const isReactNative =
-        (typeof navigator !== "undefined" &&
-            (navigator as any).product === "ReactNative") ||
+        (typeof navigator !== "undefined" && (navigator as any).product === "ReactNative") ||
         (typeof globalThis !== "undefined" && !!(globalThis as any).HermesInternal);
     return isReactNative && typeof value === "object" && typeof value.uri === "string";
 }
@@ -66,10 +65,7 @@ export function prepareBody(body: any): any {
 }
 
 /** Splits a body into JSON values and files (used by batch requests). */
-export function splitBody(body: any): {
-    json: Record<string, any>;
-    files: Record<string, any[]>;
-} {
+export function splitBody(body: any): { json: Record<string, any>; files: Record<string, any[]> } {
     const json: Record<string, any> = {};
     const files: Record<string, any[]> = {};
     if (body == null) return { json, files };

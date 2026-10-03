@@ -1,33 +1,14 @@
 import type { RustaBase } from "../client";
 import { RustaBaseError } from "../errors";
 import { seg } from "../internal/encode";
-import type {
-    AllOptions,
-    Body,
-    ListOptions,
-    Page,
-    ReadOptions,
-    RequestOptions,
-} from "../types";
+import type { AllOptions, Body, ListOptions, Page, ReadOptions, RequestOptions } from "../types";
 
 /** Moves read options (filter, sort, expand...) into the query string. */
-export function readQuery(
-    options: ReadOptions & Partial<ListOptions> = {},
-): RequestOptions {
-    const { expand, fields, page, perPage, filter, sort, skipTotal, query, ...rest } =
-        options;
+export function readQuery(options: ReadOptions & Partial<ListOptions> = {}): RequestOptions {
+    const { expand, fields, page, perPage, filter, sort, skipTotal, query, ...rest } = options;
     return {
         ...rest,
-        query: {
-            page,
-            perPage,
-            filter,
-            sort,
-            skipTotal,
-            expand,
-            fields,
-            ...(query || {}),
-        },
+        query: { page, perPage, filter, sort, skipTotal, expand, fields, ...(query || {}) },
     };
 }
 
@@ -100,19 +81,12 @@ export class Crud<T> {
                 }),
             );
         }
-        return this.rb.request(this.path + "/" + seg(id), {
-            ...readQuery(options),
-            method: "GET",
-        });
+        return this.rb.request(this.path + "/" + seg(id), { ...readQuery(options), method: "GET" });
     }
 
     /** Creates a row. Objects containing files are uploaded as multipart. */
     create(data: Body = {}, options: ReadOptions = {}): Promise<T> {
-        return this.rb.request(this.path, {
-            ...readQuery(options),
-            method: "POST",
-            body: data,
-        });
+        return this.rb.request(this.path, { ...readQuery(options), method: "POST", body: data });
     }
 
     /** Updates a row. */
@@ -128,11 +102,7 @@ export class Crud<T> {
     /** Deletes a row. */
     async remove(id: string, options: RequestOptions = {}): Promise<true> {
         if (!id) await missingId(this.rb, this.path);
-        else
-            await this.rb.request(this.path + "/" + seg(id), {
-                ...options,
-                method: "DELETE",
-            });
+        else await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
         return true;
     }
 }

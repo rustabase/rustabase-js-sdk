@@ -26,12 +26,8 @@ describe("crud guards", () => {
 
 describe("error responses", () => {
     it("keeps the status text when the error body is not JSON", async () => {
-        const fetchImpl = vi.fn(
-            async () =>
-                new Response("<html>Bad Gateway</html>", {
-                    status: 502,
-                    statusText: "Bad Gateway",
-                }),
+        const fetchImpl = vi.fn(async () =>
+            new Response("<html>Bad Gateway</html>", { status: 502, statusText: "Bad Gateway" }),
         );
         const rb = createClient("http://example.test", { fetch: fetchImpl as any });
         const err = await rb.health().catch((e) => e);
@@ -103,9 +99,7 @@ describe("realtime", () => {
             close() {}
         };
         try {
-            await expect(rt.subscribe("posts/*", () => {})).rejects.toBeInstanceOf(
-                RustaBaseError,
-            );
+            await expect(rt.subscribe("posts/*", () => {})).rejects.toBeInstanceOf(RustaBaseError);
             expect((rt as any).topics.size).toBe(0);
         } finally {
             (globalThis as any).EventSource = orig;

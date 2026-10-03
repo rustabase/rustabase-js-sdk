@@ -1,3 +1,6 @@
+# Continuous integration for rustabase-js-sdk.
+# Runs on every push to main and on pull requests. Does not publish.
+
 name: CI
 
 on:

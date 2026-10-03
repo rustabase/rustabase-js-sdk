@@ -29,15 +29,10 @@ export function readCookie(header: string, name: string): string | undefined {
 }
 
 /** Builds a `Set-Cookie` header value. */
-export function writeCookie(
-    name: string,
-    value: string,
-    opts: CookieOptions = {},
-): string {
+export function writeCookie(name: string, value: string, opts: CookieOptions = {}): string {
     if (!VALID_NAME.test(name)) throw new TypeError("Invalid cookie name.");
     const encoded = encodeURIComponent(value);
-    if (encoded && !VALID_NAME.test(encoded))
-        throw new TypeError("Invalid cookie value.");
+    if (encoded && !VALID_NAME.test(encoded)) throw new TypeError("Invalid cookie value.");
 
     const parts = [`${name}=${encoded}`];
     if (opts.maxAge != null) parts.push(`Max-Age=${Math.floor(opts.maxAge)}`);

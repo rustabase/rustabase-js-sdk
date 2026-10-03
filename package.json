@@ -23,7 +23,6 @@
     "sideEffects": false,
     "files": [
         "dist",
-        "bin",
         "LICENSE.md",
         "README.md"
     ],
@@ -61,8 +60,5 @@
     "homepage": "https://rustabase.com",
     "bugs": {
         "url": "https://github.com/rustabase/rustabase-js-sdk/issues"
-    },
-    "bin": {
-        "rustabase": "bin/rustabase.mjs"
     }
 }

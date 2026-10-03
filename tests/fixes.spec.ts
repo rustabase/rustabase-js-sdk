@@ -16,9 +16,7 @@ describe("RustaBaseError.from", () => {
     });
 
     it("marks abort errors as cancelled", () => {
-        const err = RustaBaseError.from(
-            Object.assign(new Error("Aborted"), { name: "AbortError" }),
-        );
+        const err = RustaBaseError.from(Object.assign(new Error("Aborted"), { name: "AbortError" }));
         expect(err.cancelled).toBe(true);
         expect(err.status).toBe(0);
     });

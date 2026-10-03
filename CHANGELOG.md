@@ -2,7 +2,12 @@
 
 ## 1.2.0
 
-- Added `npx rustabase gen-types`: generates TypeScript row, create and table-map types from your schema, plus a typed `table()` helper.
+- Added `admin.webhooks.deliveries()` and `clearDeliveries()` for the Go server delivery history.
+- Added `admin.functions.invoke()` for HTTP-triggered edge functions, with `X-Edge-Secret` support.
+- Log list and stats accept `clientOnly`, `since`, `minLevel` and `search`.
+- `settings.testStorage()` can test unsaved S3 settings.
+- History limits are clamped to the server's 1-500 range.
+- Typed results for SQL, RLS tests, run stats, deliveries, function logs and email templates.
 
 ## 1.1.0
 
