@@ -4,7 +4,10 @@ import { fakeToken, mockFetch } from "./helpers";
 
 const make = (reply?: Parameters<typeof mockFetch>[0]) => {
     const m = mockFetch(reply);
-    const rb = createClient("https://api.example.com/", { session: new MemorySession(), fetch: m.fetch });
+    const rb = createClient("https://api.example.com/", {
+        session: new MemorySession(),
+        fetch: m.fetch,
+    });
     return { rb, ...m };
 };
 
@@ -18,7 +21,11 @@ describe("client", () => {
     it("sends json with language and auth headers", async () => {
         const { rb, calls } = make(() => ({ body: { ok: true } }));
         rb.session.set("tok", null);
-        const out = await rb.request("/api/x", { method: "POST", body: { a: 1 }, query: { q: "a b", n: [1, 2] } });
+        const out = await rb.request("/api/x", {
+            method: "POST",
+            body: { a: 1 },
+            query: { q: "a b", n: [1, 2] },
+        });
         expect(out).toEqual({ ok: true });
         expect(calls[0].url).toBe("https://api.example.com/api/x?q=a%20b&n=1&n=2");
         expect(calls[0].init.body).toBe('{"a":1}');
@@ -30,7 +37,10 @@ describe("client", () => {
     });
 
     it("throws RustaBaseError on 4xx", async () => {
-        const { rb } = make(() => ({ status: 400, body: { message: "Bad", data: { title: { code: "x", message: "y" } } } }));
+        const { rb } = make(() => ({
+            status: 400,
+            body: { message: "Bad", data: { title: { code: "x", message: "y" } } },
+        }));
         const err = await rb.request("/api/x").catch((e) => e);
         expect(err).toBeInstanceOf(RustaBaseError);
         expect(err.status).toBe(400);
@@ -67,17 +77,28 @@ describe("client", () => {
 
     it("binds filter values safely", () => {
         const { rb } = make();
-        expect(rb.filter("a = {:a} && b = {:b} && c = {:c} && d = {:d}", { a: 'x"y', b: 2, c: null, d: [1] })).toBe(
-            'a = "x\\"y" && b = 2 && c = null && d = "[1]"',
-        );
+        expect(
+            rb.filter("a = {:a} && b = {:b} && c = {:c} && d = {:d}", {
+                a: 'x"y',
+                b: 2,
+                c: null,
+                d: [1],
+            }),
+        ).toBe('a = "x\\"y" && b = 2 && c = null && d = "[1]"');
     });
 
     it("session knows superusers", () => {
         const { rb } = make();
-        rb.session.set(fakeToken({ type: "auth", collectionId: "rbc_3142635823", exp: 9999999999 }));
+        rb.session.set(
+            fakeToken({ type: "auth", collectionId: "rbc_3142635823", exp: 9999999999 }),
+        );
         expect(rb.session.isSuperuser).toBe(true);
         expect(rb.session.isValid).toBe(true);
-        rb.session.set(fakeToken({ type: "auth", exp: 1 }), { id: "1", collectionId: "c", collectionName: "users" });
+        rb.session.set(fakeToken({ type: "auth", exp: 1 }), {
+            id: "1",
+            collectionId: "c",
+            collectionName: "users",
+        });
         expect(rb.session.isSuperuser).toBe(false);
         expect(rb.session.isUser).toBe(true);
         expect(rb.session.isValid).toBe(false);
@@ -85,7 +106,11 @@ describe("client", () => {
 
     it("round-trips the session through a cookie", () => {
         const a = new MemorySession();
-        a.set(fakeToken({ exp: 9999999999 }), { id: "1", collectionId: "c", collectionName: "users" });
+        a.set(fakeToken({ exp: 9999999999 }), {
+            id: "1",
+            collectionId: "c",
+            collectionName: "users",
+        });
         const header = a.toCookie().split(";")[0];
         const b = new MemorySession();
         b.loadCookie(header);

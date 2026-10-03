@@ -12,21 +12,7 @@ export { Batch } from "./data/batch";
 export { Files } from "./data/files";
 export { Realtime } from "./realtime/realtime";
 export { Admin } from "./admin";
-export type {
-    Collection,
-    Backup,
-    LogFilters,
-    S3Overrides,
-    RunStats,
-    RunStatsMap,
-    WebhookDelivery,
-    FunctionLog,
-    SqlColumn,
-    SqlResult,
-    RlsTestInput,
-    RlsTestResult,
-    EmailTemplate,
-} from "./admin";
+export type { Collection, Backup } from "./admin";
 export { RB_CONNECT, SUPERUSERS } from "./protocol";
 export { readClaims, tokenExpired } from "./internal/token";
 export { bindFilter, joinUrl, withQuery, toQueryString, seg } from "./internal/encode";

@@ -21,7 +21,9 @@ export function toQueryString(query?: Json): string {
         if (raw === undefined || raw === null) continue;
         const values = Array.isArray(raw) ? raw : [raw];
         for (const value of values) {
-            out.push(encodeURIComponent(key) + "=" + encodeURIComponent(stringifyParam(value)));
+            out.push(
+                encodeURIComponent(key) + "=" + encodeURIComponent(stringifyParam(value)),
+            );
         }
     }
     return out.join("&");
@@ -54,7 +56,8 @@ function filterLiteral(value: unknown): string {
     if (value === null || value === undefined) return "null";
     if (typeof value === "number" || typeof value === "boolean") return String(value);
     if (typeof value === "string") return JSON.stringify(value);
-    if (value instanceof Date) return JSON.stringify(value.toISOString().replace("T", " "));
+    if (value instanceof Date)
+        return JSON.stringify(value.toISOString().replace("T", " "));
     const json = JSON.stringify(value);
     // arrays/objects are compared as JSON text
     return /^[[{]/.test(json) ? JSON.stringify(json) : json;

@@ -125,12 +125,6 @@ const results = await batch.send();
 
 `rb.admin.collections`, `settings`, `logs`, `backups`, `crons`, `apiKeys`, `webhooks`, `functions`, `rls` and `rb.admin.sql(query)`.
 
-```ts
-await rb.admin.webhooks.deliveries(hookId, { status: "error" });
-await rb.admin.functions.invoke("hello", { body: { a: 1 } });
-await rb.admin.logs.list({ clientOnly: true, minLevel: 4 });
-```
-
 ## Errors and cancelling
 
 Every failure throws a `RustaBaseError`:
@@ -147,18 +141,37 @@ try {
 
 Identical requests cancel the older one. Pass `requestKey: null` to opt out, a custom `requestKey` to group requests, or set `rb.autoCancel = false`. Use `rb.cancel(key)` / `rb.cancelAll()` to cancel manually.
 
-Transient reads can retry with exponential backoff. Writes are not retried unless explicitly enabled:
-
-```js
-const rb = createClient(URL, { timeout: 10_000, retry: { attempts: 3, delay: 250 } });
-```
-
 ## Hooks
 
 ```js
 rb.onRequest = (url, init) => ({ url, init: { ...init, headers: { ...init.headers, "X-Trace": "1" } } });
 rb.onResponse = (response, data) => data;
 ```
+
+## Generated types
+
+Generate TypeScript types for your tables with one command (needs a superuser):
+
+```sh
+npx rustabase gen-types --url https://api.example.com --email admin@example.com --password '...'
+# or from an exported schema file
+npx rustabase gen-types --file schema.json --out src/rustabase-types.ts
+```
+
+`RUSTABASE_URL`, `RUSTABASE_TOKEN`, `RUSTABASE_EMAIL` and `RUSTABASE_PASSWORD`
+can be used instead of flags. The file contains one interface per table, a
+`...Create` interface for inserts, a `Tables` map and a typed `table()` helper:
+
+```ts
+import { table, type PostsCreate } from "./rustabase-types";
+
+const posts = table(rb, "posts"); // Table<Posts>
+const draft: PostsCreate = { title: "Hello" };
+await posts.create(draft);
+```
+
+Run the command again whenever your tables change. Password and hidden
+columns never appear in row types.
 
 ## Links
 

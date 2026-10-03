@@ -1,26 +1,7 @@
 import type { RustaBase } from "../client";
 import { Crud, readQuery } from "../data/crud";
-import { RustaBaseError } from "../errors";
 import { seg } from "../internal/encode";
 import type { Body, Json, ListOptions, Page, RequestOptions } from "../types";
-import type {
-    EmailTemplate,
-    FunctionLog,
-    RlsTestInput,
-    RlsTestResult,
-    RunStatsMap,
-    SqlResult,
-    WebhookDelivery,
-} from "./types";
-
-export type * from "./types";
-
-/** The Go server keeps 1-500 history rows per request and silently falls back to 100 otherwise. */
-function historyQuery(filter: { status?: string; limit?: number }): Json {
-    const q: Json = { ...filter };
-    if (typeof filter.limit === "number") q.limit = Math.min(500, Math.max(1, Math.floor(filter.limit)));
-    return q;
-}
 
 /** Simple REST resource without paging (api keys, webhooks, functions). */
 class Resource<T> {
@@ -39,14 +20,31 @@ class Resource<T> {
         return this.rb.request(this.path, { ...options, method: "POST", body: data });
     }
     update(id: string, data: Json, options: RequestOptions = {}): Promise<T> {
-        return this.rb.request(this.path + "/" + seg(id), { ...options, method: "PATCH", body: data });
+        return this.rb.request(this.path + "/" + seg(id), {
+            ...options,
+            method: "PATCH",
+            body: data,
+        });
     }
     async remove(id: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
+        await this.rb.request(this.path + "/" + seg(id), {
+            ...options,
+            method: "DELETE",
+        });
         return true;
     }
-    protected action<R = any>(id: string, name: string, method: string, options: RequestOptions, body?: any): Promise<R> {
-        return this.rb.request(`${this.path}/${seg(id)}/${name}`, { ...options, method, body });
+    protected action<R = any>(
+        id: string,
+        name: string,
+        method: string,
+        options: RequestOptions,
+        body?: any,
+    ): Promise<R> {
+        return this.rb.request(`${this.path}/${seg(id)}/${name}`, {
+            ...options,
+            method,
+            body,
+        });
     }
 }
 
@@ -63,7 +61,11 @@ export class Collections extends Crud<Collection> {
         super(rb, "/api/collections");
     }
     /** Replaces the schema with the given collections. */
-    async import(collections: Json[], deleteMissing = false, options: RequestOptions = {}): Promise<true> {
+    async import(
+        collections: Json[],
+        deleteMissing = false,
+        options: RequestOptions = {},
+    ): Promise<true> {
         await this.rb.request(this.path + "/import", {
             ...options,
             method: "PUT",
@@ -73,30 +75,33 @@ export class Collections extends Crud<Collection> {
     }
     /** Deletes every record of a collection. */
     async truncate(collection: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(`${this.path}/${seg(collection)}/truncate`, { ...options, method: "DELETE" });
+        await this.rb.request(`${this.path}/${seg(collection)}/truncate`, {
+            ...options,
+            method: "DELETE",
+        });
         return true;
     }
     /** Default field sets for each collection type. */
     scaffolds(options: RequestOptions = {}): Promise<Record<string, Collection>> {
-        return this.rb.request(this.path + "/meta/scaffolds", { ...options, method: "GET" });
+        return this.rb.request(this.path + "/meta/scaffolds", {
+            ...options,
+            method: "GET",
+        });
     }
     oauthProviders(options: RequestOptions = {}): Promise<Json[]> {
-        return this.rb.request(this.path + "/meta/oauth2-providers", { ...options, method: "GET" });
+        return this.rb.request(this.path + "/meta/oauth2-providers", {
+            ...options,
+            method: "GET",
+        });
     }
     /** Runs a view query and returns sample rows. */
     previewView(query: string, options: RequestOptions = {}): Promise<Json> {
-        return this.rb.request(this.path + "/meta/dry-run-view", { ...options, method: "POST", body: { query } });
+        return this.rb.request(this.path + "/meta/dry-run-view", {
+            ...options,
+            method: "POST",
+            body: { query },
+        });
     }
-}
-
-/** Unsaved S3 settings accepted by `settings.testStorage()`. */
-export interface S3Overrides {
-    bucket?: string;
-    region?: string;
-    endpoint?: string;
-    accessKey?: string;
-    secret?: string;
-    forcePathStyle?: boolean;
 }
 
 export class Settings {
@@ -105,21 +110,29 @@ export class Settings {
         return this.rb.request("/api/settings", { ...options, method: "GET" });
     }
     update(data: Body, options: RequestOptions = {}): Promise<Json> {
-        return this.rb.request("/api/settings", { ...options, method: "PATCH", body: data });
+        return this.rb.request("/api/settings", {
+            ...options,
+            method: "PATCH",
+            body: data,
+        });
     }
-    /**
-     * Checks the S3 connection. Pass `overrides` to test settings that are
-     * not saved yet (bucket, region, endpoint, accessKey, secret, forcePathStyle).
-     */
     async testStorage(
         filesystem: "storage" | "backups" = "storage",
-        options: RequestOptions & { overrides?: S3Overrides } = {},
+        options: RequestOptions = {},
     ): Promise<true> {
-        const { overrides, ...rest } = options;
-        await this.rb.request("/api/settings/test/s3", { ...rest, method: "POST", body: { ...(overrides || {}), filesystem } });
+        await this.rb.request("/api/settings/test/s3", {
+            ...options,
+            method: "POST",
+            body: { filesystem },
+        });
         return true;
     }
-    async testEmail(collection: string, to: string, template: EmailTemplate, options: RequestOptions = {}): Promise<true> {
+    async testEmail(
+        collection: string,
+        to: string,
+        template: string,
+        options: RequestOptions = {},
+    ): Promise<true> {
         await this.rb.request("/api/settings/test/email", {
             ...options,
             method: "POST",
@@ -128,51 +141,42 @@ export class Settings {
         return true;
     }
     appleClientSecret(
-        input: { clientId: string; teamId: string; keyId: string; privateKey: string; duration: number },
+        input: {
+            clientId: string;
+            teamId: string;
+            keyId: string;
+            privateKey: string;
+            duration: number;
+        },
         options: RequestOptions = {},
     ): Promise<{ secret: string }> {
-        return this.rb.request("/api/settings/apple/generate-client-secret", { ...options, method: "POST", body: input });
+        return this.rb.request("/api/settings/apple/generate-client-secret", {
+            ...options,
+            method: "POST",
+            body: input,
+        });
     }
-}
-
-/** Activity filters understood by the logs endpoints. */
-export interface LogFilters {
-    /** Only requests made by clients (hides superuser dashboard traffic). */
-    clientOnly?: boolean;
-    /** Only entries created at or after this time. */
-    since?: string | Date;
-    /** Minimum log level. */
-    minLevel?: number;
-    /** Free text search across message and request data. */
-    search?: string;
-}
-
-function logFilterQuery(f: LogFilters): Json {
-    const q: Json = {};
-    if (f.clientOnly) q.clientOnly = true;
-    if (f.since) q.since = f.since;
-    if (f.minLevel !== undefined) q.minLevel = f.minLevel;
-    if (f.search) q.search = f.search;
-    return q;
 }
 
 export class Logs {
     constructor(private readonly rb: RustaBase) {}
-    list(options: ListOptions & LogFilters = {}): Promise<Page<Json>> {
-        const { clientOnly, since, minLevel, search, ...rest } = options;
-        const req = readQuery({ page: 1, perPage: 30, ...rest });
-        req.query = { ...logFilterQuery({ clientOnly, since, minLevel, search }), ...(req.query || {}) };
-        return this.rb.request("/api/logs", { ...req, method: "GET" });
+    list(options: ListOptions = {}): Promise<Page<Json>> {
+        return this.rb.request("/api/logs", {
+            ...readQuery({ page: 1, perPage: 30, ...options }),
+            method: "GET",
+        });
     }
     get(id: string, options: RequestOptions = {}): Promise<Json> {
         return this.rb.request("/api/logs/" + seg(id), { ...options, method: "GET" });
     }
-    stats(options: RequestOptions & LogFilters & { filter?: string } = {}): Promise<Array<{ total: number; date: string }>> {
-        const { filter, clientOnly, since, minLevel, search, ...rest } = options;
+    stats(
+        options: RequestOptions & { filter?: string } = {},
+    ): Promise<Array<{ total: number; date: string }>> {
+        const { filter, ...rest } = options;
         return this.rb.request("/api/logs/stats", {
             ...rest,
             method: "GET",
-            query: { filter, ...logFilterQuery({ clientOnly, since, minLevel, search }), ...(rest.query || {}) },
+            query: { filter, ...(rest.query || {}) },
         });
     }
     async clear(options: RequestOptions = {}): Promise<true> {
@@ -193,20 +197,34 @@ export class Backups {
         return this.rb.request("/api/backups", { ...options, method: "GET" });
     }
     async create(name = "", options: RequestOptions = {}): Promise<true> {
-        await this.rb.request("/api/backups", { ...options, method: "POST", body: { name } });
+        await this.rb.request("/api/backups", {
+            ...options,
+            method: "POST",
+            body: { name },
+        });
         return true;
     }
     /** Uploads a backup archive: `upload({ file: blob })`. */
     async upload(data: Body, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request("/api/backups/upload", { ...options, method: "POST", body: data });
+        await this.rb.request("/api/backups/upload", {
+            ...options,
+            method: "POST",
+            body: data,
+        });
         return true;
     }
     async remove(key: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request("/api/backups/" + seg(key), { ...options, method: "DELETE" });
+        await this.rb.request("/api/backups/" + seg(key), {
+            ...options,
+            method: "DELETE",
+        });
         return true;
     }
     async restore(key: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(`/api/backups/${seg(key)}/restore`, { ...options, method: "POST" });
+        await this.rb.request(`/api/backups/${seg(key)}/restore`, {
+            ...options,
+            method: "POST",
+        });
         return true;
     }
     /** Download link; get the token with `rb.files.token()`. */
@@ -217,7 +235,9 @@ export class Backups {
 
 export class Crons {
     constructor(private readonly rb: RustaBase) {}
-    list(options: RequestOptions = {}): Promise<Array<{ id: string; expression: string }>> {
+    list(
+        options: RequestOptions = {},
+    ): Promise<Array<{ id: string; expression: string }>> {
         return this.rb.request("/api/crons", { ...options, method: "GET" });
     }
     async run(jobId: string, options: RequestOptions = {}): Promise<true> {
@@ -240,27 +260,11 @@ export class Webhooks extends Resource<Json> {
     constructor(rb: RustaBase) {
         super(rb, "/api/webhooks");
     }
-    stats(options: RequestOptions = {}): Promise<RunStatsMap> {
+    stats(options: RequestOptions = {}): Promise<Json> {
         return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
     }
     test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
         return this.action(id, "test", "POST", options, payload);
-    }
-    /** Latest delivery attempts of a webhook, newest first. */
-    deliveries(
-        id: string,
-        filter: { status?: "success" | "error"; limit?: number } = {},
-        options: RequestOptions = {},
-    ): Promise<WebhookDelivery[]> {
-        return this.action(id, "deliveries", "GET", {
-            ...options,
-            query: { ...historyQuery(filter), ...(options.query || {}) },
-        });
-    }
-    /** Deletes the stored delivery history of a webhook. */
-    async clearDeliveries(id: string, options: RequestOptions = {}): Promise<true> {
-        await this.action(id, "deliveries", "DELETE", options);
-        return true;
     }
 }
 
@@ -268,7 +272,7 @@ export class Functions extends Resource<Json> {
     constructor(rb: RustaBase) {
         super(rb, "/api/functions");
     }
-    stats(options: RequestOptions = {}): Promise<RunStatsMap> {
+    stats(options: RequestOptions = {}): Promise<Json> {
         return this.rb.request(this.path + "/stats", { ...options, method: "GET" });
     }
     duplicate(id: string, options: RequestOptions = {}): Promise<Json> {
@@ -278,29 +282,14 @@ export class Functions extends Resource<Json> {
     test(id: string, payload: Json = {}, options: RequestOptions = {}): Promise<Json> {
         return this.action(id, "test", "POST", options, payload);
     }
-    logs(id: string, filter: { status?: string; limit?: number } = {}, options: RequestOptions = {}): Promise<FunctionLog[]> {
-        return this.action(id, "logs", "GET", { ...options, query: { ...historyQuery(filter), ...(options.query || {}) } });
-    }
-    /**
-     * Calls an HTTP-triggered function through the public `/edge-hook/{name}`
-     * route. Pass `secret` when the function is protected.
-     */
-    invoke<R = any>(
-        name: string,
-        input: { method?: string; body?: any; query?: Json; secret?: string } = {},
+    logs(
+        id: string,
+        filter: { status?: string; limit?: number } = {},
         options: RequestOptions = {},
-    ): Promise<R> {
-        const { method = "POST", body, query, secret } = input;
-        name = (name || "").trim();
-        if (!name) {
-            return Promise.reject(new RustaBaseError({ message: "A function name is required." }));
-        }
-        return this.rb.request<R>("/edge-hook/" + seg(name), {
+    ): Promise<Json[]> {
+        return this.action(id, "logs", "GET", {
             ...options,
-            method,
-            body,
-            query: { ...(query || {}), ...(options.query || {}) },
-            headers: { ...(options.headers || {}), ...(secret ? { "X-Edge-Secret": secret } : {}) },
+            query: { ...filter, ...(options.query || {}) },
         });
     }
     async clearLogs(id: string, options: RequestOptions = {}): Promise<true> {
@@ -324,25 +313,64 @@ export class Rls {
         return this.rb.request(this.p(table, "/policies"), { ...options, method: "GET" });
     }
     createPolicy(table: string, data: Json, options: RequestOptions = {}): Promise<Json> {
-        return this.rb.request(this.p(table, "/policies"), { ...options, method: "POST", body: data });
+        return this.rb.request(this.p(table, "/policies"), {
+            ...options,
+            method: "POST",
+            body: data,
+        });
     }
-    updatePolicy(table: string, name: string, data: Json, options: RequestOptions = {}): Promise<Json> {
-        return this.rb.request(this.p(table, "/policies/" + seg(name)), { ...options, method: "PATCH", body: data });
+    updatePolicy(
+        table: string,
+        name: string,
+        data: Json,
+        options: RequestOptions = {},
+    ): Promise<Json> {
+        return this.rb.request(this.p(table, "/policies/" + seg(name)), {
+            ...options,
+            method: "PATCH",
+            body: data,
+        });
     }
-    async removePolicy(table: string, name: string, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(this.p(table, "/policies/" + seg(name)), { ...options, method: "DELETE" });
+    async removePolicy(
+        table: string,
+        name: string,
+        options: RequestOptions = {},
+    ): Promise<true> {
+        await this.rb.request(this.p(table, "/policies/" + seg(name)), {
+            ...options,
+            method: "DELETE",
+        });
         return true;
     }
     /** Turns RLS on or off for a table. */
-    async setEnabled(table: string, settings: { enabled: boolean; force?: boolean }, options: RequestOptions = {}): Promise<true> {
-        await this.rb.request(this.p(table, "/rls"), { ...options, method: "POST", body: settings });
+    async setEnabled(
+        table: string,
+        settings: { enabled: boolean; force?: boolean },
+        options: RequestOptions = {},
+    ): Promise<true> {
+        await this.rb.request(this.p(table, "/rls"), {
+            ...options,
+            method: "POST",
+            body: settings,
+        });
         return true;
     }
-    preview(data: Json, options: RequestOptions = {}): Promise<{ sql: string; error: string }> {
-        return this.rb.request("/api/rls/preview", { ...options, method: "POST", body: data });
+    preview(
+        data: Json,
+        options: RequestOptions = {},
+    ): Promise<{ sql: string; error: string }> {
+        return this.rb.request("/api/rls/preview", {
+            ...options,
+            method: "POST",
+            body: data,
+        });
     }
-    test(data: RlsTestInput, options: RequestOptions = {}): Promise<RlsTestResult> {
-        return this.rb.request("/api/rls/test", { ...options, method: "POST", body: data });
+    test(data: Json, options: RequestOptions = {}): Promise<Json> {
+        return this.rb.request("/api/rls/test", {
+            ...options,
+            method: "POST",
+            body: data,
+        });
     }
 }
 
@@ -371,7 +399,14 @@ export class Admin {
     }
 
     /** Runs raw SQL. */
-    sql(query: string, options: RequestOptions = {}): Promise<SqlResult> {
-        return this.rb.request("/api/sql", { ...options, method: "POST", body: { query } });
+    sql(
+        query: string,
+        options: RequestOptions = {},
+    ): Promise<{ columns: string[]; rows: any[]; [k: string]: any }> {
+        return this.rb.request("/api/sql", {
+            ...options,
+            method: "POST",
+            body: { query },
+        });
     }
 }

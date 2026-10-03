@@ -17,7 +17,10 @@ export class Files {
      *     rb.files.url(post, post.cover, { thumb: "300x200" })
      */
     url(
-        record: { id?: string; collectionId?: string; collectionName?: string } | null | undefined,
+        record:
+            | { id?: string; collectionId?: string; collectionName?: string }
+            | null
+            | undefined,
         filename: string,
         options: FileUrlOptions = {},
     ): string {
@@ -28,7 +31,9 @@ export class Files {
         const query: Record<string, any> = { ...rest };
         if (download) query.download = true;
         return withQuery(
-            this.rb.url(`/api/files/${seg(collection)}/${seg(record.id)}/${seg(filename)}`),
+            this.rb.url(
+                `/api/files/${seg(collection)}/${seg(record.id)}/${seg(filename)}`,
+            ),
             query,
         );
     }
