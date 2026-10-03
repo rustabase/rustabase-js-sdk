@@ -171,3 +171,28 @@ rb.onResponse = (response, data) => data;
 ## License
 
 MIT © RustaBase contributors
+
+## Generated types
+
+Generate TypeScript types for your tables with one command (needs a superuser):
+
+```sh
+npx rustabase gen-types --url https://api.example.com --email admin@example.com --password '...'
+# or from an exported schema file
+npx rustabase gen-types --file schema.json --out src/rustabase-types.ts
+```
+
+`RUSTABASE_URL`, `RUSTABASE_TOKEN`, `RUSTABASE_EMAIL` and `RUSTABASE_PASSWORD`
+can be used instead of flags. The file contains one interface per table, a
+`...Create` interface for inserts, a `Tables` map and a typed `table()` helper:
+
+```ts
+import { table, type PostsCreate } from "./rustabase-types";
+
+const posts = table(rb, "posts"); // Table<Posts>
+const draft: PostsCreate = { title: "Hello" };
+await posts.create(draft);
+```
+
+Run the command again whenever your tables change. Password and hidden
+columns never appear in row types.

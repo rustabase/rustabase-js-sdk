@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- Added `npx rustabase gen-types`: generates TypeScript row, create and table-map types from your schema, plus a typed `table()` helper.
+
 ## 1.2.0
 
 - Added `admin.webhooks.deliveries()` and `clearDeliveries()` for the Go server delivery history.

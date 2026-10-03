@@ -1,5 +1,5 @@
 {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "name": "rustabase",
     "description": "Official JavaScript and TypeScript SDK for RustaBase",
     "author": "RustaBase contributors",
@@ -24,7 +24,8 @@
     "files": [
         "dist",
         "LICENSE.md",
-        "README.md"
+        "README.md",
+        "bin"
     ],
     "keywords": [
         "rustabase",
@@ -60,5 +61,8 @@
     "homepage": "https://rustabase.com",
     "bugs": {
         "url": "https://github.com/rustabase/rustabase-js-sdk/issues"
+    },
+    "bin": {
+        "rustabase": "bin/rustabase.mjs"
     }
 }
