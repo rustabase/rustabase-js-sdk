@@ -52,9 +52,15 @@ export function bindFilter(expression: string, params?: Json): string {
 
 function filterLiteral(value: unknown): string {
     if (value === null || value === undefined) return "null";
-    if (typeof value === "number" || typeof value === "boolean") return String(value);
+    // NaN/Infinity are not valid filter literals; treat them as null.
+    if (typeof value === "number") return Number.isFinite(value) ? String(value) : "null";
+    if (typeof value === "boolean") return String(value);
     if (typeof value === "string") return JSON.stringify(value);
-    if (value instanceof Date) return JSON.stringify(value.toISOString().replace("T", " "));
+    if (value instanceof Date) {
+        // An invalid Date would throw in toISOString(); bind it as null instead.
+        if (isNaN(value.getTime())) return "null";
+        return JSON.stringify(value.toISOString().replace("T", " "));
+    }
     const json = JSON.stringify(value);
     // arrays/objects are compared as JSON text
     return /^[[{]/.test(json) ? JSON.stringify(json) : json;
