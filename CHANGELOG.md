@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+- Fixed `filter()` producing invalid expressions for `NaN`/`Infinity` and throwing on invalid `Date` values; both now bind as `null`.
+
 ## 1.3.0
 
 - Added `npx rustabase gen-types`: generates TypeScript row, create and table-map types from your schema, plus a typed `table()` helper.
