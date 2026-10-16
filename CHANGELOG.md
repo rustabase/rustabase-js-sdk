@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+- Added `count(filter?)` on tables: returns the number of matching rows with a single one-row request.
+- Added `tokenExpiresIn(token)`: seconds until a token expires (`null` when it never expires).
+- `error.fieldErrors` now always returns an object, even when the server sends a non-object `data` payload.
+
 ## 1.3.1
 
 - Fixed `filter()` producing invalid expressions for `NaN`/`Infinity` and throwing on invalid `Date` values; both now bind as `null`.
