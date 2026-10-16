@@ -49,7 +49,10 @@ export class RustaBaseError extends Error {
 
     /** Field validation errors returned by the server, keyed by field name. */
     get fieldErrors(): Record<string, { code: string; message: string }> {
-        return (this.data?.data as any) || {};
+        const fields = this.data?.data;
+        return fields && typeof fields === "object" && !Array.isArray(fields)
+            ? (fields as any)
+            : {};
     }
 
     /** Wraps any thrown value into a RustaBaseError (returned as-is if it already is one). */
