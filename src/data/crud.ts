@@ -1,14 +1,33 @@
 import type { RustaBase } from "../client";
 import { RustaBaseError } from "../errors";
 import { seg } from "../internal/encode";
-import type { AllOptions, Body, ListOptions, Page, ReadOptions, RequestOptions } from "../types";
+import type {
+    AllOptions,
+    Body,
+    ListOptions,
+    Page,
+    ReadOptions,
+    RequestOptions,
+} from "../types";
 
 /** Moves read options (filter, sort, expand...) into the query string. */
-export function readQuery(options: ReadOptions & Partial<ListOptions> = {}): RequestOptions {
-    const { expand, fields, page, perPage, filter, sort, skipTotal, query, ...rest } = options;
+export function readQuery(
+    options: ReadOptions & Partial<ListOptions> = {},
+): RequestOptions {
+    const { expand, fields, page, perPage, filter, sort, skipTotal, query, ...rest } =
+        options;
     return {
         ...rest,
-        query: { page, perPage, filter, sort, skipTotal, expand, fields, ...(query || {}) },
+        query: {
+            page,
+            perPage,
+            filter,
+            sort,
+            skipTotal,
+            expand,
+            fields,
+            ...(query || {}),
+        },
     };
 }
 
@@ -50,6 +69,28 @@ export class Crud<T> {
         }
     }
 
+    /**
+     * Number of rows matching an optional filter. Fetches a single row,
+     * so it is cheap even on large tables.
+     */
+    async count(
+        filter = "",
+        options: Omit<ListOptions, "filter" | "skipTotal"> = {},
+    ): Promise<number> {
+        const res = await this.list({
+            requestKey: "count " + this.path + " " + filter,
+            ...options,
+            filter: filter || undefined,
+            page: 1,
+            perPage: 1,
+            skipTotal: false,
+            fields: options.fields ?? "id",
+        });
+        return typeof res.totalItems === "number" && res.totalItems >= 0
+            ? res.totalItems
+            : 0;
+    }
+
     /** The first row matching a filter. Throws a 404 error when nothing matches. */
     async first(filter: string, options: Omit<ListOptions, "filter"> = {}): Promise<T> {
         const res = await this.list({
@@ -81,12 +122,19 @@ export class Crud<T> {
                 }),
             );
         }
-        return this.rb.request(this.path + "/" + seg(id), { ...readQuery(options), method: "GET" });
+        return this.rb.request(this.path + "/" + seg(id), {
+            ...readQuery(options),
+            method: "GET",
+        });
     }
 
     /** Creates a row. Objects containing files are uploaded as multipart. */
     create(data: Body = {}, options: ReadOptions = {}): Promise<T> {
-        return this.rb.request(this.path, { ...readQuery(options), method: "POST", body: data });
+        return this.rb.request(this.path, {
+            ...readQuery(options),
+            method: "POST",
+            body: data,
+        });
     }
 
     /** Updates a row. */
@@ -102,7 +150,11 @@ export class Crud<T> {
     /** Deletes a row. */
     async remove(id: string, options: RequestOptions = {}): Promise<true> {
         if (!id) await missingId(this.rb, this.path);
-        else await this.rb.request(this.path + "/" + seg(id), { ...options, method: "DELETE" });
+        else
+            await this.rb.request(this.path + "/" + seg(id), {
+                ...options,
+                method: "DELETE",
+            });
         return true;
     }
 }
