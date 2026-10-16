@@ -28,7 +28,7 @@ export type {
     EmailTemplate,
 } from "./admin";
 export { RB_CONNECT, SUPERUSERS } from "./protocol";
-export { readClaims, tokenExpired } from "./internal/token";
+export { readClaims, tokenExpired, tokenExpiresIn } from "./internal/token";
 export { bindFilter, joinUrl, withQuery, toQueryString, seg } from "./internal/encode";
 export { readQuery } from "./data/crud";
 export { isFileLike, isFormData, prepareBody, splitBody } from "./internal/body";

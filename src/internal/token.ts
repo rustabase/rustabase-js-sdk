@@ -33,3 +33,15 @@ export function tokenExpired(token: string, leewaySeconds = 0): boolean {
     if (typeof claims.exp !== "number" || !isFinite(claims.exp)) return true;
     return claims.exp - leewaySeconds <= Date.now() / 1000;
 }
+
+/**
+ * Seconds until the token expires (negative once expired). Returns `null`
+ * for tokens without an `exp` claim and `0` for missing or malformed tokens.
+ */
+export function tokenExpiresIn(token: string): number | null {
+    const claims = readClaims(token);
+    if (!Object.keys(claims).length) return 0;
+    if (claims.exp === undefined || claims.exp === null) return null;
+    if (typeof claims.exp !== "number" || !isFinite(claims.exp)) return 0;
+    return Math.floor(claims.exp - Date.now() / 1000);
+}
