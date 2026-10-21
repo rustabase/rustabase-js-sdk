@@ -52,9 +52,7 @@ export class Session {
 
     /** Signs out locally and notifies listeners. */
     clear(): void {
-        this._token = "";
-        this._record = null;
-        this.emit();
+        this.set("", null);
     }
 
     /**
