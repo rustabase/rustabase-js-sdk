@@ -33,8 +33,15 @@ export function parseArgs(argv) {
         if (a === "-h" || a === "--help") args.help = true;
         else if (a === "--include-system") args.includeSystem = true;
         else if (a.startsWith("--")) {
-            const [k, inline] = a.slice(2).split("=", 2);
-            args[k] = inline !== undefined ? inline : argv[++i];
+            const option = a.slice(2);
+            const equals = option.indexOf("=");
+            const k = equals < 0 ? option : option.slice(0, equals);
+            const value = equals < 0 ? argv[i + 1] : option.slice(equals + 1);
+            if (value === undefined || value === "" || (equals < 0 && value.startsWith("--"))) {
+                throw new Error(`missing value for --${k}`);
+            }
+            args[k] = value;
+            if (equals < 0) i++;
         } else args._.push(a);
     }
     return args;
