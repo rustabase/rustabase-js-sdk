@@ -74,7 +74,7 @@ export async function loadSchema(args, env = process.env) {
     }
     if (!token) throw new Error("missing --token, or --email and --password, of a superuser");
     const items = [];
-    for (let page = 1; page < 100; page++) {
+    for (let page = 1; ; page++) {
         const res = await call(`${base}/api/collections?perPage=200&page=${page}`, {
             headers: { Authorization: token },
         });
