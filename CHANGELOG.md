@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.1 — 2026-10-21
+
+- CLI option values retain embedded equals signs; missing values fail clearly before any request.
+- Schema generation fetches all reported pages instead of silently stopping after page 99.
+- Clearing an already-empty session no longer emits duplicate change notifications.
+
 ## 1.4.0
 
 - Added `count(filter?)` on tables: returns the number of matching rows with a single one-row request.
