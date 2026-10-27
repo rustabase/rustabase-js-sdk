@@ -6,7 +6,7 @@
 
 [![npm](https://img.shields.io/npm/v/rustabase?color=f97316&label=npm)](https://www.npmjs.com/package/rustabase)
 [![downloads](https://img.shields.io/npm/dm/rustabase?color=0ea5e9)](https://www.npmjs.com/package/rustabase)
-[![license](https://img.shields.io/badge/license-MIT-22c55e)](LICENSE.md)
+[![license](https://img.shields.io/badge/license-Apache_2.0-22c55e)](LICENSE.md)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-RustaBase-0a66c2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/rustabase)
 
 [Website](https://rustabase.com/) · [npm](https://www.npmjs.com/package/rustabase) · [Dart SDK](https://github.com/rustabase/rustabase-dart-sdk) · [LinkedIn](https://www.linkedin.com/company/rustabase)
@@ -170,7 +170,7 @@ rb.onResponse = (response, data) => data;
 
 ## License
 
-MIT © RustaBase contributors
+Apache License 2.0 © RustaBase contributors
 
 ## Generated types
 

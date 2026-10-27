@@ -3,7 +3,7 @@
     "name": "rustabase",
     "description": "Official JavaScript and TypeScript SDK for RustaBase",
     "author": "RustaBase contributors",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/rustabase/rustabase-js-sdk.git"
