@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.2 — 2026-11-08
+
+- Security: `signInWithOAuth()` only opens `http://` or `https://` provider addresses; a `javascript:` or `data:` address now fails instead of running in the app's sign-in popup.
+- Security: `toCookie()` and cookie writing reject a `path`, `domain` or `sameSite` value that would add extra cookie settings, and reject an invalid `expires` or `maxAge` instead of writing a broken header.
+
 ## 1.4.1 — 2026-10-21
 
 - CLI option values retain embedded equals signs; missing values fail clearly before any request.
