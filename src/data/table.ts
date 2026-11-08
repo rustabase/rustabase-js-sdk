@@ -210,6 +210,13 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
                 );
                 if (!provider)
                     throw new Error(`Unknown sign-in provider "${providerName}".`);
+                // The popup starts as about:blank on this page's origin, so a
+                // `javascript:` or `data:` address would run inside the app.
+                // Only ever navigate it to a web address.
+                if (!isWebUrl(provider.authURL))
+                    throw new Error(
+                        `The sign-in provider "${providerName}" returned an unsupported address.`,
+                    );
 
                 const redirectUrl = this.rb.url("/api/oauth2-redirect");
 
@@ -401,5 +408,16 @@ export class AuthTable<T extends Row = Row> extends Table<T> {
     private save(result: AuthResult<T>): AuthResult<T> {
         this.rb.session.set(result?.token || "", (result?.record as Row) || null);
         return result;
+    }
+}
+
+/** True for absolute http(s) addresses; false for javascript:, data: and anything unparsable. */
+function isWebUrl(value: unknown): boolean {
+    if (typeof value !== "string" || !value) return false;
+    try {
+        const { protocol } = new URL(value);
+        return protocol === "https:" || protocol === "http:";
+    } catch {
+        return false;
     }
 }
