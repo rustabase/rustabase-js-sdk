@@ -35,14 +35,41 @@ export function writeCookie(name: string, value: string, opts: CookieOptions = {
     if (encoded && !VALID_NAME.test(encoded)) throw new TypeError("Invalid cookie value.");
 
     const parts = [`${name}=${encoded}`];
-    if (opts.maxAge != null) parts.push(`Max-Age=${Math.floor(opts.maxAge)}`);
-    if (opts.domain) parts.push(`Domain=${opts.domain}`);
-    if (opts.path) parts.push(`Path=${opts.path}`);
-    if (opts.expires) parts.push(`Expires=${opts.expires.toUTCString()}`);
+    if (opts.maxAge != null) {
+        if (!Number.isFinite(opts.maxAge)) throw new TypeError("Invalid cookie maxAge.");
+        parts.push(`Max-Age=${Math.floor(opts.maxAge)}`);
+    }
+    if (opts.domain) parts.push(`Domain=${attribute("domain", opts.domain)}`);
+    if (opts.path) parts.push(`Path=${attribute("path", opts.path)}`);
+    if (opts.expires) {
+        if (!(opts.expires instanceof Date) || isNaN(opts.expires.getTime())) {
+            throw new TypeError("Invalid cookie expires.");
+        }
+        parts.push(`Expires=${opts.expires.toUTCString()}`);
+    }
     if (opts.httpOnly) parts.push("HttpOnly");
     if (opts.secure) parts.push("Secure");
     if (opts.sameSite) {
-        parts.push(`SameSite=${opts.sameSite === true ? "Strict" : opts.sameSite}`);
+        const sameSite =
+            opts.sameSite === true
+                ? "Strict"
+                : SAME_SITE[String(opts.sameSite).toLowerCase()];
+        if (!sameSite) throw new TypeError("Invalid cookie sameSite.");
+        parts.push(`SameSite=${sameSite}`);
     }
     return parts.join("; ");
+}
+
+const SAME_SITE: Record<string, string> = { strict: "Strict", lax: "Lax", none: "None" };
+
+// Attribute values end at ";" and the header ends at a line break, so either
+// one inside a path or domain would let a caller add their own attributes
+// (for example a wider Domain) to the session cookie.
+const SAFE_ATTRIBUTE = /^[\u0021-\u003a\u003c-\u007e]+$/;
+
+function attribute(kind: string, value: string): string {
+    if (typeof value !== "string" || !SAFE_ATTRIBUTE.test(value)) {
+        throw new TypeError(`Invalid cookie ${kind}.`);
+    }
+    return value;
 }
